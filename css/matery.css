@@ -565,7 +565,7 @@ header .go-back i {
     display: block;
     left: 0;
     top: 0;
-    content: "";
+    #content: "";
 }
 
 .bg-cover .container {
@@ -594,7 +594,7 @@ header .go-back i {
     font-weight: 400;
 }
 
-#@-webkit-keyframes rainbow {
+@-webkit-keyframes rainbow {
 
     0%,
     100% {
@@ -640,7 +640,7 @@ header .go-back i {
     }
 }
 
-#@keyframes rainbow {
+@keyframes rainbow {
 
     0%,
     100% {
