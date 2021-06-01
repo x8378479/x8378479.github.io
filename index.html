@@ -307,7 +307,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                Hi~ Are u happy today?
+                活着总会有好事发生
                 
             </div>
 
@@ -340,9 +340,11 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    var bannerUrl = "/medias/banner/" + (new Date().getMinutes())%7 + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
+
+
 
 
 
