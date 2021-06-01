@@ -2142,3 +2142,15 @@ footer .copy-right {
     padding: 0;
     margin: 0;
 }
+
+
+
+
+@media only screen and (max-width: 601px) {
+    .bg-cover .title {
+    font-size: 2rem;
+    line-height: 0.6em;
+    margin-bottom: 10px;
+    position: relative;
+}
+    }
