@@ -1,13 +1,6 @@
- @font-face {
-    font-family: 'yixifont';
-    src: url('../font/aakeyiti.eot') format('embedded-opentype'),   /*ie专用字体*/
-         url('../font/aakeyiti.woff') format('woff'),
-         url('../font/aakeyiti.ttf') format('truetype'),
-         url('../font/aakeyiti.svg') format('svg');  /*针对ios*/
-    font-weight: normal;
-    font-style: normal;
-}
-
-.diy-font{
-    font-family: 'aakeyiti';
-}
+	<style type="text/css">
+			@font-face {
+				font-family:'aakeyiti';
+				src: url(font/aakeyiti.ttf) format('truetype');
+			}
+		</style>
