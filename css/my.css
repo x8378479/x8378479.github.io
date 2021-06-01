@@ -1,9 +1,9 @@
 /* Here is your custom css styles. */
 @font-face{
-    font-family: 'AaKeYiTi';
-    src: url('../font/AaKeYiTi.ttf');
+    font-family: 'myFont';
+    src: url('../font/myFont.ttf');
 }
 
 .diy-font{
-    font-family: 'AaKeYiTi';
+    font-family: 'myFont';
 }
