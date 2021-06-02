@@ -318,11 +318,8 @@ text-shadow:0 0 5px #060606;
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-
-var num = Math.random();                //获取随机整数                
-num = Math.ceil(num*6)+1;                /*创建div用于显示随机整数*/    
-
-    var bannerUrl = "/medias/banner/" + (new Date().getHours())%num + '.jpg';
+  
+    var bannerUrl = "/medias/banner/" + (new Date().getHours())%7 + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -358,6 +355,8 @@ num = Math.ceil(num*6)+1;                /*创建div用于显示随机整数*/
 
     <footer class="page-footer bg-color">
     
+
+
 
     <div class="container row center-align"
          style="margin-bottom: 15px !important;">
@@ -452,8 +451,6 @@ var _hmt = _hmt || [];
                             document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
                         }
                     }
-
-
 
                     calcSiteTime();
                 </script>
