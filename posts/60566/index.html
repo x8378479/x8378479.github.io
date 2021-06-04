@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MestReNova处理目标产物氢谱碳谱数据基本流程, Lee&#39;s Base">
+    <meta name="keywords" content="未知有机小分子综合解谱题基本思路总结, Lee&#39;s Base">
     <meta name="description" content="To explore!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MestReNova处理目标产物氢谱碳谱数据基本流程 | Lee&#39;s Base</title>
+    <title>未知有机小分子综合解谱题基本思路总结 | Lee&#39;s Base</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -263,7 +263,7 @@
 
 
 
-<!--<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg');  opacity: 50;">--!>
+<!--<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg');  opacity: 50;">--!>
 <br>
 <br>
 <br>
@@ -272,7 +272,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                   <!--<h1 class="description center-align post-title">MestReNova处理目标产物氢谱碳谱数据基本流程</h1>-->
+                   <!--<h1 class="description center-align post-title">未知有机小分子综合解谱题基本思路总结</h1>-->
 	<h1 class="description center-align post-title"></h1>
                 </div>
             </div>
@@ -394,8 +394,8 @@
                                 <span class="chip bg-color">核磁</span>
                             </a>
                         
-                            <a href="/tags/MestReNova/">
-                                <span class="chip bg-color">MestReNova</span>
+                            <a href="/tags/%E5%88%86%E5%AD%90%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/">
+                                <span class="chip bg-color">分子结构分析</span>
                             </a>
                         
                     </div>
@@ -419,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-31
+                    2021-06-04
                 </div>
                 
 
@@ -433,14 +433,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    4 分
                 </div>
                 
 
@@ -460,75 +460,34 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="MestReNova处理目标产物氢谱碳谱数据基本流程"><a href="#MestReNova处理目标产物氢谱碳谱数据基本流程" class="headerlink" title="MestReNova处理目标产物氢谱碳谱数据基本流程"></a>MestReNova处理目标产物氢谱碳谱数据基本流程</h1><p>在通过反应和提纯等一系列痛苦的操作后，科研狗们终于得到了纯的产物了。为了在文章中写上化合物核磁信息这么小小一段挠破了头，本文记录从原始数据开始到最后文章表述的整个流程的基本操作，使用软件：MestReNova，其它细节功能可参考 <a target="_blank" rel="noopener" href="https://mestrelab.com/download/mnova/">MestReNova的官网说明书</a> ，本文不再赘述。等等，到底是不是产物呢？</p>
-<h2 id="1-目标产物核磁数据获取"><a href="#1-目标产物核磁数据获取" class="headerlink" title="1. 目标产物核磁数据获取"></a>1. 目标产物核磁数据获取</h2><p>​    如果你合成的是已知化合物或者是参照某已知化合物合成的类似化合物，可以先找到文献报导的该化合物数据。之前发的文章已经提供了大量相关数据库链接，本人最喜欢用Scifinder，因为可以通过chemdraw软件画好分子式直接搜索，比较方便。</p>
-<p>​    全新的化合物可以通过模拟数据作为参考，chemdraw 先画好分子式，选中整个分子，</p>
-<p>​    Chemdraw模拟： 点击 Structure-Predict  <sup>1</sup>H-NMR (<sup>13</sup>C-NMR) Shifts预测氢谱或者碳谱，把鼠标放到分子式上的氢或者谱图的峰上，对应的分子式上的氢或者谱图的峰会被绿框框住。个人认为该软件预测主要是看化学位移相对大小的规律，具体值无意义。</p>
-<p>​    MestReNova模拟：打开MestReNova将选中分子式直接粘贴进来，菜单栏同样有预测，而且谱图种类更多，就氢谱而言，显示峰裂分更准确。但仍然只作为参考。</p>
-<h2 id="2-氢谱数据处理"><a href="#2-氢谱数据处理" class="headerlink" title="2. 氢谱数据处理"></a>2. 氢谱数据处理</h2><p>​    该打完核磁，原始数据如图所示（仪器：Bruker 400M，.mnova是我后期用软件处理完生成的），可以把acqu，acqus, audita.txt或者fid或者把整个文件夹直接拖入打开软件的空白页。（如果数据显示不正常，可以在pdata\1路径下有个叫1i的文件拖到软件中试一试）</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%871.jpg"></p>
-<p>​    此时可以看到谱图了：</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%872.jpg"></p>
-<h3 id="基线平滑"><a href="#基线平滑" class="headerlink" title="基线平滑"></a>基线平滑</h3><p>​    基线平滑一下：菜单栏-处理-基线-多点基线校正，会弹出一个框框，你直接点Automatic，基线会以点线图的方式预览，再点击应用，基线平缓了。</p>
-<h3 id="标峰"><a href="#标峰" class="headerlink" title="标峰"></a>标峰</h3><p>​    然后是标峰，可以点击标峰自动标，但是如果有杂峰不想标就要一个个删除，很麻烦。</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%873.jpg"></p>
-<p>​    也可以下拉有个”手动设置阈值“，你可以用鼠标拉出一个阈值线，超过的才会被标峰。菜单栏下面一栏有5个放大镜图标，前3个你可以用来看谱图，帮助你给谱图标峰或者积分的时候把局部放大，看得更清楚。</p>
-<p>​    滚动鼠标滚珠可以把峰拉高或者拉低~</p>
-<p>​    这个是我标好峰的图：</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%874.jpg"></p>
-<h3 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h3><p>​    在积分之前，尽可能地把一些无关的峰给标注出来，比如溶剂峰，水峰，杂峰，这些和你产物无关，不需要积分。</p>
-<p>​    常见溶剂峰和水峰的化学位移是多少呢？</p>
-<p>​    提供两篇参考文献：</p>
-<ol>
-<li><p><a href="dx.doi.org/10.1021/acs.oprd.5b00417">Org. Process Res. Dev. 2016, 20, 661-667</a>  </p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jo971176v">J. Org. Chem. 1997, 62, 7512-7515</a>  </p>
-</li>
-</ol>
-<p>​    比如在我这个图中我使用了N,N-二甲基乙酰胺Dimethylacetamide做溶剂，后处理用了DMF，氘代试剂是DMSO，还含有水峰（一般是宽峰），都是高沸点溶剂，难以去除，根据文献查到DMSO中，溶剂峰 2.5，水峰 3.3，Dimethylacetamide 1.96, 2.94, 2.78，DMF 7.95, 2.89, 2.73出峰，这些峰是不积分的。</p>
-<p>​    积分操作：积分按钮在标峰按钮盘边，也可以点击直接自动积分（不推荐），也可以下拉选择手动，这里我们手动积分每个该积的峰的区域。 </p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%875.jpg"></p>
-<p>​    最后要积峰的就这么3个，这里有二个问题就是，大家会发现：</p>
-<ol>
-<li>积分值会随你选的范围而变化。（有很强的主观性，不利于判断）</li>
-<li>杂峰，或者其它需要分开分析的峰发生重叠，无法逐个积分或者导致积分数值偏差。（如我7.99和7.97发生重叠，7.97假如是不需要的积分）</li>
-</ol>
-<p><img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%876.jpg"></p>
-<p>​    解决方法：将积分选项下拉，点击“选项”，将积分选项的计算方法由“Sum”改成“标峰”，点OK，再在标峰选项下拉，有个峰曲线显示，勾上。你的谱图峰都都被数学拆分了，只要范围内只包含一个峰，积分数值就不变。</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%878.jpg"></p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%879.jpg"></p>
-<p>​    </p>
-<p>​    积分超过右边杂峰的峰值对应化学位移时，积分值3.5变成了3.6，这种模式是以拆分峰的面积来计算的（不以人的意志为转移=.=）。</p>
-<p><img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%8710.jpg"></p>
-<h3 id="定标"><a href="#定标" class="headerlink" title="定标"></a>定标</h3><p>​    把你认为最确认的峰与氢的个数对应上，不要用活泼氢定标（容易与环境发生化学交换）。</p>
-<p>​    比如这是我的分子：</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%8711.jpg"></p>
-<p>​    我用最中心的苯环定标，中间是3个H，和文献上报导比对，在8.8。</p>
-<p>​    右击8.8处的积分线，点击编辑积分</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%8712.jpg"></p>
-<p>​    将归一化改为3，差掉窗口，其它两个峰都以这个3为基准变了。</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%8713.jpg"></p>
-<p>​    除了羧基的三个活泼氢，完全能对的上，羧基为活泼氢，化学交换会显示不全，但在DMSO里有时能看到宽峰。</p>
-<p>​    此时你可以把文件以各种形式保存，导出txt也可以，直接右击属性也可以改线条粗细，文字大小和网格等各种页面布局（自行尝试设置成自己喜欢的样子），然后可以直接copy图片到office相关软件。有时要用到生成一张局部放大的附图。点之前提到的菜单下面的放大镜，最右边有个放大镜，你把鼠标停留在那会显示”局部放大“提示，点一下，选择你要放大的区域，会显示一个小插图。</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%8714.jpg"></p>
-<h3 id="多重峰统计"><a href="#多重峰统计" class="headerlink" title="多重峰统计"></a>多重峰统计</h3><p>​    现在很多文献数据核磁并不是给图而是给文本，这种文本是如何生成的，先下拉多重峰分析选项（在积分旁边），选择手动，然后用法和手动积分的用法一毛一样，只是它会显示多重峰（由于测试时匀场不好，核磁M数不够，可能会与理论裂分数不完全一致）。</p>
-<p>​    最后在分析里选择多重峰分析-多重峰分析报告，框框里就是你想要的，在报告设置里可以调你要投稿的期刊格式，我这里用的是JACS.</p>
-<p>​    <img src="/loading.gif" data-original="/posts/13068/%E5%9B%BE%E7%89%8715.jpg"></p>
-<h2 id="2-碳谱数据处理"><a href="#2-碳谱数据处理" class="headerlink" title="2. 碳谱数据处理"></a>2. 碳谱数据处理</h2><p>​    与氢谱处理流程完全一致，差别是不需要积分，这是由核磁原理决定的。由于NOE效应（射频相互作用的核，另一个核受到能量增强），C谱中C个数因受去耦氢个数的影响，不与峰面积成比例。但是偷偷告诉你：也正是受周围氢个数的影响，碳中伯仲叔季，季碳，羰基碳的峰会比较矮~</p>
-<p>​    导出报告时在标峰里选择峰报告即可，因为不用积分。</p>
-<h2 id="3-后记"><a href="#3-后记" class="headerlink" title="3. 后记"></a>3. 后记</h2><p>​    列表里少了什么模块，比如多重峰列表，可以在菜单栏视图-列表里添加    </p>
-<p>​    核磁峰的强弱与弛豫时间有很大关系，并不是与分子氢个数百分之百对应，有小数点位后的四舍五入的误差是很正常的。核磁的操作和软件使用都不是最难的，还是难在对未知化合物的解析和峰归属，现在也有很多的核磁技术，比如DEPT谱，NOE谱，各种二维谱，还得多多学习呀~</p>
-<p>​    拓展资料：这个视频对我当年理解核磁原理很有帮助，尽管它讲的是成像，但是像素也是强度的体现，触类旁通。</p>
-
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-    <iframe src="//player.bilibili.com/player.html?aid=19579047&bvid=BV12W411E7PF&cid=31927243&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;">
-    </iframe>
-</div>
-
-
-
-<p>（码字不易，转载标注，欢迎讨论纠错和补充）</p>
+                <h1 id="未知有机小分子综合解谱题基本思路总结"><a href="#未知有机小分子综合解谱题基本思路总结" class="headerlink" title="未知有机小分子综合解谱题基本思路总结"></a>未知有机小分子综合解谱题基本思路总结</h1><p>确认未知化合物是化学打工仔的一项重要技能，此案例为本人个人总结的通过综合谱图来解析未知化合物的基本流程，有改进方案或问题可留言，大佬轻喷。主要以有机小分子为例，复杂大分子通常有更多的构型和构想变化，需要更多更先进的表征来确认。</p>
+<h2 id="1-确定分子式"><a href="#1-确定分子式" class="headerlink" title="1. 确定分子式"></a>1. 确定分子式</h2><p>如果有质谱数据，可以看同位素峰，根据X+2同位素峰推出CHON以外的杂原子数量，再将杂原子视为氢，得到假象分子量，如果无杂原子，直接用分子离子峰的分子量去查贝农表，可将可能的分子式缩小至大概5个以内。</p>
+<p>此时，若给出再X+1峰强，可以根据C的同位素分布计算出C的个数。</p>
+<p>另外，质谱中奇数的分子量有奇数个N。</p>
+<p>若此时还不能筛选出最终分子式，可以参考红外光谱。重点观察O和N的官能团出峰个数，如:有3300左右的峰表示有-OH，而1700则有C=O，这样我们知道O的个数为2。</p>
+<p>分子式被确定。</p>
+<h2 id="2-计算不饱和度"><a href="#2-计算不饱和度" class="headerlink" title="2. 计算不饱和度"></a>2. 计算不饱和度</h2><h2 id="3-分子基团碎片指认"><a href="#3-分子基团碎片指认" class="headerlink" title="3. 分子基团碎片指认"></a>3. 分子基团碎片指认</h2><p>首先研究碳链骨架结构，可以通过核磁确认含有的化学位移峰，然后对照官能团表，建议由左到右。首先确定不饱和度的来源，一般先看是不是苯的化学位移，再看是不是烯或炔，再看有没有环。再看碳谱的峰数与碳原子数是否相等，不相等则有对称结构。</p>
+<h2 id="4-碎片连接"><a href="#4-碎片连接" class="headerlink" title="4. 碎片连接"></a>4. 碎片连接</h2><p>以特征官能团为框架开始连接，主要关注点，耦合常数，dept谱。如果有环结构，可以用质谱分析出环的元数，还看不出，上二维谱。在考试中碰到这样的题可以选择等死，另外，连接手性碳的亚甲基氢为不等价氢，在氢谱中显示两重峰。</p>
+<h2 id="5-数据比对"><a href="#5-数据比对" class="headerlink" title="5. 数据比对"></a>5. 数据比对</h2><p>确认的结构可以通过文献数据库和软件模拟就行比对，具体操作见文章《MestReNova处理目标产物氢谱碳谱数据基本流程》</p>
+<h2 id="实战演练："><a href="#实战演练：" class="headerlink" title="实战演练："></a>实战演练：</h2><p>通过以下数据解析出未知化合物结构：</p>
+<p><img src="/loading.gif" data-original="/posts/60566/.%5C%E6%9C%AA%E7%9F%A5%E6%9C%89%E6%9C%BA%E5%B0%8F%E5%88%86%E5%AD%90%E7%BB%BC%E5%90%88%E8%A7%A3%E8%B0%B1%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93%5C1.jpg"></p>
+<h3 id="分子式确认："><a href="#分子式确认：" class="headerlink" title="分子式确认："></a>分子式确认：</h3><p>先走一波质谱：</p>
+<p>有较强的X+2峰，推测含至少两个卤素原子（主要考虑溴和氯），查同位素表，根据峰强得出含有一个溴和一个氯。分子离子峰为260，偶数或者没有N，溴为79，氯为35，将其视为2个H，假分子量：260-79-35+2=148</p>
+<p>查贝农表有如下分子式：</p>
+<p>含奇数个氮的排除</p>
+<p>再确认O，从红外上看，有1685 C=O峰，查红外表看是在哪种羰基范围：醛酮羰基或酰胺，但是没有C-N峰，可能有醚键。</p>
+<p><img src="/loading.gif" data-original="/posts/60566/.%5C%E6%9C%AA%E7%9F%A5%E6%9C%89%E6%9C%BA%E5%B0%8F%E5%88%86%E5%AD%90%E7%BB%BC%E5%90%88%E8%A7%A3%E8%B0%B1%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93%5C2.jpg"></p>
+<p>可能性最大的两个：</p>
+<p><img src="/loading.gif" data-original="/posts/60566/.%5C%E6%9C%AA%E7%9F%A5%E6%9C%89%E6%9C%BA%E5%B0%8F%E5%88%86%E5%AD%90%E7%BB%BC%E5%90%88%E8%A7%A3%E8%B0%B1%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93%5C3.jpg"></p>
+<p>也就是说最可能是C9H6O2BrCl，不饱和度为8，和C10H10O1BrCl，不饱和度为5。在看C谱化学位移和dept对表，中既没有烯烃C又没有烷基季碳和叔碳，表明没有环。分子式确认 C10H10O1BrCl。</p>
+<h3 id="碎片确认："><a href="#碎片确认：" class="headerlink" title="碎片确认："></a>碎片确认：</h3><p>再看H-NMR：7.7左右化学位移的四重峰表明有苯环的对位不对称取代，苯环上的两组氢才显示AB自旋体系的四重峰。3.2和3.6的两个三重峰，必定为相邻的两个亚甲基相互耦合，且这两个亚甲基的两边碳不接含氢的东西，对应其化学位查表可知，两个亚甲基都与吸电子基相连，碎片有：</p>
+<p><img src="/loading.gif" data-original="/posts/60566/.%5C%E6%9C%AA%E7%9F%A5%E6%9C%89%E6%9C%BA%E5%B0%8F%E5%88%86%E5%AD%90%E7%BB%BC%E5%90%88%E8%A7%A3%E8%B0%B1%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93%5C4.jpg"></p>
+<p>碳谱8个峰表明除了两个苯环对称碳并没有其它对称结构。查表可对dept谱中C的种类进行归属，200左右出现了C=O碳峰，但已经证明为酮，表明其连接苯环向低场移动。</p>
+<p>可知结构为下列两者之一：</p>
+<p>看书（Ref. 《有机分子结构光谱鉴定》 科学出版社）通过对连接卤素的亚甲基氢做估算：CH2-Cl为0.23+2.53+0.47=3.23 而CH2-Br为0.23+2.33+0.47=3.05，可以知道亚甲基连Cl，为第二种，保险点还可以估算连接Br的C在C谱中化学位移。</p>
+<p>Chemdraw模拟对化合物进行标峰如下：</p>
+<p><img src="/loading.gif" data-original="/posts/60566/.%5C%E6%9C%AA%E7%9F%A5%E6%9C%89%E6%9C%BA%E5%B0%8F%E5%88%86%E5%AD%90%E7%BB%BC%E5%90%88%E8%A7%A3%E8%B0%B1%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93%5C5.jpg"></p>
+<p>验证：质谱解离验证正确。</p>
 
                 
             </div>
@@ -555,7 +514,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://x8378479.github.io/posts/13068/">https://x8378479.github.io/posts/13068/</a>
+                    <a href="https://x8378479.github.io/posts/60566/">https://x8378479.github.io/posts/60566/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -597,8 +556,8 @@
                                     <span class="chip bg-color">核磁</span>
                                 </a>
                             
-                                <a href="/tags/MestReNova/">
-                                    <span class="chip bg-color">MestReNova</span>
+                                <a href="/tags/%E5%88%86%E5%AD%90%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/">
+                                    <span class="chip bg-color">分子结构分析</span>
                                 </a>
                             
                         </div>
@@ -1040,13 +999,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/60566/">
+                <a href="/posts/47215/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="未知有机小分子综合解谱题基本思路总结">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="有机长余辉材料概述与基本性能研究方法总结">
                         
-                        <span class="card-title">未知有机小分子综合解谱题基本思路总结</span>
+                        <span class="card-title">有机长余辉材料概述与基本性能研究方法总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1074,12 +1033,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A0%B8%E7%A3%81/">
-                        <span class="chip bg-color">核磁</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%88%86%E5%AD%90%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/">
-                        <span class="chip bg-color">分子结构分析</span>
+                    <a href="/tags/%E6%9D%90%E6%96%99/">
+                        <span class="chip bg-color">材料</span>
                     </a>
                     
                 </div>
@@ -1093,13 +1048,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/31361/">
+                <a href="/posts/13068/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="生化环材科研常用数据库与教程网址导航">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="MestReNova处理目标产物氢谱碳谱数据基本流程">
                         
-                        <span class="card-title">生化环材科研常用数据库与教程网址导航</span>
+                        <span class="card-title">MestReNova处理目标产物氢谱碳谱数据基本流程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1110,7 +1065,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-31
                             </span>
                         <span class="publish-author">
                             
@@ -1127,8 +1082,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E5%9D%80%E4%B9%A6%E7%AD%BE/">
-                        <span class="chip bg-color">网址书签</span>
+                    <a href="/tags/%E6%A0%B8%E7%A3%81/">
+                        <span class="chip bg-color">核磁</span>
+                    </a>
+                    
+                    <a href="/tags/MestReNova/">
+                        <span class="chip bg-color">MestReNova</span>
                     </a>
                     
                 </div>
