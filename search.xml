@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>用Github快速建立免费个人网站（小白的记录）</title>
+      <link href="posts/10565/"/>
+      <url>posts/10565/</url>
+      
+        <content type="html"><![CDATA[<h1 id="用Github快速建立免费个人网站（小白的记录）"><a href="#用Github快速建立免费个人网站（小白的记录）" class="headerlink" title="用Github快速建立免费个人网站（小白的记录）"></a>用Github快速建立免费个人网站（小白的记录）</h1><h2 id="1-建站："><a href="#1-建站：" class="headerlink" title="1.建站："></a>1.建站：</h2><p>参考这个UP主的视频建站：<a href="https://www.bilibili.com/video/BV1Rz4y1172v">https://www.bilibili.com/video/BV1Rz4y1172v</a></p><ol><li>去github.com注册个号#假如账号是：nihao</li><li>登入后右上角头像点击选择Your repositories建立一个存储库</li><li>存储库的名字一定要和你的账号一样#这里就是nihao.github.io</li><li>下拉建立这个存储库</li><li>去pages.github.com下载一个软件，这个软件用来从你计算机本地文件上传到存储库</li><li>页面下拉，会看到一个问题“What git client are you using?”</li><li>选择I don’t know</li><li>下面就会出现一个Download GitHub Desktop，点击下载这个软件</li><li>安装好了打开这个软件用你建立的github号登入</li><li>把登入时Email改成你创号</li><li>进入页面，在your repositories栏目选择你刚刚在github上创建的页面，在下面点击Clone</li><li>将路径设置为你未来管理网站的文件夹，点clone。#以后你网站代码，图片什么的都在这个根目录下</li><li>你现在的网站已经建立成功，域名是github.io</li></ol><h2 id="2-模板套用与修改"><a href="#2-模板套用与修改" class="headerlink" title="2.模板套用与修改"></a>2.模板套用与修改</h2><ol><li><p>模板下载，视频里这个up用的是 sc.chinaz.com 中的html代码</p></li><li><p>下载下来把文件解压到根目录nihao.github.io文件夹中</p></li><li><p>此时打开github desktop软件，左侧会显示你在根目录中变动的文件</p></li><li><p>在左下的summary中随便填写个名字（本次更改记录备注）</p></li><li><p>点击Commit to main</p></li><li><p>部署好了后右上角Push origin，完成后显示Fetch origin，在点一下，发布模板网页成功</p></li><li><p>可以进XXX.github.io查看网页了</p></li></ol><h3 id="个人目前网站编辑策略"><a href="#个人目前网站编辑策略" class="headerlink" title="个人目前网站编辑策略"></a>个人目前网站编辑策略</h3><ol><li>网站发布前的预览：网站本质就是记事本，将记事本用浏览器打开预览</li><li>显示的网页通过右击鼠标选择“检查”，显示每个内容对应的代码，直接去记事本中对应的代码处修改</li><li>具体修改方法和html, js, css等语法等还需不断学习</li><li>涉及到文件调用链接时，要记得默认一级目录是记事本所在目录，而不是根目录</li><li>…</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 发掘乐趣 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网站编辑 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>安全培训与实验室安全知识（消防篇）</title>
       <link href="posts/61624/"/>
       <url>posts/61624/</url>
