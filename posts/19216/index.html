@@ -395,10 +395,6 @@
                                 <span class="chip bg-color">Arduino</span>
                             </a>
                         
-                            <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">
-                                <span class="chip bg-color">嵌入式</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -427,7 +423,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-05
+                    2022-01-22
                 </div>
                 
 
@@ -462,18 +458,18 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="与Arduino的初次相遇"><a href="#与Arduino的初次相遇" class="headerlink" title="与Arduino的初次相遇"></a>与Arduino的初次相遇</h1><p>​    2020年6月份的时候，那天在b站上看到一位叫“喵咪的哥哥”的up发布了自己制作的声控四驱车旋风冲锋，突然唤起了儿童时态多想要同类型的产品，你的一个手势和信号，一台机器就为你运作了起来，多酷啊~ 那设备怎么识别你的信号呢？其实就是将各种各样的输入信号通过元器件转换为电信号，再由一块“小小的电路板”将处理这些电信号，再输出指令给被控制的。</p>
-<p><img src="/loading.gif" data-original="/posts/19216/1.jpg"></p>
+<p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/1.jpg"></p>
 <p>​    百度了一下网友推荐最容易上手的就是Arduino和51单片机，那我就来学习下Arduino吧先。把20年夏天的笔记整理一下，我是按照b站up“科技传播坊”这个视频学的，链接如下，用的Arduino UNO R3板，烧录软件为Arduino IDE，这位up主推荐按功能模块学习而不是按原理来学习，比较符合我想要快速造点小玩意出来的需求，基础知识以后需要再补一补吧。</p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nx411U7Ht?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1nx411U7Ht?spm_id_from=333.999.0.0</a></p>
 <h2 id="什么是Arduino"><a href="#什么是Arduino" class="headerlink" title="什么是Arduino?"></a>什么是Arduino?</h2><p>Arduino是一个能够用来感应和控制现实物理世界的一套工具。 它由一个基于单片机并且开放源码的硬件平台，和一套为Arduino板编写程序 的开发环境组成。不是所有的东西都需要一台微型计算机来处理，这种板子具有很好的性价比。</p>
-<p><img src="/loading.gif" data-original="/posts/19216/2.jpg"></p>
+<p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/2.jpg"></p>
 <h3 id="Arduino的输入与输出类型"><a href="#Arduino的输入与输出类型" class="headerlink" title="Arduino的输入与输出类型"></a>Arduino的输入与输出类型</h3><p>主要明白数字（两个数值），模拟（一个范围的数值）和串口</p>
-<p><img src="/loading.gif" data-original="/posts/19216/3.jpg"></p>
-<p><img src="/loading.gif" data-original="/posts/19216/4.jpg"></p>
+<p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/3.jpg"></p>
+<p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/4.jpg"></p>
 <p>输入输出接口对应的Arduino UNO R3板子位置：</p>
-<p><img src="/loading.gif" data-original="/posts/19216/5.jpg"></p>
-<h2 id="什么是面包板？"><a href="#什么是面包板？" class="headerlink" title="什么是面包板？"></a>什么是面包板？</h2><p><img src="/loading.gif" data-original="/posts/19216/6.jpg"></p>
-<h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><h3 id="1-点亮闪烁LED"><a href="#1-点亮闪烁LED" class="headerlink" title="1. 点亮闪烁LED"></a>1. 点亮闪烁LED</h3><p><img src="/loading.gif" data-original="/posts/19216/7.jpg"></p>
+<p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/5.jpg"></p>
+<h2 id="什么是面包板？"><a href="#什么是面包板？" class="headerlink" title="什么是面包板？"></a>什么是面包板？</h2><p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/6.jpg"></p>
+<h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><h3 id="1-点亮闪烁LED"><a href="#1-点亮闪烁LED" class="headerlink" title="1. 点亮闪烁LED"></a>1. 点亮闪烁LED</h3><p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/7.jpg"></p>
 <pre class="line-numbers language-c++"><code class="language-c++">void setup() &#123;
     // put your setup code here, to run once:
     //也就是说这个void setup里的程序只会被执行一次
@@ -489,39 +485,12 @@ void loop() &#123;
     delay 1000;//防止闪烁过快，延时1s，默认单位为毫秒
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2-跑马灯"><a href="#2-跑马灯" class="headerlink" title="2. 跑马灯"></a>2. 跑马灯</h3><p><img src="/loading.gif" data-original="/posts/19216/8.jpg"></p>
+<h3 id="2-跑马灯"><a href="#2-跑马灯" class="headerlink" title="2. 跑马灯"></a>2. 跑马灯</h3><p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/8.jpg"></p>
 <pre class="line-numbers language-c++"><code class="language-c++">void setup() &#123;
     // put your setup code here, to run once:
-    for(int i=6;i<=9;i++)&#123;
-        pinMode(i, OUTPUT);//用循环语句批量定义输出口
-    &#125;
-&#125;
-
-int num =100;//定义常数，作为后面的持续时间
-
-void loop() &#123;
-    // put your main code here, to run repeatedly:
-    // 前一个端口低电压，后一个端口高电压，然后持续一段时间来实现跑马灯效果。
-    digitalWrite(6, LOW);
-    digitalWrite(7, HIGH);
-    delay(num);
-
-    digitalWrite(7, LOW);
-    digitalWrite(8, HIGH);
-    delay(num);
-
-    digitalWrite(8, LOW);
-    digitalWrite(9, HIGH);
-    delay(num);
-
-    digitalWrite(9, LOW);
-    digitalWrite(6, HIGH);
-    delay(num);
-
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    for(int i=6;i<=9;i++)&#123; pinmode(i, output); 用循环语句批量定义输出口 &#125; int num="100;//定义常数，作为后面的持续时间" void loop() &#123; put your main code here, to run repeatedly: 前一个端口低电压，后一个端口高电压，然后持续一段时间来实现跑马灯效果。 digitalwrite(6, low); digitalwrite(7, high); delay(num); digitalwrite(8, digitalwrite(9, <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></=9;i++)&#123;></code></pre>
 <h3 id="3-程序控制开关进而控制灯的亮和灭"><a href="#3-程序控制开关进而控制灯的亮和灭" class="headerlink" title="3. 程序控制开关进而控制灯的亮和灭"></a>3. 程序控制开关进而控制灯的亮和灭</h3><p>注意：这个开关，并不像初中物理里那个开关与小灯串联的电脑，开关和小灯是各自独立的两个电路，开发板通过接收和判断开关上的信息再来生成一个信息给输出的小灯。</p>
-<p><img src="/loading.gif" data-original="/posts/19216/9.jpg"></p>
+<p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/9.jpg"></p>
 <pre class="line-numbers language-c++"><code class="language-c++">void setup() &#123;
     // put your setup code here, to run once:
     pinMode (7, OUTPUT);//定义灯为输出口
@@ -538,7 +507,7 @@ void loop() &#123;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="4-蜂鸣器钢琴"><a href="#4-蜂鸣器钢琴" class="headerlink" title="4. 蜂鸣器钢琴"></a>4. 蜂鸣器钢琴</h3><p>（这个up主在这即兴演奏了一曲，要笑死我了）</p>
-<p><img src="/loading.gif" data-original="/posts/19216/10.jpg"></p>
+<p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/10.jpg"></p>
 <pre class="line-numbers language-C++"><code class="language-C++">void setup() &#123;
     // put your setup code here, to run once:
     pinMode(8,INPUT);
@@ -597,16 +566,12 @@ void loop() &#123;
 void loop() &#123;
     // put your main code here, to run repeatedly:
 
-    for(int i=0;i<=30;i++)&#123;
-        analogWrite(11,i); //模拟输出语句,可以看到这里设置了30个梯度
-        delay(50);
-    &#125;
-    for(int i=30;i>=0;i--)&#123;
+    for(int i=0;i<=30;i++)&#123; analogwrite(11,i); 模拟输出语句,可以看到这里设置了30个梯度 delay(50); &#125; for(int i="30;i">=0;i--)&#123;
         analogWrite(11,i); //模拟输出语句
         delay(50);
     &#125;
 &#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></=30;i++)&#123;></code></pre>
 <h3 id="6-呼吸跑马灯"><a href="#6-呼吸跑马灯" class="headerlink" title="6. 呼吸跑马灯"></a>6. 呼吸跑马灯</h3><p>重点：用取余去做循环</p>
 <pre class="line-numbers language-C++"><code class="language-C++">void setup() &#123;
     // put your setup code here, to run once:
@@ -638,7 +603,7 @@ void loop() &#123;
 <p>3.学会用串口监视器</p>
 <p>4.学会映射，最好学会用map函数</p>
 <p>Map(X, a, b, c, d)</p>
-<p><img src="/loading.gif" data-original="/posts/19216/11.jpg"></p>
+<p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/11.jpg"></p>
 <pre class="line-numbers language-C++"><code class="language-C++">void setup() &#123;
     // 模拟输入口A0-A5，只能默认输入，所以没有必要定义输入
     pinMode(9, OUTPUT);//灯的输入
@@ -653,7 +618,7 @@ void loop() &#123;
 
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="8-数码管骰子"><a href="#8-数码管骰子" class="headerlink" title="8. 数码管骰子"></a>8. 数码管骰子</h3><p><img src="/loading.gif" data-original="/posts/19216/12.jpg"></p>
+<h3 id="8-数码管骰子"><a href="#8-数码管骰子" class="headerlink" title="8. 数码管骰子"></a>8. 数码管骰子</h3><p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/12.jpg"></p>
 <pre class="line-numbers language-C++"><code class="language-C++">class LedSegmentDisplays
 &#123;
     private:
@@ -715,7 +680,7 @@ void loop() &#123;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="9-光敏电阻的使用"><a href="#9-光敏电阻的使用" class="headerlink" title="9. 光敏电阻的使用"></a>9. 光敏电阻的使用</h3><p>记得学会调用串口监视器哈~</p>
-<p><img src="/loading.gif" data-original="/posts/19216/13.jpg"></p>
+<p><img src="/loading.gif" data-original="./%E4%B8%8EArduino%E7%9A%84%E5%88%9D%E6%AC%A1%E7%9B%B8%E9%81%87/13.jpg"></p>
 <pre class="line-numbers language-C++"><code class="language-C++">    void setup() &#123;
       // put your setup code here, to run once:
     Serial.begin(9600);//设置比特率
@@ -796,10 +761,6 @@ void loop() &#123;
                             
                                 <a href="/tags/Arduino/">
                                     <span class="chip bg-color">Arduino</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">
-                                    <span class="chip bg-color">嵌入式</span>
                                 </a>
                             
                         </div>
@@ -1277,10 +1238,6 @@ void loop() &#123;
                     
                     <a href="/tags/Arduino/">
                         <span class="chip bg-color">Arduino</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">
-                        <span class="chip bg-color">嵌入式</span>
                     </a>
                     
                 </div>

@@ -395,10 +395,6 @@
                                 <span class="chip bg-color">Arduino</span>
                             </a>
                         
-                            <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">
-                                <span class="chip bg-color">嵌入式</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -427,14 +423,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.6k
+                    3.5k
                 </div>
                 
 
@@ -463,9 +459,10 @@
             <div id="articleContent">
                 <h1 id="Arduino智能小车搭建学习"><a href="#Arduino智能小车搭建学习" class="headerlink" title="Arduino智能小车搭建学习"></a>Arduino智能小车搭建学习</h1><p>学习一下怎么搭建一个具有智能避障，寻迹的蓝牙遥控车。个人认为可以主要分为以下两个步骤：1. 硬件电路连接。2. 编码。编好程序的Arduino去控制各个元件去发挥作用就如同人的大脑去控制手脚。</p>
 <p>由于本人基本是属于0基础，将在此对不认识的元器件留下笔记，并尝试理解每一个电路和代码的意义。Arduino是如何实现对电子元器件控制的，单独的Arduino初步熟悉可以参考上一篇笔记，这里只记录小车中用到的功能模块。 </p>
-<h3 id="组装好的智障鬼畜小车演示："><a href="#组装好的智障鬼畜小车演示：" class="headerlink" title="组装好的智障鬼畜小车演示："></a>组装好的智障鬼畜小车演示：</h3><video id="video" controls preload="none">
+<h3 id="组装好的智障鬼畜小车演示："><a href="#组装好的智障鬼畜小车演示：" class="headerlink" title="组装好的智障鬼畜小车演示："></a>组装好的智障鬼畜小车演示：</h3><video id="video" controls preload="none" height="600">
     <source id="mp4" src="./1.mp4" type="video/mp4">
 </video>
+
 
 
 
@@ -485,9 +482,7 @@
 <p><img src="/loading.gif" data-original="/posts/10477/14.jpg" alt="底部"></p>
 <h3 id="涉及相关工具和元器件知识"><a href="#涉及相关工具和元器件知识" class="headerlink" title="涉及相关工具和元器件知识"></a>涉及相关工具和元器件知识</h3><h4 id="相关工具"><a href="#相关工具" class="headerlink" title="相关工具"></a>相关工具</h4><ol>
 <li>电烙铁的使用。（手一定要远离烙铁头啊，不然你会闻道菜市场用火去除猪蹄上的毛时发出来的香味，别问我为什么知道）</li>
-<li>吸锡器的使用。万一焊错了要用。<br>  电烙铁和吸锡器的使用：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av77382196">https://www.bilibili.com/video/av77382196</a><pre><code>松香使用：https://www.bilibili.com/video/BV1G7411Z75j?from=search&amp;seid=6199709897536263282&amp;spm_id_from=333.337.0.0
-</code></pre>
-</li>
+<li>吸锡器的使用。万一焊错了要用。<br>  <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av77382196">电烙铁和吸锡器的使用教程链接</a>。<br>  <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1G7411Z75j?from=search&seid=6199709897536263282&spm_id_from=333.337.0.0">松香使用教程链接</a>。</li>
 <li>固定胶带：因为焊接电路板是在背面，背过来焊接元器件时元器件容易掉下去，胶带用来固定。</li>
 </ol>
 <h4 id="元器件"><a href="#元器件" class="headerlink" title="元器件"></a>元器件</h4><p>将元器件一个个焊接到主板上，秉承着先焊接小元件（电阻和LED类）再焊接大元件的原则，防止大的装上去之后，小的安装不上。然后作为小白，我主要了解下这些元器件的使用方法和功能，还有就是元器件为什么是这么安装！一个个来~</p>
@@ -926,6 +921,8 @@ void loop()
    LEDTask();
 &#125;//
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>对应遥控器按键：</p>
+<p><img src="/loading.gif" data-original="/posts/10477/18.jpg"></p>
 <h4 id="2、智能小车超声波避障实验-无舵机-。"><a href="#2、智能小车超声波避障实验-无舵机-。" class="headerlink" title="2、智能小车超声波避障实验(无舵机)。"></a>2、智能小车超声波避障实验(无舵机)。</h4><pre class="line-numbers language-C++"><code class="language-C++">//============================智宇科技===========================
 //  智能小车超声波避障实验(无舵机)
 //===============================================================
@@ -1514,10 +1511,6 @@ void loop()
                                     <span class="chip bg-color">Arduino</span>
                                 </a>
                             
-                                <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">
-                                    <span class="chip bg-color">嵌入式</span>
-                                </a>
-                            
                         </div>
                     
                 </div>
@@ -1997,10 +1990,6 @@ void loop()
                         <span class="chip bg-color">Arduino</span>
                     </a>
                     
-                    <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">
-                        <span class="chip bg-color">嵌入式</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -2048,10 +2037,6 @@ void loop()
                     
                     <a href="/tags/Arduino/">
                         <span class="chip bg-color">Arduino</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">
-                        <span class="chip bg-color">嵌入式</span>
                     </a>
                     
                 </div>
