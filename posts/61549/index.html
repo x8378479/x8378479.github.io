@@ -427,7 +427,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-11
+                    2022-05-04
                 </div>
                 
 
@@ -479,22 +479,17 @@
 <p>原理：对于正向入射的信号光，通过起偏器后成为线偏振光，法拉弟旋磁介质与外磁场一起使信号光的偏振方向右旋45度，并恰好使低损耗通过与起偏器成45度放置的检偏器。对于反向光，出检偏器的线偏振光经过放置介质时，偏转方向也右旋转45度，从而使反向光的偏振方向与起偏器方向正交，完全阻断了反射光的传输。（摘自：百度百科）</p>
 <p>操作：</p>
 <ol>
-<li><p>对齐光路</p>
-</li>
+<li>对齐光路</li>
 <li><p>用两个凸透镜（收束器）缩小了激光器光斑大小（因为激光器光斑半径大于了收束器）</p>
 </li>
 <li><p>使用隔离器时，为防止其被拿来拿去位置变化，隔离器上的锁环可以锁住位置。</p>
 </li>
 <li><p>调节隔离器角度时，看隔离器后面的功率计功率为最大值时，说明调正了。</p>
 </li>
-<li><p>调整滑环内的隔离器主体，将里面的线偏振片与入射偏振光对准，通过功率计，使得光通量最大，锁定。</p>
-</li>
-<li><p>将隔离器在光路中的方向反转。隔离器上的箭头表示预期的光束传播方向，让箭头指向光源。</p>
-</li>
-<li><p>调节靠近激光器这端的输出端偏振片，知道看到这个方向的透过率最小，锁定。</p>
-</li>
-<li><p>再把箭头转回来，调到功率最大。</p>
-</li>
+<li>调整滑环内的隔离器主体，将里面的线偏振片与入射偏振光对准，通过功率计，使得光通量最大，锁定。</li>
+<li>将隔离器在光路中的方向反转。隔离器上的箭头表示预期的光束传播方向，让箭头指向光源。</li>
+<li>调节靠近激光器这端的输出端偏振片，知道看到这个方向的透过率最小，锁定。</li>
+<li>再把箭头转回来，调到功率最大。</li>
 </ol>
 <h2 id="6-使线偏振片的轴与平台垂直或平行"><a href="#6-使线偏振片的轴与平台垂直或平行" class="headerlink" title="6. 使线偏振片的轴与平台垂直或平行"></a>6. 使线偏振片的轴与平台垂直或平行</h2><p>元件：一个经过准的激光二极管，一个偏振分束立方，偏振器，安装座，功率探头和表头</p>
 <p>P偏振：平行于入射平面偏振</p>
@@ -541,7 +536,7 @@
 <p>插入损耗一般用单位dBm表示，而不是mW。功率[mW]=10^(功率[dBm]/10)，这样可以确保总插入损耗计算具有加和性而不是相乘。</p>
 <p>功率计上的Dealt键可以在打开光源时，按下，显示为0，关开电源，看是不是还是0，以确保光源稳定性。</p>
 <h2 id="9-用1-4将线偏光变圆偏光"><a href="#9-用1-4将线偏光变圆偏光" class="headerlink" title="9. 用1/4将线偏光变圆偏光"></a>9. 用1/4将线偏光变圆偏光</h2><p>波片的快轴折射率与慢轴不同，线偏振光平行于快轴时，将输出偏振方向与快轴相同的线偏振光，但相位延迟，延迟量与快轴折射率和波片厚度成正比。线偏振光平行于慢轴时，也一样输出偏振方向与慢轴相同的线偏振光，只是对应受影响的折射率为慢轴折射率。</p>
-<p>延迟相位$$Γ=\frac{2π(n_s-n_f)t}{λ}$$</p>
+<p>延迟相位<script type="math/tex">Γ=\frac{2π(n_s-n_f)t}{λ}</script></p>
 <p>线偏振光与1/4波片成为45度时，则垂直波与水平波相差1/4个相位，则输出圆偏振光。</p>
 <p>如果找到波片的轴？</p>
 <ol>
@@ -573,8 +568,11 @@
 <p>设中间偏振片与第一个偏振片的夹角为θ</p>
 </li>
 </ol>
-<p>$$<br>I=I_1cos^2θcos^2(π/2-θ)\<br>I=I_1cos^2θsin^2θ\<br>2cosθsinθ=sin2θ\<br>I=I_1sin^22θ/4<br>$$</p>
-<p>   所以θ=π/4时值最大。</p>
+<script type="math/tex; mode=display">
+I=I_1cos^2θcos^2(π/2-θ)\\
+I=I_1cos^2θsin^2θ\\
+2cosθsinθ=sin2θ\\
+I=I_1sin^22θ/4</script><p>   所以θ=π/4时值最大。</p>
 <h2 id="11-光纤准直器用于单模光纤的对准和耦合"><a href="#11-光纤准直器用于单模光纤的对准和耦合" class="headerlink" title="11. 光纤准直器用于单模光纤的对准和耦合"></a>11. 光纤准直器用于单模光纤的对准和耦合</h2><p>将点光源放在凸透镜后焦面，凸透镜可以将点光转化为平行光。</p>
 <p>实验室常为非平行光，经过透镜后大概是一个喇叭状。</p>
 <p>输出光束直径为准直器输出的最小光束宽度。</p>
@@ -630,23 +628,28 @@
 </li>
 <li><p>测测两个轴的功率，也就知道了总功率，然后把结果拟合在两条理论曲线上就得到了对应轴。</p>
 <p>参考知乎：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/396331166">https://zhuanlan.zhihu.com/p/396331166</a></p>
-<p><img src="/loading.gif" data-original="/posts/61549/1.jpg"></p>
-<p><img src="/loading.gif" data-original="/posts/61549/2.jpg"></p>
+<p><img src="/loading.gif" data-original="/posts/61549/1.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/61549/2.jpg" alt></p>
 </li>
 </ol>
-<h2 id="15-测量偏振光的斯托克斯参量"><a href="#15-测量偏振光的斯托克斯参量" class="headerlink" title="15. 测量偏振光的斯托克斯参量"></a>15. 测量偏振光的斯托克斯参量</h2><p><img src="/loading.gif" data-original="/posts/61549/3.jpg"></p>
+<h2 id="15-测量偏振光的斯托克斯参量"><a href="#15-测量偏振光的斯托克斯参量" class="headerlink" title="15. 测量偏振光的斯托克斯参量"></a>15. 测量偏振光的斯托克斯参量</h2><p><img src="/loading.gif" data-original="/posts/61549/3.jpg" alt></p>
 <p>斯托克斯偏振参数：1x4的矩阵，4个参数S0，S1，S2，S3中：</p>
 <p>S0:总功率或强度，可以归一化为1</p>
 <p>S1:水平偏振光强与垂直偏振光强之差，-1到1之间。1就代表完全水平。</p>
 <p>S2:45度与-45度偏振方向光强之差，-1到1之间，1就表示为45度。</p>
 <p>S3:右圆偏振光强与左圆偏振光强之差。-1到1之间，1是完全右圆，0是线偏，二者之间为椭圆。</p>
 <p>所有的光都可以以椭圆偏振光的形式描述，斯托克斯参量关系，如图：</p>
-<p>可以直接用线偏振片测不同角度的透过光强来计算，测S3的时候要在前面加一个快轴水平的1/4波片。<br>$$<br>S_0=P_1(0^o)+P_2(90^o)\<br>S_1=P_1(0^o)-P_2(90^o)\<br>S_2=2P_3(45^o)-S_0\<br>S_3=S_0-2P_4(0^o,45^o)<br>$$<br>经典法缺点：只测量了一次，且光学元器件在测量时要取进取出，带来很多误差。</p>
+<p>可以直接用线偏振片测不同角度的透过光强来计算，测S3的时候要在前面加一个快轴水平的1/4波片。</p>
+<script type="math/tex; mode=display">
+S_0=P_1(0^o)+P_2(90^o)\\
+S_1=P_1(0^o)-P_2(90^o)\\
+S_2=2P_3(45^o)-S_0\\
+S_3=S_0-2P_4(0^o,45^o)</script><p>经典法缺点：只测量了一次，且光学元器件在测量时要取进取出，带来很多误差。</p>
 <p>旋转1/4波片法：直接用测S3的光路，线偏振片偏振方向改为水平方向，将前面的1/4波片旋转180度取8个点以上测试。</p>
-<p><img src="/loading.gif" data-original="/posts/61549/4.jpg"></p>
+<p><img src="/loading.gif" data-original="/posts/61549/4.jpg" alt></p>
 <p>缺点：波片与波长不匹配时，角度旋转不准时会出现误差。</p>
 <p>补充知识：</p>
-<p>在庞加莱球中，偏振度定义为$$P=\frac{\sqrt{S_{1}^{2}+S_{2}^{2}+S_{3}^{2}}}{S_{0}}$$，其意义为判断光波偏振的程度，即是否为完全偏振光。一般情况下，$$1\geqslant P\geqslant 0$$。当P=0时，光波为完全非偏振光，也就是自然光；当$$1&gt; P&gt; 0$$时，光波为部分偏振光；当$$P=1$$时，光波为完全偏振光。</p>
+<p>在庞加莱球中，偏振度定义为<script type="math/tex">P=\frac{\sqrt{S_{1}^{2}+S_{2}^{2}+S_{3}^{2}}}{S_{0}}</script>，其意义为判断光波偏振的程度，即是否为完全偏振光。一般情况下，<script type="math/tex">1\geqslant P\geqslant 0</script>。当P=0时，光波为完全非偏振光，也就是自然光；当<script type="math/tex">1> P> 0</script>时，光波为部分偏振光；当<script type="math/tex">P=1</script>时，光波为完全偏振光。</p>
 <p>偏振知识：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/studyhao1999/p/15636798.html">https://www.cnblogs.com/studyhao1999/p/15636798.html</a></p>
 <h2 id="16-Visual-Studio®项目设置和C-编程-Kinesis®-BBD300系列控制器"><a href="#16-Visual-Studio®项目设置和C-编程-Kinesis®-BBD300系列控制器" class="headerlink" title="16. Visual Studio®项目设置和C#编程 - Kinesis® BBD300系列控制器"></a>16. Visual Studio®项目设置和C#编程 - Kinesis® BBD300系列控制器</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1W34y1X7ot?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1W34y1X7ot?spm_id_from=333.999.0.0</a></p>
 <p>此Kinesis®软件教程演示的是如何使用C#和.NET Framework新建Visual Studio®项目并初始化连接的设备，此处用于示例的是连接了两轴位移台的BBD300系列运动控制器。</p>
@@ -685,7 +688,7 @@
 <p>19:44 - 编写双向光栅扫描模式</p>
 <p>24:11 - 测试代码并调试</p>
 <p>25:05 - 成功执行代码</p>
-<h2 id="18-用离轴抛物面反射镜准直发散光"><a href="#18-用离轴抛物面反射镜准直发散光" class="headerlink" title="18. 用离轴抛物面反射镜准直发散光"></a>18. 用离轴抛物面反射镜准直发散光</h2><p><img src="/loading.gif" data-original="/posts/61549/5.jpg"></p>
+<h2 id="18-用离轴抛物面反射镜准直发散光"><a href="#18-用离轴抛物面反射镜准直发散光" class="headerlink" title="18. 用离轴抛物面反射镜准直发散光"></a>18. 用离轴抛物面反射镜准直发散光</h2><p><img src="/loading.gif" data-original="/posts/61549/5.jpg" alt></p>
 <p>操作：</p>
 <ol>
 <li><p>将转接件安装在反射镜上</p>
@@ -725,31 +728,22 @@
 </li>
 <li><p>将光纤后面的两个光阑调小进一步调节xyz轴，先调离光纤近的。</p>
 </li>
-<li><p>将光纤接到平行的第二个FiberPort上来调节。</p>
-</li>
-<li><p>调好后两端接好光纤。</p>
-</li>
-<li><p>输出端接功率计，调节3个Z轴螺丝，使得功率计实数最大。（不断探寻最大功率处，究极折磨）</p>
-</li>
+<li>将光纤接到平行的第二个FiberPort上来调节。</li>
+<li>调好后两端接好光纤。</li>
+<li>输出端接功率计，调节3个Z轴螺丝，使得功率计实数最大。（不断探寻最大功率处，究极折磨）</li>
 </ol>
 <h2 id="21-KF真空法兰组件的组装方法"><a href="#21-KF真空法兰组件的组装方法" class="headerlink" title="21. KF真空法兰组件的组装方法"></a>21. KF真空法兰组件的组装方法</h2><p>操作：</p>
 <ol>
-<li><p>手套用皮筋勒紧，带两层，防止污染和刮伤</p>
-</li>
-<li><p>在工作台面上垫一层锡箔纸。</p>
-</li>
+<li>手套用皮筋勒紧，带两层，防止污染和刮伤</li>
+<li>在工作台面上垫一层锡箔纸。</li>
 <li><p>O圈被压缩在两个法兰之间</p>
 </li>
 <li><p>注意O圈在不同温度下要保养，还要防止形变。</p>
 </li>
-<li><p>保存时用锡箔纸包好，防止刮伤。</p>
-</li>
-<li><p>用纸巾清洁连接处。</p>
-</li>
-<li><p>拧上螺栓。</p>
-</li>
-<li><p>如果使用真空润滑油，要考虑是否好清洁，环境条件下是否适用。</p>
-</li>
+<li>保存时用锡箔纸包好，防止刮伤。</li>
+<li>用纸巾清洁连接处。</li>
+<li>拧上螺栓。</li>
+<li>如果使用真空润滑油，要考虑是否好清洁，环境条件下是否适用。</li>
 </ol>
 
                 
@@ -1530,6 +1524,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
 
@@ -1844,13 +1845,13 @@ $(function () {
     
 
 
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
 
