@@ -427,7 +427,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-01
+                    2022-07-03
                 </div>
                 
 
@@ -463,8 +463,8 @@
             <div id="articleContent">
                 <h1 id="知识点汇总：薄膜晶体管液晶显示器显示原理与设计"><a href="#知识点汇总：薄膜晶体管液晶显示器显示原理与设计" class="headerlink" title="知识点汇总：薄膜晶体管液晶显示器显示原理与设计"></a>知识点汇总：薄膜晶体管液晶显示器显示原理与设计</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>该知识点汇总了电子工业出版社的《薄膜晶体管液晶显示器显示原理与设计》读书笔记。重点关注工艺参数和表征方法，相关机理应该还要考半导体物理知识来救救，这本书讲机理讲得模模糊糊。</p>
 <p>下图为本人根据书中介绍后画的总结的TFT液晶显示器结构组成图，想了想显示器也许是一个大方向，掌握其中的某一个工艺可能就能横扫一方了，但既然在这个行业，也要时刻关注科技大变革才行呀，以前的大砖头显示器不是就早就不存在了吗。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/1.png" alt="TFT液晶显示器结构细分"></p>
-<h2 id="1-液晶显示的基本概念"><a href="#1-液晶显示的基本概念" class="headerlink" title="1. 液晶显示的基本概念"></a>1. 液晶显示的基本概念</h2><h3 id="液晶基本类型与性质简介"><a href="#液晶基本类型与性质简介" class="headerlink" title="液晶基本类型与性质简介"></a>液晶基本类型与性质简介</h3><p>液晶分子的构效粗略关系：侧链(柔韧性，主要影响黏度和相转变温度)+环结构（刚性。主要影响液晶线性和光学各向异性）+端基（通常为极性基团，影响整个分子极性）</p>
+<p><img src="/loading.gif" data-original="/posts/53757/1.png" alt="TFT液晶显示器结构细分"></p>
+<h2 id="1-液晶显示的基本概念"><a href="#1-液晶显示的基本概念" class="headerlink" title="1. 液晶显示的基本概念"></a>1. 液晶显示的基本概念</h2><h3 id="液晶基本类型与性质简介"><a href="#液晶基本类型与性质简介" class="headerlink" title="液晶基本类型与性质简介"></a>液晶基本类型与性质简介</h3><p>液晶分子的构效粗略关系：侧链（柔韧性，主要影响黏度和相转变温度）+环结构（刚性。主要影响液晶线性和光学各向异性）+端基（通常为极性基团，影响整个分子极性）</p>
 <p>液晶类型：近晶型，相列型，胆甾型</p>
 <p>​    近晶型：棒状分子，层状结构，长短轴取向均一致。</p>
 <p>​    向列向：棒状分子，层状结构，长轴取向一致，黏度小，短轴易产生滑移。</p>
@@ -488,17 +488,17 @@
 <p>偏光片重要参数：偏振度、透过率、可靠性、剥离力、外观指标…</p>
 <p>偏振度：<script type="math/tex">S=\sqrt{\frac{T_‖-T_⊥}{T_‖+T_⊥}}</script>，<script type="math/tex">T_‖</script>和<script type="math/tex">T_⊥</script>分别是平行和垂直于碘分子排列方向的振动光强。</p>
 <p>透过率：<script type="math/tex">T_s</script>-单体透过率-光经过单光片后的透过率，理论最大50%。<script type="math/tex">T_p</script>-平行透过率-经过两片透光轴平行的偏光片的透过率。<script type="math/tex">T_c</script>-平行透过率-经过两片透光轴垂直的偏光片的透过率。<script type="math/tex">T_p</script>影响LCD的最大亮度，<script type="math/tex">T_c</script>影响LCD的暗态亮度，<script type="math/tex">T_p</script>/<script type="math/tex">T_c</script>的大小影响LCD的对比度。实际光通过偏振片也不是严格意义的单一方向的线偏振光，可以视为正交矢量上的两束光，两束光的光强为总光强的一半，光强具有加和性，此时<script type="math/tex">T_s</script>=(<script type="math/tex">k_1</script>+<script type="math/tex">k_2</script>)/2，<script type="math/tex">k_1</script>和<script type="math/tex">k_2</script>分别代表两个方向的透光率。平行透过率则为<script type="math/tex">T_p=(k_1^2+k_2^2)/2</script> 而垂直透过率<script type="math/tex">T_c=k_1k_2</script></p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/1.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/1.jpg" alt></p>
 <p>可靠性：单位时间内不同工作环境（温度、湿度等等）的可使用性。</p>
 <p>剥离力：分为保护膜剥离力、离型膜剥离力和对玻璃基板的剥离力。太大的话则返工修复性差，太小则可靠性差。</p>
 <p>外关指标：平整度、四角翘曲高度、边缘波纹状卷曲高度和尘粒污染参数。</p>
 <p>偏光片还需表面改性改良一下力学性能。</p>
 <p>玻璃基板：低碱、平整度高、耐高温和热膨胀系数低等特点。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/2.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/2.jpg" alt></p>
 <h3 id="液晶显示的基本原理与光电特性参数"><a href="#液晶显示的基本原理与光电特性参数" class="headerlink" title="液晶显示的基本原理与光电特性参数"></a>液晶显示的基本原理与光电特性参数</h3><p>薄膜晶体管（Thin Film Transistor, TFT）液晶显示器基本结构：背光源、液晶面板和驱动电路。TFT会对驱动液晶的电信号起到开关作用。</p>
 <p>偏振光经过偏振片时光强变化规律遵循马吕斯定律：<script type="math/tex">I_2=I_1cos^2θ</script>，其中θ是偏振器偏振化方向与偏振光偏振方向的夹角。</p>
 <p>通过控制施加给液晶的电压，可以改变液晶旋向，从而改变液晶通量。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/3.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/3.jpg" alt></p>
 <p>显示器重要参数：</p>
 <p>液晶面板透过率=面板表面亮度/背光源亮度。越大越节能。</p>
 <p>对比度：屏幕上某一点最亮的亮度/最暗的亮度，静态对比度是背光源保持不变的情况下测试，动态对比度测试改变了背光源亮度。越大图像越清晰。</p>
@@ -515,7 +515,7 @@
 <p>运动图像补偿技术（Motion Estimate and Motion Compensation，MEMC）:在帧与帧之间通过算法预测运动轨迹，插帧，使得画面更流畅。</p>
 <p>帧数转换技术（Frame Rate Conversion, FRC）：通过控制多帧的像素实现插入中间灰阶的办法，从而实现显示画面灰阶数的增加。从而色彩分明。</p>
 <h3 id="立体显示技术"><a href="#立体显示技术" class="headerlink" title="立体显示技术"></a>立体显示技术</h3><p>利用双眼显示图像差异产生。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/4.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/4.jpg" alt></p>
 <p>眼镜式：快门眼镜和偏光眼镜</p>
 <p>裸眼3D：靠视差光栅和柱棱镜光栅使得不同视区呈现不同图像。关键参数就是光栅参数。</p>
 <p>其中柱棱镜光栅：有源偏光式微透镜、有源液晶透镜和电驱动式液晶透镜。原理都是通过导电改变入射光偏振方向与液晶排列方向的角度，从而控制光线在空间中的分离(3D显示)与不分离（2D显示）。</p>
@@ -568,8 +568,8 @@
 <h3 id="薄膜晶体管的基本组成"><a href="#薄膜晶体管的基本组成" class="headerlink" title="薄膜晶体管的基本组成"></a>薄膜晶体管的基本组成</h3><p>根据栅电极和硅岛的上下位置关系分为：底栅结构（反交叠型结构）和顶栅结构</p>
 <p>一般用底栅结构，因为栅电极可以阻挡光线直接照射硅产生光生载流子。</p>
 <p>底栅结构分为：背沟道刻蚀型结构（Back-channel Etchant, BEC，成本低，工艺少，常用）和刻蚀阻挡层型结构（Etched-stopper Layer, ESL, Insulated-stopper Layer, ISL, 电学特性更优异）。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/5.jpg" alt></p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/6.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/5.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/6.jpg" alt></p>
 <p>器件基本特性：与MOSFET一致。工作区间可分为线性区与饱和区，亚阈值区，截止区</p>
 <p>​    线性区：Vds&lt;&lt;Vgs-Vth，沟道漏电流随者漏极电压线性变化，即沟道电阻不变，符合欧姆定律。开启状态的大部分时间都工作在此区域。</p>
 <p>​    饱和区:   Vds&gt;Vgs-Vth，沟道漏电流随漏极电压增加而基本保持不变。</p>
@@ -631,8 +631,8 @@
 <p>​    人眼能识别的光度（光通量）是主观物理量，单位是lm(流明)</p>
 <p>​    对应光度学中的光强度、光照度和光亮度三个参数。</p>
 <p>​    通过视敏函数，可将辐射度转换为人眼能感知的光度。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/7.jpg" alt></p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/8.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/7.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/8.jpg" alt></p>
 <h3 id="颜色三要素"><a href="#颜色三要素" class="headerlink" title="颜色三要素"></a>颜色三要素</h3><p>色调：不同颜色之间相互区分的特性。受环境光源的光谱组成和物体表面反射光源各波长辐射的相对比例影响。</p>
 <p>明度：颜色的亮度。受光源强度与反射率的影响。</p>
 <p>饱和度：颜色的纯度（鲜艳度）。发光光谱的宽度。</p>
@@ -650,11 +650,11 @@
 <p>色温计算：色温用来描述显示器颜色的色调，光源色温定义为与光源辐射颜色相同的黑体温度，但实际中不可能是黑体，故称为相关色温，用McCamy公式计算。</p>
 <p>（Correlated Color Temperature）<script type="math/tex">CCT=-437·(\frac{x-0.332}{y-0.1858})^3+3601·(\frac{x-0.332}{y-0.1858})^2-6861·\frac{x-0.332}{y-0.1858}+5514.31</script></p>
 <p>CIE图相关资料总结： <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137639368">https://zhuanlan.zhihu.com/p/137639368</a></p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/9.jpg" alt="XYZ CIE图"></p>
+<p><img src="/loading.gif" data-original="/posts/53757/9.jpg" alt="XYZ CIE图"></p>
 <h2 id="5-液晶光学设计基础"><a href="#5-液晶光学设计基础" class="headerlink" title="5. 液晶光学设计基础"></a>5. 液晶光学设计基础</h2><p>液晶盒的主要参数：透过率、对比度、视角、响应时间、驱动电压和工作温度等。</p>
 <p>液晶显示模式（根据液晶旋转方式不同）：扭曲向列相（Twist Nematic, TN）、垂直取向（Vertical Alignment, VA）、面内转换（In-Plane Switching, IPS）、边缘场转换（Fringe Field Switching, FFS）</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/10.jpg" alt></p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/11.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/10.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/11.jpg" alt></p>
 <h3 id="偏振光的描述"><a href="#偏振光的描述" class="headerlink" title="偏振光的描述"></a>偏振光的描述</h3><p>光的偏振包含5种可能状态：自然光、部分偏振光、椭圆偏振光、圆偏振光和线偏振光。</p>
 <p>光偏振态可以用多种方法来表示：三角函数，琼斯矩阵，斯托克斯矩阵，和庞加莱球。</p>
 <p>三角函数表示光的一般形式：</p>
@@ -699,7 +699,7 @@ E_x=Ecosβ\\
 E_y=Esinβ</script><p>Jones矩阵如下，可见其偏振与β角度无关</p>
 <script type="math/tex; mode=display">
 \left[\begin{matrix}cosθ&sinθ\\-sinθ&cosθ\end{matrix}\right]</script><p>还可以用庞加来球表示，球面上不同的点表示不同的偏振态，球半径表示振幅强度。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/12.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/12.jpg" alt></p>
 <p>双折射现象：光经过晶体或液晶类材料变成两束折射光的物理现象，一束遵循折射定律的o光，一束不遵循的e光。</p>
 <p>光轴-光束绕此轴转动，无任何光学特性变化（可以有好几个光轴），沿着光轴入射不发生双折射现象。</p>
 <p>入射面-入射光方向与晶体界面法线组成</p>
@@ -724,7 +724,7 @@ T=1-\frac{sin^2(θ\sqrt{1+(\frac{△ndπ}{λθ})^2})}{1+(\frac{△ndπ}{λθ})^2
 <p>由于液晶对波长有色散，常黑模式下有暗态漏光和低灰阶色偏，一般用常白模式（暗态需要加电的状态）。</p>
 <p>这个公式给出的关键信息就是给出设计液晶时需调控厚度与折射率，以确保透过率较大，且透过率随波长的变化较小（色散程度较轻），值得注意的是TN模式下，斜视角存在双折射现象，Δnd增大，暗态漏光率也会增加， 要权衡。</p>
 <p>为满足最大透过率，根据公式的极限原理得到，Δnd&gt;=θλ/π</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/13.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/13.jpg" alt></p>
 <p>IPS模式特点</p>
 <p>电极位置：同一玻璃基板面上，有方位角而不是与液晶初始方向完全平行（防止加电压时，旋转角度随机）。</p>
 <p>下偏光片的透过轴与液晶分子长轴的初始排列方向平行，根据上述双折射定律公式，折射进入液晶层的是e光，e光振动方向与入射光振动方向平行，o光强度为0，称之为E模式。下偏光片的透过轴与液晶分子长轴的初始排列方向垂直，称之为O模式。</p>
@@ -742,7 +742,7 @@ S_{液晶盒}=\frac{[Δn×(n_e+n_o)]^2×d}{K}</script><p>S-液晶层的色散系
 <p>d-液晶盒厚</p>
 <p>K-弹性常数，液晶的本征属性。</p>
 <p>视角：对比度大于10:1的观测角度范围为视角，对于TN模式，也用灰阶反转角来定义视角。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/14.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/14.jpg" alt></p>
 <h3 id="响应时间"><a href="#响应时间" class="headerlink" title="响应时间"></a>响应时间</h3><p>具体计算公式由连续弹性模型推导。</p>
 <p>和黏度挂钩，黏度大的响应时间慢，而负性液晶黏度大，所以VA模式，响应时间较慢。</p>
 <h2 id="6-驱动电路系统设计基础"><a href="#6-驱动电路系统设计基础" class="headerlink" title="6. 驱动电路系统设计基础"></a>6. 驱动电路系统设计基础</h2><p>薄膜晶体管液晶显示模组的基本构成：液晶显示屏，驱动电路系统，背光源及其驱动电路系统。</p>
@@ -750,7 +750,7 @@ S_{液晶盒}=\frac{[Δn×(n_e+n_o)]^2×d}{K}</script><p>S-液晶层的色散系
 <p>OC（Open Cell）:贴了偏光片、邦定并连接了周边驱动电路元器件的显示屏。</p>
 <p>模组：背光源及其驱动电路系统组合。</p>
 <p>补习电路知识吧，不然这本书看这章没法看懂的。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/15.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/15.jpg" alt></p>
 <h2 id="7-机构光学设计基础"><a href="#7-机构光学设计基础" class="headerlink" title="7. 机构光学设计基础"></a>7. 机构光学设计基础</h2><p>背光模组设计主要参考以下几个主要方面：电学特性，光学特性，机构特性，外观特性、可靠性、量产性。</p>
 <p>背光源：荧光灯光源（Hg灯不环保，现在不常用）与发光二极管光源</p>
 <p>发光二极管：核心为PN结，常用GaAs、GaP、GaAsP等。衬底为Al2O3，Si和SiC三种。</p>
@@ -802,7 +802,7 @@ S_{液晶盒}=\frac{[Δn×(n_e+n_o)]^2×d}{K}</script><p>S-液晶层的色散系
 <p>关键参数：棱镜间距与 棱镜顶角的角度。</p>
 </li>
 <li><p>反射型偏光增亮膜（Dual Brightness Enhancement Film, DBEF）：利用液晶吸收掉的S偏振光。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/16.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/16.jpg" alt></p>
 </li>
 </ol>
 <p>其它部件：</p>
@@ -850,7 +850,7 @@ S_{液晶盒}=\frac{[Δn×(n_e+n_o)]^2×d}{K}</script><p>S-液晶层的色散系
 <p>残像测试：老化前后全亮和全暗灰阶下原棋盘格影像残留的程度，取不同的点的亮度按所选规定的公式进行计算。</p>
 <p>VT曲线测试：不同实现模式下的电压-透过率曲线。</p>
 <p>Gamma曲线：人眼感觉与亮度之间的变化关系曲线就叫Gamma曲线（透过率-灰阶），大概在2.0-2.4之间。测试方法：1. 液晶面板老化半个小时稳定一下；2. 测试各个灰阶下的亮度；3. 将亮度除以最大亮度值得到透过率；4. 灰阶用百分比表示，再取对数，去掉端点取平均值得到Gamma值，如果不在2.0-2.4之间，需要调PCB上的Gamma电压电阻，重新校正。</p>
-<h2 id="9-阵列制造工程"><a href="#9-阵列制造工程" class="headerlink" title="9. 阵列制造工程"></a>9. 阵列制造工程</h2><p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/17.jpg" alt></p>
+<h2 id="9-阵列制造工程"><a href="#9-阵列制造工程" class="headerlink" title="9. 阵列制造工程"></a>9. 阵列制造工程</h2><p><img src="/loading.gif" data-original="/posts/53757/17.jpg" alt></p>
 <p>用以在玻璃基板上沉积各种薄膜图形，是实现液晶电学驱动的关键。</p>
 <p>溅射：物理气象沉积的一种，在一定高真空状态下，采用激励源使高真空里的带电粒子获得高能量并轰击靶材表面，靶材表面组分会获得足够大的能量而飞溅到另一个介质表面的薄膜沉积方法。被激励的通常是惰性气体，Xe和Kr溅射率最好，但是Ar稳定便宜，用得比较多。</p>
 <p>启辉：随着电压进一步增加，电流增大，非自持放电过渡到自持放电，此刻的电压被称为启辉电压。</p>
@@ -862,7 +862,7 @@ S_{液晶盒}=\frac{[Δn×(n_e+n_o)]^2×d}{K}</script><p>S-液晶层的色散系
 <p>干法刻蚀工艺条件：气体种类和气流，腔室气体的压力，输入功率，基板温度。评价参数：刻蚀速率，刻蚀均一性，刻蚀选择比（不同膜层之间的刻蚀速率比），刻蚀坡度角（太大太小都不行，但一般在60度以下），特征尺寸偏差（掩膜版与实际面板尺寸之间的差值）</p>
 <p>湿法刻蚀是利用化学反应。</p>
 <p>阵列不良检测与修复</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/18.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/18.jpg" alt></p>
 <p>AOI检测：根据CCD捕获图像，看阵列显示明暗正不正常，比较灰度差，超过了阈值就是有问题，不同结构要求的分辨率也不一样。</p>
 <p>OS检测：三个步骤看短路断路，1. 逐行扫描（必要）2. 位置扫描（沿着不良线上扫描） 3. 不良取证：拍照镜头到不良位置拍照。</p>
 <p>阵列综合检测：在阵列制程结束后，像素具有完整电学功能结构后，对面板上所有像素统一充电，随后采用非接触式传感器探测对比像素表面电压差异及分布规律，进而发现各种电学不良的检测方法。</p>
@@ -872,16 +872,16 @@ S_{液晶盒}=\frac{[Δn×(n_e+n_o)]^2×d}{K}</script><p>S-液晶层的色散系
 <p>玻璃衬底</p>
 <p>黑矩阵(Black Matrix, BM)-防止亚像素之间混色，以及照射到TFT沟道。</p>
 <p>红绿蓝三基色色阻(Color Resist, CR)-其实都是掺杂了燃料的光刻胶材料（是负胶，显影后保留下来，与阵列图案用正胶不同）</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/19.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/19.jpg" alt></p>
 <p>平坦层（Over Coater, OC）-在BM与R/G/B的段间形成一个平坦平面，有利于液晶取向，同时防止RGB中金属色阻污染液晶。</p>
 <p>ITO和柱状隔垫物(Post Spacer, PS)-维持液晶盒厚度，防止液晶在温度变化时产生重力Mura（热胀）和真空气泡（冷缩）。</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/20.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/20.jpg" alt></p>
 <p>彩膜除了ITO玻璃层是溅射沉积的，其它的都是PR涂布、曝光和显影三大工艺形成的。</p>
 <p>工艺细分：清洗（用EUV或者常压等离子体）、涂布（旋涂，刮涂，精细刮涂）、前烘（去除残余溶剂，活化感光剂）、曝光、显影、后烘（去除光阻中的溶剂，烘烤，使得非晶ITO退火为多晶ITO，降低电阻）</p>
 <p>不良的检测与修复</p>
 <p>检测手段：AOI检测，Mura检查、宏观检查（Macro，利用特别的波长观察薄膜干涉现象，出现干涉条纹意味着厚度有变）</p>
 <p>修复手段：缺陷发现-激光烧蚀-光阻滴注</p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/21.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/21.jpg" alt></p>
 <p>再工工程：利用湿法刻蚀，把彩膜基板上的ITO和其他各层光阻去除。去除ITO用HCl和CH3COOH混合液，去除光阻用KOH为主的溶液。</p>
 <p>材料测试与评价：</p>
 <ol>
@@ -906,7 +906,7 @@ S_{液晶盒}=\frac{[Δn×(n_e+n_o)]^2×d}{K}</script><p>S-液晶层的色散系
 <li><p>表面特性测试（粗糙度，粘附性，亲疏水性什么的）</p>
 </li>
 </ol>
-<h2 id="11-液晶盒制造工程"><a href="#11-液晶盒制造工程" class="headerlink" title="11. 液晶盒制造工程"></a>11. 液晶盒制造工程</h2><p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/22.jpg" alt></p>
+<h2 id="11-液晶盒制造工程"><a href="#11-液晶盒制造工程" class="headerlink" title="11. 液晶盒制造工程"></a>11. 液晶盒制造工程</h2><p><img src="/loading.gif" data-original="/posts/53757/22.jpg" alt></p>
 <p>取向层经常用聚酰亚胺等高分子材料通过摩擦工艺得到带方向性的凹槽，用以锚定分子，否则初始自然滴加的液晶是杂乱的。</p>
 <p>材料要求：</p>
 <ol>
@@ -935,9 +935,9 @@ S_{液晶盒}=\frac{[Δn×(n_e+n_o)]^2×d}{K}</script><p>S-液晶层的色散系
 <p>真空对盒：真空环境，上端通过静电吸附吸着彩膜基板，下端用阵列基板被负压吸附着阵列基板，CCD对准。</p>
 <p>液晶盒检测（不同的通电方式测试不同图形的显示效果）与修复（AOI检测，高能激光修复退火处理）</p>
 <p>清洗过程与彩膜类似。</p>
-<h2 id="12-模组制造工程"><a href="#12-模组制造工程" class="headerlink" title="12. 模组制造工程"></a>12. 模组制造工程</h2><p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/23.jpg" alt></p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/24.jpg" alt></p>
-<p><img src="/loading.gif" data-original="./知识点汇总：薄膜晶体管液晶显示器显示原理与设计/25.jpg" alt></p>
+<h2 id="12-模组制造工程"><a href="#12-模组制造工程" class="headerlink" title="12. 模组制造工程"></a>12. 模组制造工程</h2><p><img src="/loading.gif" data-original="/posts/53757/23.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/24.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/25.jpg" alt></p>
 
                 
             </div>
@@ -2040,13 +2040,13 @@ $(function () {
     
 
 
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
 
