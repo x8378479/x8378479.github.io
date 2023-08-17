@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Excel绘二维折线图</title>
+      <link href="posts/58585/"/>
+      <url>posts/58585/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Excel绘二维折线图"><a href="#Excel绘二维折线图" class="headerlink" title="Excel绘二维折线图"></a>Excel绘二维折线图</h1><p>在学校呆得太久，天天用Origin画图水论文，已经忘记最初怎么用Excel画图了，重新学吧。</p><p>目标：有多组X和Y，绘制成一个X-Y图，并美化格式。</p><p>其它：误差棒与多组图的对齐（类似于origin的merge）。</p><h2 id="数据绘图"><a href="#数据绘图" class="headerlink" title="数据绘图"></a>数据绘图</h2><p>原始数据如下：</p><p><img src="/loading.gif" data-original="/./Excel绘二维折线图/图片1.jpg" alt></p><p>选中一个很坐标序列和要显示折线的纵坐标数据：</p><p>快键键提示：</p><p>选中一个位置再按Ctrl+shift+↓可以把这一列选到最底下一个数据。</p><p>选完一列后可以按Ctrl间隔选一个再用Ctrl+shift+↓实现间隔选列。</p><p><img src="/loading.gif" data-original="/./Excel绘二维折线图/图片2.jpg" alt></p><p>插入图表选择所有图表中的组合图，将图表类型均改为同种，将Y轴勾上次坐标轴。</p><p><img src="/loading.gif" data-original="/./Excel绘二维折线图/图片3.jpg" alt></p><p>在图表的线上右击选择数据。</p><p>编辑三列Y数据，使其系列名称为数据组名称，X轴数据框选所选Y轴对应的X轴数据，确定。</p><p><img src="/loading.gif" data-original="/./Excel绘二维折线图/图片4.jpg" alt></p><p>在菜单栏设计中添加图表元素添加坐标轴标题。</p><p>作图完成。</p><h2 id="图片美化"><a href="#图片美化" class="headerlink" title="图片美化"></a>图片美化</h2><p>选中图片，右上角有个“+”号，展开，基本能满足各种需求。</p><p><img src="/loading.gif" data-original="/./Excel绘二维折线图/图片6.jpg" alt></p><p>再不行再去右击图片设置绘图区格式慢慢调。</p><h2 id="多图对齐"><a href="#多图对齐" class="headerlink" title="多图对齐"></a>多图对齐</h2><p>多张图的Merge相比较于origin更加简单粗暴，直接用shift将多张图选中然后在菜单栏-页面布局-排列-对齐即可。</p><h2 id="误差棒作图"><a href="#误差棒作图" class="headerlink" title="误差棒作图"></a>误差棒作图</h2><ol><li><p>求平均值：选中要求平均值的那列第一个，输入公式“=AVERAGE(num1:num2)”，再选中这列最后一个要输入的空白框，Ctrl+Shift+↑选中整列，Ctrl+D整列填充公式。</p></li><li><p>求标准差：选中要求平均值的那列第一个，输入公式“=STDEV(num1:num2)”，再选中这列最后一个要输入的空白框，Ctrl+Shift+↑选中整列，Ctrl+D整列填充公式。</p><p>注：公式中的逗号有and的意思，而冒号是from… to…的意思。</p></li><li><p>算出正值（平均值+标准偏差）与负值（平均值-标准偏差）</p></li><li><p>根据平均值做图后图片右上角+号中选择相应误差类型，再右击误差棒设置格式，误差率为自定义，带入正值与负值即可。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 苦逼的科研 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Execel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo个人网站最方便快速搬家经验</title>
       <link href="posts/11811/"/>
       <url>posts/11811/</url>
