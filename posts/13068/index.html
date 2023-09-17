@@ -471,16 +471,16 @@
 <p>​    Chemdraw模拟： 点击 Structure-Predict  <sup>1</sup>H-NMR (<sup>13</sup>C-NMR) Shifts预测氢谱或者碳谱，把鼠标放到分子式上的氢或者谱图的峰上，对应的分子式上的氢或者谱图的峰会被绿框框住。个人认为该软件预测主要是看化学位移相对大小的规律，具体值无意义。</p>
 <p>​    MestReNova模拟：打开MestReNova将选中分子式直接粘贴进来，菜单栏同样有预测，而且谱图种类更多，就氢谱而言，显示峰裂分更准确。但仍然只作为参考。</p>
 <h2 id="2-氢谱数据处理"><a href="#2-氢谱数据处理" class="headerlink" title="2. 氢谱数据处理"></a>2. 氢谱数据处理</h2><p>​    该打完核磁，原始数据如图所示（仪器：Bruker 400M，.mnova是我后期用软件处理完生成的），可以把acqu，acqus, audita.txt或者fid或者把整个文件夹直接拖入打开软件的空白页。（如果数据显示不正常，可以在pdata\1路径下有个叫1i的文件拖到软件中试一试）</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片1.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片1.jpg" alt></p>
 <p>​    此时可以看到谱图了：</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片2.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片2.jpg" alt></p>
 <h3 id="基线平滑"><a href="#基线平滑" class="headerlink" title="基线平滑"></a>基线平滑</h3><p>​    基线平滑一下：菜单栏-处理-基线-多点基线校正，会弹出一个框框，你直接点Automatic，基线会以点线图的方式预览，再点击应用，基线平缓了。</p>
 <h3 id="标峰"><a href="#标峰" class="headerlink" title="标峰"></a>标峰</h3><p>​    然后是标峰，可以点击标峰自动标，但是如果有杂峰不想标就要一个个删除，很麻烦。</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片3.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片3.jpg" alt></p>
 <p>​    也可以下拉有个”手动设置阈值“，你可以用鼠标拉出一个阈值线，超过的才会被标峰。菜单栏下面一栏有5个放大镜图标，前3个你可以用来看谱图，帮助你给谱图标峰或者积分的时候把局部放大，看得更清楚。</p>
 <p>​    滚动鼠标滚珠可以把峰拉高或者拉低~</p>
 <p>​    这个是我标好峰的图：</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片4.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片4.jpg" alt></p>
 <h3 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h3><p>​    在积分之前，尽可能地把一些无关的峰给标注出来，比如溶剂峰，水峰，杂峰，这些和你产物无关，不需要积分。</p>
 <p>​    常见溶剂峰和水峰的化学位移是多少呢？</p>
 <p>​    提供两篇参考文献：</p>
@@ -492,33 +492,33 @@
 </ol>
 <p>​    比如在我这个图中我使用了N,N-二甲基乙酰胺Dimethylacetamide做溶剂，后处理用了DMF，氘代试剂是DMSO，还含有水峰（一般是宽峰），都是高沸点溶剂，难以去除，根据文献查到DMSO中，溶剂峰 2.5，水峰 3.3，Dimethylacetamide 1.96, 2.94, 2.78，DMF 7.95, 2.89, 2.73出峰，这些峰是不积分的。</p>
 <p>​    积分操作：积分按钮在标峰按钮盘边，也可以点击直接自动积分（不推荐），也可以下拉选择手动，这里我们手动积分每个该积的峰的区域。 </p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片5.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片5.jpg" alt></p>
 <p>​    最后要积峰的就这么3个，这里有二个问题就是，大家会发现：</p>
 <ol>
 <li>积分值会随你选的范围而变化。（有很强的主观性，不利于判断）</li>
 <li>杂峰，或者其它需要分开分析的峰发生重叠，无法逐个积分或者导致积分数值偏差。（如我7.99和7.97发生重叠，7.97假如是不需要的积分）</li>
 </ol>
-<p><img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片6.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/13068/图片6.jpg" alt></p>
 <p>​    解决方法：将积分选项下拉，点击“选项”，将积分选项的计算方法由“Sum”改成“标峰”，点OK，再在标峰选项下拉，有个峰曲线显示，勾上。你的谱图峰都都被数学拆分了，只要范围内只包含一个峰，积分数值就不变。</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片8.jpg" alt></p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片9.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片8.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片9.jpg" alt></p>
 <p>​    </p>
 <p>​    积分超过右边杂峰的峰值对应化学位移时，积分值3.5变成了3.6，这种模式是以拆分峰的面积来计算的（不以人的意志为转移=.=）。</p>
-<p><img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片10.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/13068/图片10.jpg" alt></p>
 <h3 id="定标"><a href="#定标" class="headerlink" title="定标"></a>定标</h3><p>​    把你认为最确认的峰与氢的个数对应上，不要用活泼氢定标（容易与环境发生化学交换）。</p>
 <p>​    比如这是我的分子：</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片11.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片11.jpg" alt></p>
 <p>​    我用最中心的苯环定标，中间是3个H，和文献上报导比对，在8.8。</p>
 <p>​    右击8.8处的积分线，点击编辑积分</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片12.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片12.jpg" alt></p>
 <p>​    将归一化改为3，差掉窗口，其它两个峰都以这个3为基准变了。</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片13.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片13.jpg" alt></p>
 <p>​    除了羧基的三个活泼氢，完全能对的上，羧基为活泼氢，化学交换会显示不全，但在DMSO里有时能看到宽峰。</p>
 <p>​    此时你可以把文件以各种形式保存，导出txt也可以，直接右击属性也可以改线条粗细，文字大小和网格等各种页面布局（自行尝试设置成自己喜欢的样子），然后可以直接copy图片到office相关软件。有时要用到生成一张局部放大的附图。点之前提到的菜单下面的放大镜，最右边有个放大镜，你把鼠标停留在那会显示”局部放大“提示，点一下，选择你要放大的区域，会显示一个小插图。</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片14.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片14.jpg" alt></p>
 <h3 id="多重峰统计"><a href="#多重峰统计" class="headerlink" title="多重峰统计"></a>多重峰统计</h3><p>​    现在很多文献数据核磁并不是给图而是给文本，这种文本是如何生成的，先下拉多重峰分析选项（在积分旁边），选择手动，然后用法和手动积分的用法一毛一样，只是它会显示多重峰（由于测试时匀场不好，核磁M数不够，可能会与理论裂分数不完全一致）。</p>
 <p>​    最后在分析里选择多重峰分析-多重峰分析报告，框框里就是你想要的，在报告设置里可以调你要投稿的期刊格式，我这里用的是JACS.</p>
-<p>​    <img src="/loading.gif" data-original="/./MestReNova处理目标产物氢谱碳谱数据基本流程/图片15.jpg" alt></p>
+<p>​    <img src="/loading.gif" data-original="/posts/13068/图片15.jpg" alt></p>
 <h2 id="2-碳谱数据处理"><a href="#2-碳谱数据处理" class="headerlink" title="2. 碳谱数据处理"></a>2. 碳谱数据处理</h2><p>​    与氢谱处理流程完全一致，差别是不需要积分，这是由核磁原理决定的。由于NOE效应（射频相互作用的核，另一个核受到能量增强），C谱中C个数因受去耦氢个数的影响，不与峰面积成比例。但是偷偷告诉你：也正是受周围氢个数的影响，碳中伯仲叔季，季碳，羰基碳的峰会比较矮~</p>
 <p>​    导出报告时在标峰里选择峰报告即可，因为不用积分。</p>
 <h2 id="3-后记"><a href="#3-后记" class="headerlink" title="3. 后记"></a>3. 后记</h2><p>​    列表里少了什么模块，比如多重峰列表，可以在菜单栏视图-列表里添加    </p>
@@ -1633,13 +1633,13 @@ $(function () {
     
 
 
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
 

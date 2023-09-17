@@ -458,18 +458,18 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="与Arduino的初次相遇"><a href="#与Arduino的初次相遇" class="headerlink" title="与Arduino的初次相遇"></a>与Arduino的初次相遇</h1><p>​    2020年6月份的时候，那天在b站上看到一位叫“喵咪的哥哥”的up发布了自己制作的声控四驱车旋风冲锋，突然唤起了童年时代的愿望，那时候多想要同类型的产品啊，你的一个手势和信号，一台机器就为你运作了起来，多酷啊~ 那设备怎么识别你的信号呢？其实就是将各种各样的输入信号通过元器件转换为电信号，再由一块“小小的电路板”将处理这些电信号，再输出指令给被控制的。</p>
-<p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/1.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/19216/1.jpg" alt></p>
 <p>​    百度了一下网友推荐最容易上手的就是Arduino和51单片机，那我就来学习下Arduino吧先。把20年夏天的笔记整理一下，我是按照b站up“科技传播坊”这个视频学的，链接如下，用的Arduino UNO R3板，烧录软件为Arduino IDE，这位up主推荐按功能模块学习而不是按原理来学习，比较符合我想要快速造点小玩意出来的需求，基础知识以后需要再补一补吧。</p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nx411U7Ht?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1nx411U7Ht?spm_id_from=333.999.0.0</a></p>
 <h2 id="什么是Arduino"><a href="#什么是Arduino" class="headerlink" title="什么是Arduino?"></a>什么是Arduino?</h2><p>Arduino是一个能够用来感应和控制现实物理世界的一套工具。 它由一个基于单片机并且开放源码的硬件平台，和一套为Arduino板编写程序 的开发环境组成。不是所有的东西都需要一台微型计算机来处理，这种板子具有很好的性价比。</p>
-<p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/2.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/19216/2.jpg" alt></p>
 <h3 id="Arduino的输入与输出类型"><a href="#Arduino的输入与输出类型" class="headerlink" title="Arduino的输入与输出类型"></a>Arduino的输入与输出类型</h3><p>主要明白数字（两个数值），模拟（一个范围的数值）和串口</p>
-<p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/3.jpg" alt></p>
-<p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/4.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/19216/3.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/19216/4.jpg" alt></p>
 <p>输入输出接口对应的Arduino UNO R3板子位置：</p>
-<p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/5.jpg" alt></p>
-<h2 id="什么是面包板？"><a href="#什么是面包板？" class="headerlink" title="什么是面包板？"></a>什么是面包板？</h2><p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/6.jpg" alt></p>
-<h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><h3 id="1-点亮闪烁LED"><a href="#1-点亮闪烁LED" class="headerlink" title="1. 点亮闪烁LED"></a>1. 点亮闪烁LED</h3><p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/7.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/19216/5.jpg" alt></p>
+<h2 id="什么是面包板？"><a href="#什么是面包板？" class="headerlink" title="什么是面包板？"></a>什么是面包板？</h2><p><img src="/loading.gif" data-original="/posts/19216/6.jpg" alt></p>
+<h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><h3 id="1-点亮闪烁LED"><a href="#1-点亮闪烁LED" class="headerlink" title="1. 点亮闪烁LED"></a>1. 点亮闪烁LED</h3><p><img src="/loading.gif" data-original="/posts/19216/7.jpg" alt></p>
 <pre class="line-numbers language-lang-c++"><code class="language-lang-c++">void setup() &#123;
     // put your setup code here, to run once:
     //也就是说这个void setup里的程序只会被执行一次
@@ -485,7 +485,7 @@ void loop() &#123;
     delay 1000;//防止闪烁过快，延时1s，默认单位为毫秒
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2-跑马灯"><a href="#2-跑马灯" class="headerlink" title="2. 跑马灯"></a>2. 跑马灯</h3><p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/8.jpg" alt></p>
+<h3 id="2-跑马灯"><a href="#2-跑马灯" class="headerlink" title="2. 跑马灯"></a>2. 跑马灯</h3><p><img src="/loading.gif" data-original="/posts/19216/8.jpg" alt></p>
 <pre class="line-numbers language-lang-c++"><code class="language-lang-c++">void setup() &#123;
     // put your setup code here, to run once:
     for(int i=6;i<=9;i++)&#123;
@@ -517,7 +517,7 @@ void loop() &#123;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="3-程序控制开关进而控制灯的亮和灭"><a href="#3-程序控制开关进而控制灯的亮和灭" class="headerlink" title="3. 程序控制开关进而控制灯的亮和灭"></a>3. 程序控制开关进而控制灯的亮和灭</h3><p>注意：这个开关，并不像初中物理里那个开关与小灯串联的电脑，开关和小灯是各自独立的两个电路，开发板通过接收和判断开关上的信息再来生成一个信息给输出的小灯。</p>
-<p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/9.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/19216/9.jpg" alt></p>
 <pre class="line-numbers language-lang-c++"><code class="language-lang-c++">void setup() &#123;
     // put your setup code here, to run once:
     pinMode (7, OUTPUT);//定义灯为输出口
@@ -534,7 +534,7 @@ void loop() &#123;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="4-蜂鸣器钢琴"><a href="#4-蜂鸣器钢琴" class="headerlink" title="4. 蜂鸣器钢琴"></a>4. 蜂鸣器钢琴</h3><p>（这个up主在这即兴演奏了一曲，要笑死我了）</p>
-<p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/10.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/19216/10.jpg" alt></p>
 <pre class="line-numbers language-lang-C++"><code class="language-lang-C++">void setup() &#123;
     // put your setup code here, to run once:
     pinMode(8,INPUT);
@@ -634,7 +634,7 @@ void loop() &#123;
 <p>3.学会用串口监视器</p>
 <p>4.学会映射，最好学会用map函数</p>
 <p>Map(X, a, b, c, d)</p>
-<p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/11.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/19216/11.jpg" alt></p>
 <pre class="line-numbers language-lang-C++"><code class="language-lang-C++">void setup() &#123;
     // 模拟输入口A0-A5，只能默认输入，所以没有必要定义输入
     pinMode(9, OUTPUT);//灯的输入
@@ -649,7 +649,7 @@ void loop() &#123;
 
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="8-数码管骰子"><a href="#8-数码管骰子" class="headerlink" title="8. 数码管骰子"></a>8. 数码管骰子</h3><p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/12.jpg" alt></p>
+<h3 id="8-数码管骰子"><a href="#8-数码管骰子" class="headerlink" title="8. 数码管骰子"></a>8. 数码管骰子</h3><p><img src="/loading.gif" data-original="/posts/19216/12.jpg" alt></p>
 <pre class="line-numbers language-lang-C++"><code class="language-lang-C++">class LedSegmentDisplays
 &#123;
     private:
@@ -711,7 +711,7 @@ void loop() &#123;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="9-光敏电阻的使用"><a href="#9-光敏电阻的使用" class="headerlink" title="9. 光敏电阻的使用"></a>9. 光敏电阻的使用</h3><p>记得学会调用串口监视器哈~</p>
-<p><img src="/loading.gif" data-original="/./与Arduino的初次相遇/13.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/19216/13.jpg" alt></p>
 <pre class="line-numbers language-lang-C++"><code class="language-lang-C++">    void setup() &#123;
       // put your setup code here, to run once:
     Serial.begin(9600);//设置比特率
@@ -1813,13 +1813,13 @@ $(function () {
     
 
 
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
 
