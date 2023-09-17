@@ -33,15 +33,7 @@
     }
 }
 
-/* CSS for image zoom effect */
-.zoomable-image {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
 
-.zoomable-image:hover {
-    transform: scale(1.1);
-}
 
 body {
     background-color: #eaeaea;

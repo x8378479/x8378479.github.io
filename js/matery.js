@@ -185,15 +185,11 @@ $(function () {
 
 //图片缩放
 document.addEventListener('DOMContentLoaded', function () {
-    // Get all images within the content
     const images = document.querySelectorAll('.content img');
 
     images.forEach(image => {
-        image.classList.add('zoomable-image');
-
-        // Add click event listener to each image
         image.addEventListener('click', () => {
-            image.classList.toggle('zoomed');
+            window.open(image.src, '_blank');
         });
     });
 });
