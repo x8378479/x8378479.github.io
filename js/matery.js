@@ -182,3 +182,18 @@ $(function () {
         $(document).find('img[data-original]').each(function(){
             $(this).parent().attr("href", $(this).attr("data-original"));
         });
+
+//图片缩放
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all images within the content
+    const images = document.querySelectorAll('.content img');
+
+    images.forEach(image => {
+        image.classList.add('zoomable-image');
+
+        // Add click event listener to each image
+        image.addEventListener('click', () => {
+            image.classList.toggle('zoomed');
+        });
+    });
+});
