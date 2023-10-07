@@ -431,21 +431,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-09-17
+                    2023-10-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.3k
+                    4.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    16 分
                 </div>
                 
 
@@ -466,7 +466,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>结合半导体物理与器件第四版与西安邮电大学吕淑媛课程进行汇总。由于短时间内本人垃圾的数学能力不足以透彻地理解相关知识，只能透过解决问题的思路和前人已经推导出的公式定性理解构效关系，以思维导图为主，结合基本概念解释。</p>
-<p><img src="/loading.gif" data-original="/posts/17597/0.png" alt></p>
+<p><img src="/loading.gif" data-original="/./半导体物理与器件知识汇总/0.png" alt></p>
 <h2 id="固体晶格结构"><a href="#固体晶格结构" class="headerlink" title="固体晶格结构"></a>固体晶格结构</h2><p>电阻率单位：ρ（Ω·cm）</p>
 <p>电导率单位：σ（S/cm） //S是西门子</p>
 <p>R=ρ×L/A</p>
@@ -477,7 +477,7 @@
 <p>​    电阻率介于金属（10<sup>-6</sup> Ω·cm）和绝缘体（10<sup>12</sup> Ω·cm）之间。</p>
 <p>​    电阻率介于10<sup>-3</sup>~10<sup>6</sup> Ω·cm之间。</p>
 <p>​    电阻率随温度升高减小，不止是温度，还有光照等其他因素也有影响。</p>
-<p><img src="/loading.gif" data-original="/posts/17597/1.png" alt></p>
+<p><img src="/loading.gif" data-original="/./半导体物理与器件知识汇总/1.png" alt></p>
 <p>半导体结构：一般为单晶。</p>
 <p>半导体单晶硅的一般制备方法：籽晶提拉法后沿晶面切割。</p>
 <p>如何描述单晶的周期性？//注意括号类型</p>
@@ -542,7 +542,7 @@
 <p>当E-E<sub>f</sub>&gt;&gt;kT时，费米-狄拉克分布函数可做麦克斯韦-玻尔兹曼近似，差不多3kT就可以保证误差在5%以内。//可以在曲线图上比较二者的差异。</p>
 </li>
 </ol>
-<p><img src="/loading.gif" data-original="/posts/17597/2.png" alt></p>
+<p><img src="/loading.gif" data-original="/./半导体物理与器件知识汇总/2.png" alt></p>
 <h2 id="平衡半导体"><a href="#平衡半导体" class="headerlink" title="平衡半导体"></a>平衡半导体</h2><p>平衡载流子浓度公式</p>
 <p>​    电子浓度n<sub>0</sub>：对f<sub>F</sub>(E)和g<sub>c</sub>(E)的乘积在相应能带范围内进行积分。</p>
 <p>​    空穴浓度p<sub>0</sub>：对（1-f<sub>F</sub>(E)）和g<sub>c</sub>(E)的乘积在相应能带范围内进行积分。</p>
@@ -562,6 +562,8 @@
 <p>费米能级位置：N型偏向导带，P型偏向价带。</p>
 <p>注意：这些公式中很多都是玻尔兹曼近似下才成立，重掺杂下不能用。</p>
 <p>禁带变窄效应：重掺杂导致施主/受主能级与导带/价带交叠成一个带。</p>
+<p>//之前的一个疑问：能否用本征硅加个栅极直接作为MOS管，通过栅压控制沟道载流子开关电路？</p>
+<p>答：理论可行，但栅压产生的载流子本质上时施/受主能级电离出的载流子，为面电荷，非常少，如果完全本征则更少，因此开启沟道需要的阈值电压会非常之大；此外没有耗尽层漏电流也很大，因此源极与衬底短接形成反向偏压以保持耗尽层。</p>
 <h2 id="载流子漂移运动与扩散运动"><a href="#载流子漂移运动与扩散运动" class="headerlink" title="载流子漂移运动与扩散运动"></a>载流子漂移运动与扩散运动</h2><p>载流子运动：1. 电场作用下的漂移运动；2. 浓度梯度作用下的扩散运动。</p>
 <p>载流子热运动动能：3kT/2，但运动矢量方向混乱。</p>
 <p>PS：漂移运动中的电子也不是理想的直线运动，而是不断被散射，但总体来看朝着电场方向。//电子一边被撞得绕来绕去，一边往前。</p>
@@ -570,9 +572,9 @@
 <p>平均自由时间：载流子没被散射的间隙用于电场加速的时间，显然散射越强，平均自由时间越短。</p>
 <p>散射概率：平均自由时间的倒数，也是代表单位时间散射次数。</p>
 <p>总散射概率=电离杂质散射概率（低温主导）+晶格振动散射概率（高温主导）</p>
-<p><img src="/loading.gif" data-original="/posts/17597/3.png" alt></p>
+<p><img src="/loading.gif" data-original="/./半导体物理与器件知识汇总/3.png" alt></p>
 <p>再考虑温度对载流子浓度的影响（影响杂质电离和本征激发），电阻率一般呈现如下变化趋势：</p>
-<p><img src="/loading.gif" data-original="/posts/17597/4.png" alt></p>
+<p><img src="/loading.gif" data-original="/./半导体物理与器件知识汇总/4.png" alt></p>
 <p>扩散电流：电子和空穴都会由高浓度向低浓度扩散，空穴扩散方向相同，电子扩散方向相反。</p>
 <p>总电流密度=扩散电流密度+漂移电流密度</p>
 <p>E<sub>c</sub>（最终能级）-E<sub>ref</sub>（初始能级）=-eV //电场下电子所处能带的弯曲畸变带来的能量差值等于电子在电场下做的功。</p>
@@ -606,7 +608,61 @@
 <p>​    齐纳击穿：击穿两侧，一边有载流子，一边有空位；势垒要窄；所以重掺杂和大反向偏压容易引起齐纳击穿。</p>
 <p>​    隧道击穿</p>
 <p>PN结应用：发光二极管，太阳能电池，光电探测器等。</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>其它更复杂的器件为PN结的花式组合，如MOS等，如果只是定性了解，可能认知也就停留在调节载流子浓度，温度，偏压上了，看来不了解建立的模型和推公式已经很难对电性的变化规律有具体的了解了，后面再开一章关于模型公式的学习总结吧。</p>
+<h2 id="金属半导体接触"><a href="#金属半导体接触" class="headerlink" title="金属半导体接触"></a>金属半导体接触</h2><p>功函数Ws=E<sub>0</sub>(真空能级)-E<sub>Fs</sub>(费米能级) //在金属和半导体中均适用</p>
+<p>电子亲和能X=E<sub>0</sub>(真空能级)-E<sub>Fs</sub>(导带能级)//为了避免半导体中费米能级运动的情况</p>
+<p>但金属半导体接触时，费米能级被拉平，产生接触电势差eV<sub>ms</sub>=W<sub>m</sub>-W<sub>s</sub>，金属电荷密度大所以能带在电场下基本不弯曲，而半导体能带会发生弯曲。</p>
+<p>对于N型半导体，</p>
+<p>当W<sub>s</sub><W<sub>m&lt;/sub&gt;，电子从半导体流向金属，为肖特基接触，也是整流接触模式，与PN结效果类似。</W<sub></p>
+<p>当W<sub>s</sub>&gt;W<sub>m</sub>，电子从金属流向半导体，欧姆接触模式，加正偏和反偏载流子都能顺利导通。</p>
+<p>P型则相反。</p>
+<h2 id="MOSFET场效应晶体管"><a href="#MOSFET场效应晶体管" class="headerlink" title="MOSFET场效应晶体管"></a>MOSFET场效应晶体管</h2><p>功能：一种用电控制电的器件。</p>
+<p>参考朱士维教授课程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1JK411c7RC/?spm_id_from=333.999.0.0&amp;vd_source=ea480b8ccd665a521227e36f3036dd11">https://www.bilibili.com/video/BV1JK411c7RC/?spm_id_from=333.999.0.0&amp;vd_source=ea480b8ccd665a521227e36f3036dd11</a></p>
+<p>MOS：上中下三餐分别为导体，绝缘层，半导体，中间加偏压形成反型层。</p>
+<p>加外电场才有沟道产生的叫增强型MOS，本来有沟道加电压沟道消失的叫耗尽型MOS。</p>
+<p>MOS管两端为N型半导体的叫NMOS，P型半导体的为PMOS。</p>
+<p>一端接地为源（产生载流子的极），另一端接电压为漏极（漏出载流子的极）。</p>
+<p>对于NMOS，沟道主要为电子，V<sub>TN</sub>阈值电压大于0，V<sub>GS</sub>&gt;V<sub>TN</sub>沟道打开，S和衬底都是接地的。</p>
+<p>对于PMOS，沟道主要为空穴，V<sub>TP</sub>阈值电压小于0，V<sub>GS</sub><V<sub>TP&lt;/sub&gt;沟道打开，S和衬底都是接地的。</V<sub></p>
+<h3 id="以NMOS为例对ID-VD曲线描述（输出特性曲线）："><a href="#以NMOS为例对ID-VD曲线描述（输出特性曲线）：" class="headerlink" title="以NMOS为例对ID-VD曲线描述（输出特性曲线）："></a>以NMOS为例对ID-VD曲线描述（输出特性曲线）：</h3><ol>
+<li>初期线性增长区：</li>
+</ol>
+<p>​    定义单位面积的电容大小C<sub>ox</sub>=ε<sub>ox</sub>/t<sub>ox</sub>，分子为介电常数，分母为栅绝缘层厚度</p>
+<p>​    单位面积上电容所带电荷IQI=C<sub>ox</sub>WL(V<sub>GS</sub>-V<sub>TN</sub>)</p>
+<p>​    单位长度的电荷密度IQI/L=C<sub>ox</sub>W(V<sub>GS</sub>-V<sub>TN</sub>)</p>
+<p>​    沟道电场强度为IEI=V<sub>DS</sub>/L</p>
+<p>​    利用迁移率μ可计算载流子迁移速率μE=μV<sub>DS</sub>/L</p>
+<p>​    电流I<sub>D</sub>就是电荷密度乘上迁移速率(IQI/L)×(μE)，I<sub>D</sub>=μC<sub>ox</sub>W/L(V<sub>GS</sub>-V<sub>TN</sub>)V<sub>DS</sub></p>
+<p>​    可见工艺决定后能调的就只有V<sub>GS</sub>和V<sub>DS</sub>。</p>
+<p>​    个人：思考这几个变量在更微观的层面上真的是相互独立的吗？</p>
+<ol>
+<li>中期非线性增长区，V<sub>DS</sub>持续变大，V<sub>GD</sub>=V<sub>GS</sub>-V<sub>DS</sub>减小，靠近漏端栅压变小明显：</li>
+</ol>
+<p>​    源端载流子正比于(V<sub>GS</sub>-V<sub>TN</sub>)，漏端为(V<sub>GS</sub>-V<sub>TN</sub>-V<sub>DS</sub>)</p>
+<p>​    沟道电压平局值为1/2[(V<sub>GS</sub>-V<sub>TN</sub>)+(V<sub>GS</sub>-V<sub>TN</sub>-V<sub>DS</sub>)]=(V<sub>GS</sub>-V<sub>TN</sub>)-0.5V<sub>DS</sub>。</p>
+<p>​    单位长度的平均电荷密度IQI/L=C<sub>ox</sub>W[(V<sub>GS</sub>-V<sub>TN</sub>)-0.5V<sub>DS</sub>]</p>
+<p>​    电流I<sub>D</sub>=μC<sub>ox</sub>W/L(V<sub>GS</sub>-V<sub>TN</sub>)V<sub>DS</sub>-0.5V<sub>DS</sub><sup>2</sup> //其实线性区也该这么表达，只能说V<sub>DS</sub><sup>2</sup>的影响比较小，不怎么改变电容在沟道上的平均分布，这个公式才是这三段区域中最有普适性的，其它的都是特殊点位。</p>
+<ol>
+<li><p>饱和区，预夹断，即为漏端电荷分布为0，V<sub>GS</sub>-V<sub>TN</sub>-V<sub>DS</sub>=0：</p>
+<p>带入公式I<sub>D</sub>=μC<sub>ox</sub>W/L(V<sub>GS</sub>-V<sub>TN</sub>)V<sub>DS</sub>-0.5V<sub>DS</sub><sup>2</sup> 中可得I<sub>D</sub>=μC<sub>ox</sub>W/L0.5(V<sub>GS</sub>-V<sub>TN</sub>)<sup>2</sup></p>
+<p>可见V<sub>DS</sub>已经不影响I<sub>D</sub>了。</p>
+</li>
+<li><p>继续增加V<sub>DS</sub>只会让夹断点向源端移，I<sub>D</sub>不变（夹断区为耗尽区，类似于PN的反偏，随着电压增长慢），看起来多么理想的恒流源啊，可惜：</p>
+<p>V<sub>DS</sub>继续增加，夹断点左移意味着沟道也在变短，实际电流I<sub>D</sub>=I<sub>D0</sub>(1+λV<sub>DS</sub>)，后面这个系数意味着电流随着V<sub>DS</sub>继续增大的程度，但引入这个系数的人应该并不怎么关心为什么继续增大，而是更注重这个输出结果。</p>
+</li>
+</ol>
+<p>将一个PMOS和NMOS用金属串联形成所谓的CMOS（Complementary MOSFETS）器件。</p>
+<h3 id="关键参量："><a href="#关键参量：" class="headerlink" title="关键参量："></a>关键参量：</h3><p>就算知道了这个公式，如何调控I<sub>D</sub>的方式似乎仍然十分有限，怎么调控Vth（V<sub>TN</sub>与V<sub>TP</sub>），电容C<sub>ox</sub>，迁移率μ呢？</p>
+<p>核心在于对阈值电压Vth的理解，在上面ID-VD曲线中已经知道了Vth是被视为了一个很关键的参数，那么Vth是常量吗？受什么因素影响？</p>
+<p>V<sub>TN</sub>的公式推导：</p>
+<p>​    栅极电容两边电荷之和Q’<sub>mT</sub>+Q’<sub>ss</sub>=︱Q’<sub>SD</sub>(max)︱衬底电离电荷</p>
+<p>​    ︱Q’<sub>SD</sub>(max)︱=eN<sub>a</sub>x<sub>dT</sub>    //x<sub>dT</sub>为最大空间电荷宽度，N<sub>a</sub>是杂质浓度。</p>
+<p>​    V<sub>TN</sub>=(︱Q’<sub>SD</sub>(max)︱-Q’<sub>ss</sub>)(t<sub>ox</sub>/ε<sub>ox</sub>)+Φ<sub>ms</sub>+2Φ<sub>fp</sub>    //Φ<sub>ms</sub>为金属半导体功函数差，Φ<sub>fp</sub>是费米能级与本征费米能级的势垒高度。</p>
+<p>可见V<sub>TN</sub>与半导体掺杂、栅氧化层电荷和栅氧化层厚度有关。</p>
+<p>电容</p>
+<p>跨导：g<sub>m</sub>=dI<sub>D</sub>/dV<sub>GS</sub> //即增加栅压会增加相应多少电流。</p>
+<p>衬底偏置电压：衬底和源极电压不一样导致器件正偏。</p>
+<p>//个人问题：到达Vth时，载流子是如何穿过MOSFET沟道的反型层的？普通的反偏PN结电阻就那么大，为什么MOSFET就可以？</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>其它更复杂的器件为PN结的花式组合，如果只是定性了解，可能认知也就停留在调节载流子浓度，温度，偏压上了，看来不了解建立的模型和推公式已经很难对电性的变化规律有具体的了解了，后面再开一章关于模型公式的学习总结吧。</p>
 
                 
             </div>
@@ -1719,13 +1775,13 @@ $(function () {
     
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
 
 </html>
 
