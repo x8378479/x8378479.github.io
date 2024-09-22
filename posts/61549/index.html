@@ -1,0 +1,1871 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Thorlabs光子学实验基础操作汇总, Lee&#39;s Base">
+    <meta name="description" content="To explore!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Thorlabs光子学实验基础操作汇总 | Lee&#39;s Base</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+
+
+   <style>
+    body{
+       background-image: url(http://x8378479.github.io/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Lee&#39;s Base</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Lee&#39;s Base</div>
+        <div class="logo-desc">
+            
+            To explore!
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<!--<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg');  opacity: 50;">--!>
+<br>
+<br>
+<br>
+<br>
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                   <!--<h1 class="description center-align post-title">Thorlabs光子学实验基础操作汇总</h1>-->
+	<h1 class="description center-align post-title"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">读书笔记</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%85%89%E5%AD%90%E5%AD%A6%E5%AE%9E%E9%AA%8C/">
+                                <span class="chip bg-color">光子学实验</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%8B%A6%E9%80%BC%E7%9A%84%E7%A7%91%E7%A0%94/" class="post-category">
+                                苦逼的科研
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-04-11
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-05-04
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    16 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Thorlabs光子学实验基础操作汇总"><a href="#Thorlabs光子学实验基础操作汇总" class="headerlink" title="Thorlabs光子学实验基础操作汇总"></a>Thorlabs光子学实验基础操作汇总</h1><h2 id="1-使激光传播方向和光学平台平行"><a href="#1-使激光传播方向和光学平台平行" class="headerlink" title="1. 使激光传播方向和光学平台平行"></a>1. 使激光传播方向和光学平台平行</h2><ol>
+<li>将光源固定好后，用一把垂直的尺子放在离光源贴近的地方记下刻度(a cm)，再放到远的地方记下刻度(b cm)，调节光源上下方向将a和b调至一样，垂直方向就调正了。再把尺子贴近且让尺子的边缘对准光源，再把尺子远离，看光源离尺子边缘偏移多少，调节光源左右方向使得光斑贴至尺子边，水平方向就调正了。</li>
+<li>如果光源不能动，可以借助两个能转动的反光镜使得光路呈现U型，然后用光阑代替尺子放在第二个反射镜后面来定位。</li>
+</ol>
+<h2 id="2-功率计的参数设置"><a href="#2-功率计的参数设置" class="headerlink" title="2. 功率计的参数设置"></a>2. 功率计的参数设置</h2><p>元件：光线耦合激光光源（中心波长：520 nm）激光光源，光电功率探头，功率计表头。</p>
+<p>光电功率探头功能：将光功率转为光电流，转换因子也称光电响应度，和波长相关。</p>
+<p>参数1：波长</p>
+<p>PS：设置波长后并不是说滤掉了其它光线的光，只测单波长的光，而是还要以那个波长为标准校准。</p>
+<p>参数2：功率范围</p>
+<p>PS：量程太大会分辨率下降，量程太小会不够测。环境光会增加噪音，可以加个镜筒再归0。</p>
+<h2 id="3-将手动位移台换成电动位移台"><a href="#3-将手动位移台换成电动位移台" class="headerlink" title="3. 将手动位移台换成电动位移台"></a>3. 将手动位移台换成电动位移台</h2><p>将手动旋转的设备换成电机。</p>
+<h2 id="4-安装接杆支架时注意螺丝长度"><a href="#4-安装接杆支架时注意螺丝长度" class="headerlink" title="4. 安装接杆支架时注意螺丝长度"></a>4. 安装接杆支架时注意螺丝长度</h2><p>元件：接杆支架、带帽螺丝、固定螺丝、顶部装有光阑的接杆和一块底板。</p>
+<p>选择合适的螺丝，接杆支架可以一插到底，而且可以防止光机械件（此处为顶部装有光阑）不会再旋入螺丝中。</p>
+<h2 id="5-根据应用波长调节自由空间光隔离器"><a href="#5-根据应用波长调节自由空间光隔离器" class="headerlink" title="5. 根据应用波长调节自由空间光隔离器"></a>5. 根据应用波长调节自由空间光隔离器</h2><p>元件：中心波长为532 nm窄带可调光隔离器，520 nm的二类激光器</p>
+<p>532 nm窄带可调光隔离器功能：减少520 nm背向反射光透过抵达上游光源，影响光源稳定性，甚至造成损伤，提高光源单向传输效率。</p>
+<p>原理：对于正向入射的信号光，通过起偏器后成为线偏振光，法拉弟旋磁介质与外磁场一起使信号光的偏振方向右旋45度，并恰好使低损耗通过与起偏器成45度放置的检偏器。对于反向光，出检偏器的线偏振光经过放置介质时，偏转方向也右旋转45度，从而使反向光的偏振方向与起偏器方向正交，完全阻断了反射光的传输。（摘自：百度百科）</p>
+<p>操作：</p>
+<ol>
+<li>对齐光路</li>
+<li><p>用两个凸透镜（收束器）缩小了激光器光斑大小（因为激光器光斑半径大于了收束器）</p>
+</li>
+<li><p>使用隔离器时，为防止其被拿来拿去位置变化，隔离器上的锁环可以锁住位置。</p>
+</li>
+<li><p>调节隔离器角度时，看隔离器后面的功率计功率为最大值时，说明调正了。</p>
+</li>
+<li>调整滑环内的隔离器主体，将里面的线偏振片与入射偏振光对准，通过功率计，使得光通量最大，锁定。</li>
+<li>将隔离器在光路中的方向反转。隔离器上的箭头表示预期的光束传播方向，让箭头指向光源。</li>
+<li>调节靠近激光器这端的输出端偏振片，知道看到这个方向的透过率最小，锁定。</li>
+<li>再把箭头转回来，调到功率最大。</li>
+</ol>
+<h2 id="6-使线偏振片的轴与平台垂直或平行"><a href="#6-使线偏振片的轴与平台垂直或平行" class="headerlink" title="6. 使线偏振片的轴与平台垂直或平行"></a>6. 使线偏振片的轴与平台垂直或平行</h2><p>元件：一个经过准的激光二极管，一个偏振分束立方，偏振器，安装座，功率探头和表头</p>
+<p>P偏振：平行于入射平面偏振</p>
+<p>S偏振：垂直于入射平面偏振</p>
+<p>分束器立方：Thorlabs的分束器立方分为偏振和非偏振版本。偏振分束器立方会将S和P偏振光分成不同的两个方向，而非偏振分束立方不管光的波长和偏振态，都会以相同的比率将入射光分开。我们的分束立方可以预安装在笼式立方内，可以兼容透镜套管和笼式系统。</p>
+<p>入射平面为反射光与入射光形成的平面。</p>
+<p>当偏振轴不垂直时，偏振入射光与偏振轴夹角在正反面是不同的，根据马吕斯定律，则正面和反面的透过率是不同的。所以可以不停地调角度，一直到正反面透过光的功率一致。</p>
+<p>所以把偏振片取出去再放回来通常是需要用功率计对准的，在偏振片支架上先粗调，再用顶端测微头细调，否则由+-5度的误差。</p>
+<p>然后可以用这个调好的偏振片为参考调节其它偏振片。</p>
+<h2 id="7-如何手工切割光纤？"><a href="#7-如何手工切割光纤？" class="headerlink" title="7. 如何手工切割光纤？"></a>7. 如何手工切割光纤？</h2><p>适用于单模光纤和多模光纤</p>
+<p>操作：</p>
+<ol>
+<li><p>用剪刀剪下一段所需长度的光纤。</p>
+</li>
+<li><p>用光纤剥除工具剥下两端缓冲层。</p>
+</li>
+<li><p>用透明胶固定一头在平台上。</p>
+</li>
+<li><p>用红宝石刻划刀一气呵成刻划包层横截面，但不要伤害光纤，会听到沙沙的声音。</p>
+</li>
+<li><p>用一块裸纤夹片压住透明胶带，贴住光纤的前端。</p>
+</li>
+<li><p>再用一块保住后端。</p>
+</li>
+<li><p>沿着直轴拉断光纤。</p>
+</li>
+<li><p>用放大镜对着光线看光纤断口。</p>
+</li>
+<li><p>如果是一个圆面就可以切割另一端了，否则重来。</p>
+</li>
+<li><p>将光纤接上光源，另一端对准白板，会看到一个均匀的圆，就说明切得不错。</p>
+</li>
+</ol>
+<h2 id="8-测量光纤器件的插入损耗"><a href="#8-测量光纤器件的插入损耗" class="headerlink" title="8. 测量光纤器件的插入损耗"></a>8. 测量光纤器件的插入损耗</h2><p>名称：单端/单条线参考法测量插入损耗</p>
+<p>操作：</p>
+<ol>
+<li><p>先要测量参考条线的输出光功率。</p>
+</li>
+<li><p>再将参考条线与器件连接比较输出功率，就可以计算器件的插入损耗。</p>
+</li>
+</ol>
+<p>PS: 不同方法测出来的结果不一样，但他们有时候不会指明所使用的方法。</p>
+<p>功率计上的光纤探头应该要大于光纤直径，确保光线被全部接收。</p>
+<p>插入损耗一般用单位dBm表示，而不是mW。功率[mW]=10^(功率[dBm]/10)，这样可以确保总插入损耗计算具有加和性而不是相乘。</p>
+<p>功率计上的Dealt键可以在打开光源时，按下，显示为0，关开电源，看是不是还是0，以确保光源稳定性。</p>
+<h2 id="9-用1-4将线偏光变圆偏光"><a href="#9-用1-4将线偏光变圆偏光" class="headerlink" title="9. 用1/4将线偏光变圆偏光"></a>9. 用1/4将线偏光变圆偏光</h2><p>波片的快轴折射率与慢轴不同，线偏振光平行于快轴时，将输出偏振方向与快轴相同的线偏振光，但相位延迟，延迟量与快轴折射率和波片厚度成正比。线偏振光平行于慢轴时，也一样输出偏振方向与慢轴相同的线偏振光，只是对应受影响的折射率为慢轴折射率。</p>
+<p>延迟相位<script type="math/tex">Γ=\frac{2π(n_s-n_f)t}{λ}</script></p>
+<p>线偏振光与1/4波片成为45度时，则垂直波与水平波相差1/4个相位，则输出圆偏振光。</p>
+<p>如果找到波片的轴？</p>
+<ol>
+<li><p>先将光路调整为光源1-偏振片1-偏振片2-功率计</p>
+</li>
+<li><p>将偏振片1与偏振片2垂直，使得功率计为最小。</p>
+</li>
+<li><p>将波片插入1与2之间后，功率计产生较大示数，转动到某一个刻度后，功率计为最小，为其中某一个轴，转90度为另一个轴。记录两个角度。</p>
+</li>
+</ol>
+<p>如何合成圆偏振光？</p>
+<ol>
+<li>以上述记录角度为基准，旋转45度，此时功率计也会显示最大功率。</li>
+</ol>
+<p>圆偏振度检测：</p>
+<ol>
+<li><p>旋转偏振片2，并记录不同角度功率。</p>
+</li>
+<li><p>如果是纯的圆偏振光，输出功率不变。（实际上有很多原因影响）</p>
+</li>
+</ol>
+<h2 id="10-使线偏振片与入射平面成45度角"><a href="#10-使线偏振片与入射平面成45度角" class="headerlink" title="10. 使线偏振片与入射平面成45度角"></a>10. 使线偏振片与入射平面成45度角</h2><p>操作：</p>
+<ol>
+<li><p>先按6中的操作使得平台与透射轴对齐。</p>
+</li>
+<li><p>锁住位置，再调节后面的偏振片调节与上一个偏振片正交。 </p>
+</li>
+<li><p>再在中间插入一个偏振片，当与两个偏振片呈45度时，功率最大（马吕斯定理）。</p>
+<p>设中间偏振片与第一个偏振片的夹角为θ</p>
+</li>
+</ol>
+<script type="math/tex; mode=display">
+I=I_1cos^2θcos^2(π/2-θ)\\
+I=I_1cos^2θsin^2θ\\
+2cosθsinθ=sin2θ\\
+I=I_1sin^22θ/4</script><p>   所以θ=π/4时值最大。</p>
+<h2 id="11-光纤准直器用于单模光纤的对准和耦合"><a href="#11-光纤准直器用于单模光纤的对准和耦合" class="headerlink" title="11. 光纤准直器用于单模光纤的对准和耦合"></a>11. 光纤准直器用于单模光纤的对准和耦合</h2><p>将点光源放在凸透镜后焦面，凸透镜可以将点光转化为平行光。</p>
+<p>实验室常为非平行光，经过透镜后大概是一个喇叭状。</p>
+<p>输出光束直径为准直器输出的最小光束宽度。</p>
+<p>瑞丽范围：从光束的束腰到扩大41%的距离。</p>
+<p>操作：</p>
+<ol>
+<li>将光纤头弄干净。</li>
+<li>用功率计把光纤头对直。</li>
+<li>一边调光源侧光纤的补偿，一边调检测器光纤补偿，先调垂直方向，再调水平方向，直到出现最大值。</li>
+</ol>
+<h2 id="12-安装TO封装的激光二极管"><a href="#12-安装TO封装的激光二极管" class="headerlink" title="12. 安装TO封装的激光二极管"></a>12. 安装TO封装的激光二极管</h2><p>激光器对ESD(Electrostatic Discharge)非常敏感。人身上累计了电荷，然后接触到金属，很可能受到电击。如果碰到激光二级管，可能会破坏它。</p>
+<p>ESD护腕：一个护腕，内侧有金属片，接了仪器的地线。保证金属接触皮肤</p>
+<p>操作：</p>
+<ol>
+<li><p>按引脚标签插好激光器，用法兰锁定位置。</p>
+</li>
+<li><p>确认激光二极管的极性：二极管阳极接地，所以LD开关切换到AG，PG是阴极接地，切到CG。</p>
+</li>
+<li><p>激光驱动器也弄成AG与CG。</p>
+</li>
+<li><p>设置驱动器的最大电流。</p>
+</li>
+<li><p>连接温度控制器，将温度设定在工作温度，此处25度，比室温高一点，减小驱动器受环境的波动。</p>
+</li>
+<li><p>戴好护目镜，将功率计探头靠近激光器。</p>
+</li>
+<li><p>慢慢加电流，看功率达到最大限制功率的时候，记录驱动电流值。</p>
+</li>
+<li><p>将驱动电流值设定为最大调控值。</p>
+</li>
+</ol>
+<h2 id="13-安装蝶形封装的激光二极管"><a href="#13-安装蝶形封装的激光二极管" class="headerlink" title="13. 安装蝶形封装的激光二极管"></a>13. 安装蝶形封装的激光二极管</h2><p>与12的区分，因为引脚和底座接触面是隔开的，可以用散热膏涂在底座面上。</p>
+<p>参数设置主要也是根据Steinhart-Hart系数，热敏电阻温度等，与驱动器保持一致。</p>
+<h2 id="14-如何区分波片的快慢轴"><a href="#14-如何区分波片的快慢轴" class="headerlink" title="14. 如何区分波片的快慢轴"></a>14. 如何区分波片的快慢轴</h2><p>可以用一些仪器测折射率，也可以用一个使用方向明确的延迟器。</p>
+<p>这里用的方法是参考文献：Opt. Eng. 44, 3316-3318(2002).的方法</p>
+<p>须知：反射和透射的菲涅尔公式</p>
+<p>圆偏振光方向定义：方法1：视角正对光束，朝着光源看。方向2：沿光束的传播方向观看。顺时针绕轴转动为右手圆偏振，此时慢轴水平，快轴垂直。反之亦然。</p>
+<p>操作：</p>
+<ol>
+<li><p>搭建光路，激光器45度入射反射镜，135度反射光进入功率计。</p>
+</li>
+<li><p>激光器入射无保护层的金膜反射镜（只要能反射产生相位差即可，无保护层更简单计算）。</p>
+</li>
+<li><p>将一个偏振方向为45度的偏振片放在功率计与反射镜之间。（45度的调节方法参考第10节）</p>
+</li>
+<li><p>在激光器与反射镜之间加入待测波片。（参考第9节的方法已经找到了两个轴的角度）</p>
+</li>
+<li><p>在待测波片与激光器前再放一个偏振方向为45度的偏振片。</p>
+</li>
+<li><p>根据菲涅尔公式计算反射率，计算结果取决于光从哪一轴通过。</p>
+</li>
+<li><p>快轴和慢轴方向各能得到一个不同的反射率曲线。</p>
+</li>
+<li><p>测测两个轴的功率，也就知道了总功率，然后把结果拟合在两条理论曲线上就得到了对应轴。</p>
+<p>参考知乎：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/396331166">https://zhuanlan.zhihu.com/p/396331166</a></p>
+<p><img src="/loading.gif" data-original="/posts/61549/1.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/61549/2.jpg" alt></p>
+</li>
+</ol>
+<h2 id="15-测量偏振光的斯托克斯参量"><a href="#15-测量偏振光的斯托克斯参量" class="headerlink" title="15. 测量偏振光的斯托克斯参量"></a>15. 测量偏振光的斯托克斯参量</h2><p><img src="/loading.gif" data-original="/posts/61549/3.jpg" alt></p>
+<p>斯托克斯偏振参数：1x4的矩阵，4个参数S0，S1，S2，S3中：</p>
+<p>S0:总功率或强度，可以归一化为1</p>
+<p>S1:水平偏振光强与垂直偏振光强之差，-1到1之间。1就代表完全水平。</p>
+<p>S2:45度与-45度偏振方向光强之差，-1到1之间，1就表示为45度。</p>
+<p>S3:右圆偏振光强与左圆偏振光强之差。-1到1之间，1是完全右圆，0是线偏，二者之间为椭圆。</p>
+<p>所有的光都可以以椭圆偏振光的形式描述，斯托克斯参量关系，如图：</p>
+<p>可以直接用线偏振片测不同角度的透过光强来计算，测S3的时候要在前面加一个快轴水平的1/4波片。</p>
+<script type="math/tex; mode=display">
+S_0=P_1(0^o)+P_2(90^o)\\
+S_1=P_1(0^o)-P_2(90^o)\\
+S_2=2P_3(45^o)-S_0\\
+S_3=S_0-2P_4(0^o,45^o)</script><p>经典法缺点：只测量了一次，且光学元器件在测量时要取进取出，带来很多误差。</p>
+<p>旋转1/4波片法：直接用测S3的光路，线偏振片偏振方向改为水平方向，将前面的1/4波片旋转180度取8个点以上测试。</p>
+<p><img src="/loading.gif" data-original="/posts/61549/4.jpg" alt></p>
+<p>缺点：波片与波长不匹配时，角度旋转不准时会出现误差。</p>
+<p>补充知识：</p>
+<p>在庞加莱球中，偏振度定义为<script type="math/tex">P=\frac{\sqrt{S_{1}^{2}+S_{2}^{2}+S_{3}^{2}}}{S_{0}}</script>，其意义为判断光波偏振的程度，即是否为完全偏振光。一般情况下，<script type="math/tex">1\geqslant P\geqslant 0</script>。当P=0时，光波为完全非偏振光，也就是自然光；当<script type="math/tex">1> P> 0</script>时，光波为部分偏振光；当<script type="math/tex">P=1</script>时，光波为完全偏振光。</p>
+<p>偏振知识：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/studyhao1999/p/15636798.html">https://www.cnblogs.com/studyhao1999/p/15636798.html</a></p>
+<h2 id="16-Visual-Studio®项目设置和C-编程-Kinesis®-BBD300系列控制器"><a href="#16-Visual-Studio®项目设置和C-编程-Kinesis®-BBD300系列控制器" class="headerlink" title="16. Visual Studio®项目设置和C#编程 - Kinesis® BBD300系列控制器"></a>16. Visual Studio®项目设置和C#编程 - Kinesis® BBD300系列控制器</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1W34y1X7ot?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1W34y1X7ot?spm_id_from=333.999.0.0</a></p>
+<p>此Kinesis®软件教程演示的是如何使用C#和.NET Framework新建Visual Studio®项目并初始化连接的设备，此处用于示例的是连接了两轴位移台的BBD300系列运动控制器。</p>
+<p>（没有软件和相关设备，这一章没仔细学习）</p>
+<p>主要如下：</p>
+<p>00:43 - 新建Visual Studio项目</p>
+<p>01:56 - 在项目中加入Kinesis®动态链路库</p>
+<p>02:47 - 检查截至目前的生成操作</p>
+<p>03:32 - 加入基于C语言的依赖文件</p>
+<p>04:27 - 加载并关联可用控制器</p>
+<p>05:39 - 确认并筛选连接的设备</p>
+<p>07:27 - 检查截至目前的生成操作</p>
+<p>07:44 - 初始化控制器机箱 </p>
+<p>09:45 - 初始化一个控制器通道</p>
+<p>12:21 - 获取位置和状态信息</p>
+<p>13:01 - 启用位移台</p>
+<p>13:23 - 创建位移台归位方法示例</p>
+<p>16:14 - 创建位移台运动方法示例</p>
+<p>18:22 - 调节速度和加速设置</p>
+<p>19:15 - 设置运动和断开序列</p>
+<p>20:33 - 测试代码</p>
+<h2 id="17-Visual-Studio®项目设置和C-编程-Kinesis®-BBD300系列控制器"><a href="#17-Visual-Studio®项目设置和C-编程-Kinesis®-BBD300系列控制器" class="headerlink" title="17. Visual Studio®项目设置和C#编程 - Kinesis® BBD300系列控制器"></a>17. Visual Studio®项目设置和C#编程 - Kinesis® BBD300系列控制器</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1b34y197dT?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1b34y197dT?spm_id_from=333.999.0.0</a></p>
+<p>此Kinesis®软件教程演示的是对BBD300系列运动控制器进行编程，使其以步进式双向光栅扫描模式移动所连接的双轴位移台。此编程使用C#、.NET Framework和Visual Studio®开发环境。</p>
+<p>（没有软件和相关设备，这一章没仔细学习）</p>
+<p>主要如下：</p>
+<p>00:24 - 光栅扫描概述和实现方法</p>
+<p>02:56 - 项目设置简介（库、导入）</p>
+<p>03:50 - 生成设备列表</p>
+<p>05:41 - 初始化控制器机箱</p>
+<p>07:12 - 初始化、关联并启用两个通道</p>
+<p>10:10 - 封装移动和归位方法</p>
+<p>10:59 - 封装点动方法</p>
+<p>11:38 - 完善三种移动方法</p>
+<p>14:10 - 回到程序主体</p>
+<p>18:10 - 确定扫描方向</p>
+<p>19:44 - 编写双向光栅扫描模式</p>
+<p>24:11 - 测试代码并调试</p>
+<p>25:05 - 成功执行代码</p>
+<h2 id="18-用离轴抛物面反射镜准直发散光"><a href="#18-用离轴抛物面反射镜准直发散光" class="headerlink" title="18. 用离轴抛物面反射镜准直发散光"></a>18. 用离轴抛物面反射镜准直发散光</h2><p><img src="/loading.gif" data-original="/posts/61549/5.jpg" alt></p>
+<p>操作：</p>
+<ol>
+<li><p>将转接件安装在反射镜上</p>
+</li>
+<li><p>安装和粗略地对准反射镜</p>
+</li>
+<li><p>将反射镜和光源设在相同高度</p>
+</li>
+<li><p>初步对准反射镜和光源的位置和方向</p>
+</li>
+<li><p>反复细调反射镜和光源的位置和方向，理想位置反射出来的光斑是一个圆，要不断地去逼近</p>
+</li>
+<li><p>光束质量问题和解决方法、像第1节调尺子那样用一个挡光板去调垂直，水平偏移量等。</p>
+</li>
+<li><p>光源和反光镜只能调一个，不然永远调不准了。</p>
+</li>
+</ol>
+<h2 id="19-Visual-Studio®和C-编程：相机设置和图像采集"><a href="#19-Visual-Studio®和C-编程：相机设置和图像采集" class="headerlink" title="19. Visual Studio®和C#编程：相机设置和图像采集"></a>19. Visual Studio®和C#编程：相机设置和图像采集</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Zr4y1h7RV?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1Zr4y1h7RV?spm_id_from=333.999.0.0</a></p>
+<p>将科研相机集成在光学装置中时，通过触发自动采集和存储图像能为应用提供便利。通过Thorlabs科研级相机提供的软件开发套件(SDK)可实现上述过程。上述视频演示了利用ThorCam SDK在Visual Studio®环境下写C#程序，用于控制成像装置中的科研相机并采集图像。</p>
+<p>（没有软件和相关设备，这一章没仔细学习）</p>
+<p>00:00 - 简要介绍</p>
+<p>00:35 - LED控制器设置和连接</p>
+<p>02:30 - 项目设置简述（添加数据库并导入）</p>
+<p>03:58 - 查找可用的相机</p>
+<p>05:39 - 打开选定的相机</p>
+<p>06:03 - 设置相机参数</p>
+<p>07:59 - 设置图像张数</p>
+<p>09:44 - 接收和保存获取到的图像</p>
+<p>11:29 - 清理相机资源</p>
+<p>12:03 - 成功执行代码</p>
+<h2 id="20-单模光纤对准耦合之FiberPort调节技巧"><a href="#20-单模光纤对准耦合之FiberPort调节技巧" class="headerlink" title="20. 单模光纤对准耦合之FiberPort调节技巧"></a>20. 单模光纤对准耦合之FiberPort调节技巧</h2><p>将极小的聚焦光斑和同样小的单模光纤模光纤模场直径重合。</p>
+<p>操作：</p>
+<ol>
+<li><p>用放大镜确保光纤清洁。</p>
+</li>
+<li><p>光纤FiberPort头子上有xyz三个轴的螺丝对光的输出方向进行调节，使得光束不再发散且平行于平面传播。</p>
+</li>
+<li><p>将光纤后面的两个光阑调小进一步调节xyz轴，先调离光纤近的。</p>
+</li>
+<li>将光纤接到平行的第二个FiberPort上来调节。</li>
+<li>调好后两端接好光纤。</li>
+<li>输出端接功率计，调节3个Z轴螺丝，使得功率计实数最大。（不断探寻最大功率处，究极折磨）</li>
+</ol>
+<h2 id="21-KF真空法兰组件的组装方法"><a href="#21-KF真空法兰组件的组装方法" class="headerlink" title="21. KF真空法兰组件的组装方法"></a>21. KF真空法兰组件的组装方法</h2><p>操作：</p>
+<ol>
+<li>手套用皮筋勒紧，带两层，防止污染和刮伤</li>
+<li>在工作台面上垫一层锡箔纸。</li>
+<li><p>O圈被压缩在两个法兰之间</p>
+</li>
+<li><p>注意O圈在不同温度下要保养，还要防止形变。</p>
+</li>
+<li>保存时用锡箔纸包好，防止刮伤。</li>
+<li>用纸巾清洁连接处。</li>
+<li>拧上螺栓。</li>
+<li>如果使用真空润滑油，要考虑是否好清洁，环境条件下是否适用。</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Lee</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://x8378479.github.io/posts/61549/">https://x8378479.github.io/posts/61549/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Lee</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">读书笔记</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%85%89%E5%AD%90%E5%AD%A6%E5%AE%9E%E9%AA%8C/">
+                                    <span class="chip bg-color">光子学实验</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢您的支持！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '67iv3fIwkPzU8B6pomqAdjDa-gzGzoHsz',
+        appKey: 'msR7WdRSmLnaEIqwzlUx0If4',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '想说你就说呀~如果你填了网址，你评论用的名字会自动生成网址的超链接'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/29886/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2022年求职训练课程笔记（一）">
+                        
+                        <span class="card-title">2022年求职训练课程笔记（一）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B9%B3%E5%87%A1%E7%9A%84%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    平凡的生活
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">读书笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%80%9D%E8%80%83%E4%B8%8E%E6%88%90%E9%95%BF/">
+                        <span class="chip bg-color">思考与成长</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/6926/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="《社会心理学》读书笔记">
+                        
+                        <span class="card-title">《社会心理学》读书笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B9%B3%E5%87%A1%E7%9A%84%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    平凡的生活
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">读书笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%80%9D%E8%80%83%E4%B8%8E%E6%88%90%E9%95%BF/">
+                        <span class="chip bg-color">思考与成长</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lee&#39;s Base<br />'
+            + '文章作者: Lee<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2024</span>
+            
+
+            <a href="/about" target="_blank">Lee</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+
+
+
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "5";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已苟延残喘了 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6cbd3a2f0dfd08af75a743f1c51a163f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:425999183@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=425999183" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 425999183" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+
+
+
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+	<link rel="stylesheet" href="/css/matery.css">
+	<script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6cbd3a2f0dfd08af75a743f1c51a163f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+
+</html>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 128" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!--鼠标点击烟花特效-->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+
+
+

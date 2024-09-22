@@ -1,0 +1,2060 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="知识点汇总：薄膜晶体管液晶显示器显示原理与设计, Lee&#39;s Base">
+    <meta name="description" content="To explore!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>知识点汇总：薄膜晶体管液晶显示器显示原理与设计 | Lee&#39;s Base</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+
+
+   <style>
+    body{
+       background-image: url(http://x8378479.github.io/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Lee&#39;s Base</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Lee&#39;s Base</div>
+        <div class="logo-desc">
+            
+            To explore!
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<!--<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg');  opacity: 50;">--!>
+<br>
+<br>
+<br>
+<br>
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                   <!--<h1 class="description center-align post-title">知识点汇总：薄膜晶体管液晶显示器显示原理与设计</h1>-->
+	<h1 class="description center-align post-title"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">读书笔记</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%98%BE%E7%A4%BA%E5%99%A8/">
+                                <span class="chip bg-color">显示器</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8F%91%E6%8E%98%E4%B9%90%E8%B6%A3/" class="post-category">
+                                发掘乐趣
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-05-14
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-07-03
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    8.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    32 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="知识点汇总：薄膜晶体管液晶显示器显示原理与设计"><a href="#知识点汇总：薄膜晶体管液晶显示器显示原理与设计" class="headerlink" title="知识点汇总：薄膜晶体管液晶显示器显示原理与设计"></a>知识点汇总：薄膜晶体管液晶显示器显示原理与设计</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>该知识点汇总了电子工业出版社的《薄膜晶体管液晶显示器显示原理与设计》读书笔记。重点关注工艺参数和表征方法，相关机理应该还要考半导体物理知识来救救，这本书讲机理讲得模模糊糊。</p>
+<p>下图为本人根据书中介绍后画的总结的TFT液晶显示器结构组成图，想了想显示器也许是一个大方向，掌握其中的某一个工艺可能就能横扫一方了，但既然在这个行业，也要时刻关注科技大变革才行呀，以前的大砖头显示器不是就早就不存在了吗。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/1.png" alt="TFT液晶显示器结构细分"></p>
+<h2 id="1-液晶显示的基本概念"><a href="#1-液晶显示的基本概念" class="headerlink" title="1. 液晶显示的基本概念"></a>1. 液晶显示的基本概念</h2><h3 id="液晶基本类型与性质简介"><a href="#液晶基本类型与性质简介" class="headerlink" title="液晶基本类型与性质简介"></a>液晶基本类型与性质简介</h3><p>液晶分子的构效粗略关系：侧链（柔韧性，主要影响黏度和相转变温度）+环结构（刚性。主要影响液晶线性和光学各向异性）+端基（通常为极性基团，影响整个分子极性）</p>
+<p>液晶类型：近晶型，相列型，胆甾型</p>
+<p>​    近晶型：棒状分子，层状结构，长短轴取向均一致。</p>
+<p>​    向列向：棒状分子，层状结构，长轴取向一致，黏度小，短轴易产生滑移。</p>
+<p>​    胆甾型：扁平状分子，层状排列，层内取向一致，层层之间呈现螺旋排列，旋光性强。</p>
+<p>其中向列型作为显示器中使用最多，胆甾型一般加在向列型里调节螺距或作为液晶补偿膜。</p>
+<p>液晶的特性：电学各向异性，光学各向异性，力学特性，其它…</p>
+<p>​    电学性质：各向异性，长轴介电常数<script type="math/tex">ε_∥</script>和短轴介电常数<script type="math/tex">ε_⊥</script>，定义<script type="math/tex">△ε=ε_∥-ε_⊥</script>，△ε&gt;0为正性液晶（电场够大时，长轴与电场平行），△ε&lt;0为负性液晶（电场够大时，长轴与电场垂直）。</p>
+<p>​    光学性质：各向异性，长轴折射率<script type="math/tex">n_∥</script>和短轴介电常数<script type="math/tex">n_⊥</script>，定义<script type="math/tex">△n=n_∥-n_⊥</script>。LCD（Liquid Crystal Display）中常用的液晶可以视为单轴液晶，光轴取向与长轴一致。光线通过时发生双折射，产生一束遵循折射定律的寻常光（Ordinary Light），另一束是非寻常光（Extraordinary Light），两束光有相位差（△n·d），决定了合成光的强度和振动方向。</p>
+<p>PS：折射定律-<script type="math/tex">sinθ_1·n_1=sinθ_2·n_2</script>。 其中<script type="math/tex">θ_1</script>为入射角，<script type="math/tex">n_1</script>为入射界面折射率，下标2则为反射的。</p>
+<p>​    力学性质：用弹性参数描述-克服单位形变所需要克服的应力大小。三种形变对应的弹性常数：K11(展曲)，K22(扭曲)，K33(弯曲)，通常K33&gt;K11&gt;K22。</p>
+<p>​    其它性质：电阻率（一般液晶接近绝缘，越大越稳定，越小说明纯度低，杂质粒子多，会影响显示器的残像特性），黏度系数（与分子间相互作用力有关，两个重要的黏度分别是流体黏度-影响流动性，旋转黏度-影响液晶的响应速度与清亮点温度，旋转黏度越大显示器响应时间越长）</p>
+<p>​    相变温度：清亮点（液晶态向各向同性液体转变）-Tni（n-nematic，i-isotropy），近晶相向向列相转变温度Tsn（s-smectic），熔点(液晶态向固态转变)-Tcn（c-crystal）.</p>
+<p>偏光片：让自然光变成偏振光的光学膜材。 </p>
+<p>PS：用于液晶显示的偏光片通常是利用碘分子（I3-作用于450 nm左右和I5-作用于610 nm左右）附着在聚乙烯醇薄膜上进行单向拉伸或具有二相色散性的染料来吸收某一偏振态光线。</p>
+<h3 id="偏光片基本类型与性质简介"><a href="#偏光片基本类型与性质简介" class="headerlink" title="偏光片基本类型与性质简介"></a>偏光片基本类型与性质简介</h3><p>偏光片基本组成：保护膜-TAC层-PVA层-TAC层-PSA层-离子型膜</p>
+<p>PVA层：核心部分，PVA即为聚乙烯醇，加碘实现偏振功能，约20um。</p>
+<p>TAC层：Tri-Acetate Cellulose，三醋酸纤维素，用于支撑和保护PVA层，防止PVA吸水变形等，一般有40 um和60 um。通过NRT（No Retardation TAC）可以改善拉伸工艺，实现无光学延迟的TAC薄膜，用来改善暗态漏光。</p>
+<p>PSA层：Pressure Sensitive Adhere，压敏胶，用以确保偏光片能牢靠地粘贴在玻璃基板上。</p>
+<p>离型膜和保护膜：分别保护PSA层与TAC层，通常为PET材料，即聚对苯二甲酸乙二酯。</p>
+<p>补偿膜：入射光在长轴和短轴方向位相差不同，导致不同角度观看出现色偏和亮度不均，所以需要补偿膜修正。一般为固化了的聚合物液晶（比如液晶胆甾相液晶）薄膜组成。</p>
+<p>偏光片重要参数：偏振度、透过率、可靠性、剥离力、外观指标…</p>
+<p>偏振度：<script type="math/tex">S=\sqrt{\frac{T_‖-T_⊥}{T_‖+T_⊥}}</script>，<script type="math/tex">T_‖</script>和<script type="math/tex">T_⊥</script>分别是平行和垂直于碘分子排列方向的振动光强。</p>
+<p>透过率：<script type="math/tex">T_s</script>-单体透过率-光经过单光片后的透过率，理论最大50%。<script type="math/tex">T_p</script>-平行透过率-经过两片透光轴平行的偏光片的透过率。<script type="math/tex">T_c</script>-平行透过率-经过两片透光轴垂直的偏光片的透过率。<script type="math/tex">T_p</script>影响LCD的最大亮度，<script type="math/tex">T_c</script>影响LCD的暗态亮度，<script type="math/tex">T_p</script>/<script type="math/tex">T_c</script>的大小影响LCD的对比度。实际光通过偏振片也不是严格意义的单一方向的线偏振光，可以视为正交矢量上的两束光，两束光的光强为总光强的一半，光强具有加和性，此时<script type="math/tex">T_s</script>=(<script type="math/tex">k_1</script>+<script type="math/tex">k_2</script>)/2，<script type="math/tex">k_1</script>和<script type="math/tex">k_2</script>分别代表两个方向的透光率。平行透过率则为<script type="math/tex">T_p=(k_1^2+k_2^2)/2</script> 而垂直透过率<script type="math/tex">T_c=k_1k_2</script></p>
+<p><img src="/loading.gif" data-original="/posts/53757/1.jpg" alt></p>
+<p>可靠性：单位时间内不同工作环境（温度、湿度等等）的可使用性。</p>
+<p>剥离力：分为保护膜剥离力、离型膜剥离力和对玻璃基板的剥离力。太大的话则返工修复性差，太小则可靠性差。</p>
+<p>外关指标：平整度、四角翘曲高度、边缘波纹状卷曲高度和尘粒污染参数。</p>
+<p>偏光片还需表面改性改良一下力学性能。</p>
+<p>玻璃基板：低碱、平整度高、耐高温和热膨胀系数低等特点。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/2.jpg" alt></p>
+<h3 id="液晶显示的基本原理与光电特性参数"><a href="#液晶显示的基本原理与光电特性参数" class="headerlink" title="液晶显示的基本原理与光电特性参数"></a>液晶显示的基本原理与光电特性参数</h3><p>薄膜晶体管（Thin Film Transistor, TFT）液晶显示器基本结构：背光源、液晶面板和驱动电路。TFT会对驱动液晶的电信号起到开关作用。</p>
+<p>偏振光经过偏振片时光强变化规律遵循马吕斯定律：<script type="math/tex">I_2=I_1cos^2θ</script>，其中θ是偏振器偏振化方向与偏振光偏振方向的夹角。</p>
+<p>通过控制施加给液晶的电压，可以改变液晶旋向，从而改变液晶通量。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/3.jpg" alt></p>
+<p>显示器重要参数：</p>
+<p>液晶面板透过率=面板表面亮度/背光源亮度。越大越节能。</p>
+<p>对比度：屏幕上某一点最亮的亮度/最暗的亮度，静态对比度是背光源保持不变的情况下测试，动态对比度测试改变了背光源亮度。越大图像越清晰。</p>
+<p>响应时间：分为黑白响应时间与灰阶响应时间。越小越不容易拖影。</p>
+<p>​    黑白响应时间：液晶在电场下由一个极端变另一个极端花的时间，屏幕由暗场变亮场所需的时间。施加电压后光穿透率由10%变90%所需要的时间为上升时间Ton；释放电压后光穿透率由90%变10%所需要的时间为上升时间Toff。Toff通常大于Ton。</p>
+<p>​    灰阶响应时间：GTG(Gray-to-Gray)时间，图像从一个灰阶变成另一灰阶的时间，一般是全部灰阶分成几个等分，然后测灰阶之间的响应时间，最后计算出平均值。</p>
+<p>视角：观察者能清楚看到图像的角度范围定义为显示器的视角。一般用对比度大于等于10定义LCD视角，也可以按灰阶反转（超过一个角度，低灰阶比高灰阶还亮）定义，还可以按色偏定义。</p>
+<p>色域：Color Gamut, CG 可以显示的颜色范围，可以根据CIE图确认，色域标准有NTSC、sRGB、Aobe等。</p>
+<p>色温：Color Temperature, CT 黑体受热发光，温度越低颜色越红，温度越高颜色越蓝。</p>
+<h3 id="画质改善技术"><a href="#画质改善技术" class="headerlink" title="画质改善技术"></a>画质改善技术</h3><p>Quantum Dot, QD法，作为蓝光LED的受激对象，发出更纯的光，NTSC色域可以高达100%以上。QD材料的缺点是抗湿气和抗高温能力差。</p>
+<p>高动态范围图像技术（High Dynamic Range, HDR）：使得灰阶数增加，图像显示出更多细节。</p>
+<p>局域调光技术（Local Dimming）：将整个LED背光源分割成几个独立模块，按区域调整光强。（想一下这个东西的极限操作不就是每个像素点后面都放个灯珠）</p>
+<p>姆拉擦除技术（De-mura）：通过算法把局部灰度异常的区域通过数据驱动信号调整达到一致。</p>
+<p>运动图像补偿技术（Motion Estimate and Motion Compensation，MEMC）:在帧与帧之间通过算法预测运动轨迹，插帧，使得画面更流畅。</p>
+<p>帧数转换技术（Frame Rate Conversion, FRC）：通过控制多帧的像素实现插入中间灰阶的办法，从而实现显示画面灰阶数的增加。从而色彩分明。</p>
+<h3 id="立体显示技术"><a href="#立体显示技术" class="headerlink" title="立体显示技术"></a>立体显示技术</h3><p>利用双眼显示图像差异产生。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/4.jpg" alt></p>
+<p>眼镜式：快门眼镜和偏光眼镜</p>
+<p>裸眼3D：靠视差光栅和柱棱镜光栅使得不同视区呈现不同图像。关键参数就是光栅参数。</p>
+<p>其中柱棱镜光栅：有源偏光式微透镜、有源液晶透镜和电驱动式液晶透镜。原理都是通过导电改变入射光偏振方向与液晶排列方向的角度，从而控制光线在空间中的分离(3D显示)与不分离（2D显示）。</p>
+<p>待解决问题：</p>
+<ol>
+<li><p>一块显示器要同时显示左右两种画面，分辨率，亮度下降。</p>
+</li>
+<li><p>摩尔条纹。（两个物体之间以恒定的角度和频率发生干涉的视觉效果，得到一个较低频率的眼睛能分辨的条纹，类似于小时候冒险小虎队的解密卡）</p>
+</li>
+<li><p>对观察者的角度要求。</p>
+</li>
+<li><p>采用时差分辨法时，大脑不能同时采集到左右图片会发生眩晕。</p>
+</li>
+</ol>
+<h2 id="2-氢化非晶硅薄膜晶体管材料与器件特性"><a href="#2-氢化非晶硅薄膜晶体管材料与器件特性" class="headerlink" title="2. 氢化非晶硅薄膜晶体管材料与器件特性"></a>2. 氢化非晶硅薄膜晶体管材料与器件特性</h2><h3 id="氢化非晶硅简介"><a href="#氢化非晶硅简介" class="headerlink" title="氢化非晶硅简介"></a>氢化非晶硅简介</h3><p>氢化非晶硅（Hydrogenated amorphous Silicon, a-Si:H）与单晶硅（Crystalline Silicon，c-Si）相似，但薄膜中存在的大量无序的氢键和悬挂键影响了其电子的能带结构和载流子传输特性。主要特点还包括：非晶态硅短程有序，长程无序。悬挂键改变了电子态密度，导带和价带的带尾相连，形成局域态。</p>
+<p>带尾的宽度被称作Urbach能量，表征方法：恒定光电流方法或光热偏移光谱仪测定。</p>
+<p>悬挂键分布于迁移率隙中心附近，即费米能级中心附近。费米能级以下的悬挂键的能态表现为电子特性，符号：<script type="math/tex">D^-</script>;以上则为正电，符号：<script type="math/tex">D^+</script>；中间则为<script type="math/tex">D^0</script>。</p>
+<p>标准单晶硅Si-Si键长a=0.35 nm，键角为109度。宏观上则用键长和键角的变化量△a和△θ来表示a-Si:H的无序度。一般器件△a/a=2%，△θ/θ=10%。</p>
+<p>工艺控制：通常，薄膜沉积期间的衬底温度越高，所形成的a-Si:H的氢含量就越低，其光学带隙也越窄。</p>
+<p>氢含量表征：红外光谱。器件级的a-Si:H的氢含量一般约10</p>
+<p>导电机理：与a-Si:H的三种类型的电子态有关-深入带隙内的悬挂键形成的缺陷态、位于带隙边缘的弱键形成的带尾态（室温下起主导作用）和四面体网格结构的导带与价带形成的扩展态（高温时起主要作用）。电导率与载流子数量呈线性关系，假设悬挂键的缺陷态电子接近费米能级，用Mott模型描述电导率：</p>
+<p>​    <script type="math/tex">σ_t=σ_{t0}exp-(\frac{E_Ct-E_F}{kT})</script>，其中<script type="math/tex">σ_t0</script>与跃迁几率有关，<script type="math/tex">E_Ct</script>是导带尾态的平均能量，<script type="math/tex">E_F</script>是费米能级，载流子遵循玻尔兹曼分布，所以是指数关系。</p>
+<p>当光子能量大于迁移率隙时，光照射会导致电导率激增。</p>
+<p>PS：费米能级的物理意义-该能级上的一个状态被电子占据的几率是1/2.</p>
+<p>对于a-Si:H TFT，施加正极性栅压将增加导带迁移率边以上的电子数目。</p>
+<p>缺点：因为扩展态电导的低迁移率导致a-Si:H作为沟道层的TFT的应用领域受到一定局限性。TFT的开关速度与载流子迁移率成正比，液晶显示信号处理的视频解码电路需要很快的开关速度，a-Si:H器件满足不了。</p>
+<p>对策：微晶硅材料与多晶硅材料开发。</p>
+<p>PS：迁移率-电子的运动速度除以场强。</p>
+<p>a-Si:H晶格结构中存在Si-Si弱键、悬挂键和Si-H键之间的亚稳定平衡态，在外部能量作用下可以改变这一平衡，也可以变回来，所谓亚稳定性，证明实验：Staebler-Wronski效应。具体案例：光照导致暗电导和光电导随照射时间降低，在200度下退火几小时后又还原。所以在有的TFT中需要有对背光源或环境光的遮蔽层。这个在OLED中影响更大。</p>
+<p>小结影响a-Si:H导电的重要指标：导电活化能、暗电导、缺陷态密度、电子迁移率、空穴迁移率、氢的浓度、光学带隙、光电导、光敏性、折射率、Urbach能量。</p>
+<h3 id="绝缘层简介"><a href="#绝缘层简介" class="headerlink" title="绝缘层简介"></a>绝缘层简介</h3><p>绝缘层和半导体层相接。常见的绝缘层材料包括：</p>
+<p>氮化硅    制备方法：等离子增强化学气象沉积（PECVD），烧NH3和SiH4，再混合H2和N2作为稀释气体。产物为含氢的非晶氮化硅，记作SiNx:H。</p>
+<p>氧化硅    制备方法：PECVD，烧N2O和硅烷，记作SiOx:H。SiH4+4N2O-&gt;SiO2+2H2O+4N2。</p>
+<p>PECVD相比于其它CVD的优势：制备非化学计量比的膜；要求温度低；大面积沉积且均匀；速度快。</p>
+<p>PECVD关键工艺参数：等离子体功率（太大太小都对电导率不利，主要是影响了沉积速率）；衬底温度（影响反应速率，结晶过程，高温还会降低含氢量）；a-Si:H本体效应；a-Si:H的光电导效应。</p>
+<p>漏电机理：离子导电；空间电荷限制电流；隧穿和内场发射；肖特基发射和Poole-Frenkel效应；欧姆导电。（具体内容还需学习半导体物理才行）</p>
+<p>迁移率提高，关系到TFT中电流通道的各个电阻，所以可以从其中涉及的各个电阻的工艺来改良迁移率。</p>
+<p>常用改良措施：</p>
+<ol>
+<li><p>适当比例H2作为反应气降低a-Si:H薄膜中的缺陷。</p>
+</li>
+<li><p>降低a-Si:H薄膜与栅绝缘层界面的粗糙度的工艺。</p>
+</li>
+<li><p>降低a-Si:H薄膜厚度，或分层沉积。</p>
+</li>
+</ol>
+<h3 id="薄膜刻蚀"><a href="#薄膜刻蚀" class="headerlink" title="薄膜刻蚀"></a>薄膜刻蚀</h3><p>导电膜（金属膜和透明氧化铟锡薄膜等）刻蚀一般用湿法刻蚀：化学反应+离子轰击</p>
+<p>功能膜（绝缘层、半导体层和掺杂层等）刻蚀一般用干法刻蚀：化学腐蚀</p>
+<p>刻蚀常用含氟气体配氧气。</p>
+<h3 id="薄膜晶体管的基本组成"><a href="#薄膜晶体管的基本组成" class="headerlink" title="薄膜晶体管的基本组成"></a>薄膜晶体管的基本组成</h3><p>根据栅电极和硅岛的上下位置关系分为：底栅结构（反交叠型结构）和顶栅结构</p>
+<p>一般用底栅结构，因为栅电极可以阻挡光线直接照射硅产生光生载流子。</p>
+<p>底栅结构分为：背沟道刻蚀型结构（Back-channel Etchant, BEC，成本低，工艺少，常用）和刻蚀阻挡层型结构（Etched-stopper Layer, ESL, Insulated-stopper Layer, ISL, 电学特性更优异）。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/5.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/6.jpg" alt></p>
+<p>器件基本特性：与MOSFET一致。工作区间可分为线性区与饱和区，亚阈值区，截止区</p>
+<p>​    线性区：Vds&lt;&lt;Vgs-Vth，沟道漏电流随者漏极电压线性变化，即沟道电阻不变，符合欧姆定律。开启状态的大部分时间都工作在此区域。</p>
+<p>​    饱和区:   Vds&gt;Vgs-Vth，沟道漏电流随漏极电压增加而基本保持不变。</p>
+<p>​    在不同区域可根据不同公式计算场效应迁移率。</p>
+<p>​    亚阈值区：0&lt;Vgs&lt;Vth</p>
+<p>​    截止区：VTR&gt;Vgs</p>
+<h3 id="薄膜评估方法"><a href="#薄膜评估方法" class="headerlink" title="薄膜评估方法"></a>薄膜评估方法</h3><p>红外光谱</p>
+<p>制样方法：将薄膜样品沉积到未掺杂或低掺杂的晶体硅衬底上，衬底最好做抛光处理。</p>
+<p>常用功能：确定化学键成分，积分确定化学键比例。</p>
+<p>紫外-可见光谱</p>
+<p>制样方法：将薄膜样品沉积到石英衬底上。</p>
+<p>常用功能：光学带隙Tauc Gap和E04带隙确认。</p>
+<p>恒定光电流方法：施加电压，改变光照，观察电流变化（与吸收系数有关）。</p>
+<p>制样方法：在透明绝缘衬底上沉积半导体薄膜</p>
+<p>常用功能：可以补足紫外在低吸收区域灵敏度不足的特点。<script type="math/tex">0.1-10^3</script>这个区间的吸收系数测试。</p>
+<p>拉曼光谱</p>
+<p>常用功能：520波数积分尖锐峰积分微晶硅对480波数非晶宽拉曼峰积分比值可得晶体相和非晶相的体积比。</p>
+<p>椭偏仪：用圆偏振激光照射薄膜表面，衬底是已知折射率的高反射晶体硅衬底，测入射光的角度，反射光和折射光叠加的相位和振幅。</p>
+<p>常用功能：上述提到的振幅和相位与样品的膜厚和折射率有关，所以可以实时测试成核区厚度和薄膜晶体分量，还可以测不同波长的延迟相位。</p>
+<h2 id="3-液晶面板设计与驱动"><a href="#3-液晶面板设计与驱动" class="headerlink" title="3. 液晶面板设计与驱动"></a>3. 液晶面板设计与驱动</h2><p>显示器可以分为：显示区（Active Area），密封区（Sealing Area）和衬垫区（Pad Area）。</p>
+<h4 id="显示区"><a href="#显示区" class="headerlink" title="显示区"></a>显示区</h4><p>显示区由横向和纵向的小像素点构成。全高清液晶显示器为水平方向1920列和垂直方向1080列构成。</p>
+<p>关键参数：分辨率、宽长比、像素排列方式和TFT排列方式。</p>
+<p>分辨率：相同尺寸下，越大越清晰。图像分辨率单位：PPT(Pixels Per Inch)</p>
+<p>已知显示器尺寸、屏幕长宽比和分辨率(H×V)，可以求得像素（3个像素格）尺寸(A×A)和亚像素（一个像素格）尺寸(A×A/3)。A的单位是um，X的单位是英寸。</p>
+<script type="math/tex; mode=display">（X×25.4×1000）^2=(H×A)^2+(V×A)^2</script><p>最后以0.25um为步长精度，如想做31.5in的分辨率1366×768的显示器亚像素值算出来为170.1877um，就取170.25um实际像素工艺尺寸。最后倒推出实际尺寸为31.51in。</p>
+<p>PS：显示屏尺寸指的是对角线长度。</p>
+<p>像素排列方式：条形（Stripe）、岛形（Island）、马赛克形（Mosaic）和品字形（Delta），为了提高分辨率和色域，还有四基色显示。</p>
+<p>像素驱动结构：1G1D，2G2D等，主体特性要了解电路知识，主要是影响：数据线数量（成本）、写入时间（进一步影响像素充电率）</p>
+<h4 id="密封区"><a href="#密封区" class="headerlink" title="密封区"></a>密封区</h4><p>密封区主要是对液晶进行密封和对来自背光源的光进行“密封”。</p>
+<p>组分：胶，硅球或者聚合物粒子（支撑作用），金银颗粒（导电）。</p>
+<h4 id="衬垫区（邦定区）"><a href="#衬垫区（邦定区）" class="headerlink" title="衬垫区（邦定区）"></a>衬垫区（邦定区）</h4><p>是阵列玻璃基板上的电极与外围的驱动集成电路相连同的区域。</p>
+<h4 id="特征标记"><a href="#特征标记" class="headerlink" title="特征标记"></a>特征标记</h4><p>切割标记、研磨标记、工艺标记、重叠标记、总截距标记</p>
+<h3 id="液晶显示模式与原理"><a href="#液晶显示模式与原理" class="headerlink" title="液晶显示模式与原理"></a>液晶显示模式与原理</h3><p>显示模式：扭曲相列相模式（Twist Nematic, TN）、垂直取向模式（Vertical Alignment, VA）、面内开关模式（In-plane Switching, IPS）和边缘场开关模式（Fringe Field Switching, FFS）</p>
+<p>历程：早期用VA用得多，液晶面板中会设置一些凸起形状，导电时液晶就会沿着凸起区域构建的轨道排列。后面发展了(Polymer Sustained Alignment)技术，取消了基底凸起，而是用精细的狭缝来控制狭缝取向。</p>
+<p>PSA技术：先让液晶取向，在用聚合物固定液晶。<script type="math/tex">UV^2A</script>技术：先用偏振光使得聚合物沿着偏振光方向聚合，在填充液晶使其取向。</p>
+<p>液晶显示流程：</p>
+<p>​    背光源发出的自然光通过起偏器变成线偏振光，光能变为最初的50%，再经过液晶层，液晶层的长轴和短轴折射率不一样，从而产生相位差：</p>
+<p>​    <script type="math/tex">δ=2π·(△n)·d/λ</script> 长轴与短轴的折射率差为△n；d为液晶层厚度；λ是波长。</p>
+<p>​    再经过一连串矩阵运算，的出射光透过率<script type="math/tex">T=0.5·[sin^2(2Φ)][sin^2(δ/2)]</script>，其中Φ为入射偏振光片透光轴的片面与液晶长轴取向的夹角。</p>
+<p>​    关键信息：1. 控制Φ可以控制透光率，不加电压时的液晶取向如果使得光能完全透过，则叫为常白模式（常见的常白为TN模式），反之为常黑（常见为FFS，IPS,和VA）。2. 对不同波长的光要有针对性地调节液晶型号，厚度，避免颜色失真。</p>
+<h3 id="曝光工艺技术"><a href="#曝光工艺技术" class="headerlink" title="曝光工艺技术"></a>曝光工艺技术</h3><p>由不透光的掩膜图形遮盖在透明基板上，再通过光刻转移图形到薄膜上。</p>
+<p>光刻胶可以盖在薄膜上，从掩膜版上获得图形，再在刻蚀薄膜时保护薄膜。</p>
+<p>正性光刻胶:掩膜版上不透光区域转化为图像。</p>
+<p>负性光刻胶:掩膜版上透光区域转化为图像。</p>
+<p>曝光机组件：照明系统、对准系统、掩膜版载台、玻璃基板载台和光学系统。</p>
+<h3 id="像素设计原理"><a href="#像素设计原理" class="headerlink" title="像素设计原理"></a>像素设计原理</h3><p>液晶电容计算</p>
+<p>TN型液晶关键实验：等效介电常数与液晶分子旋转角度之间的关系曲线；相对透过率与施加电压的关系曲线。</p>
+<p>关键参数：液晶电容充电后，透过率改变所需要的响应时间。</p>
+<p>补习半导体物理学，电路知识，影响电容，电阻的相关因素等，从而影响电对液晶光阀重要参数的影响，不看懂电路无从下手。</p>
+<h2 id="4-液晶显示颜色基础"><a href="#4-液晶显示颜色基础" class="headerlink" title="4. 液晶显示颜色基础"></a>4. 液晶显示颜色基础</h2><p>太阳辐射范围：300-4000 nm</p>
+<p>可见光范围：380-780 nm</p>
+<p>视敏函数</p>
+<p>人眼对不同波长光的感知强度分布：光源能量分布和人眼视敏函数的乘积。</p>
+<p>光的相关单位：</p>
+<p>​    辐射能量是绝对物理量，单位是W（瓦特）</p>
+<p>​    辐强度：单位视角内的辐射能量。</p>
+<p>​    辐照度：单位面积内的辐射能量。</p>
+<p>​    辐亮度：单位视角内单位光源面积的辐射能量。</p>
+<p>​    人眼能识别的光度（光通量）是主观物理量，单位是lm(流明)</p>
+<p>​    对应光度学中的光强度、光照度和光亮度三个参数。</p>
+<p>​    通过视敏函数，可将辐射度转换为人眼能感知的光度。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/7.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/8.jpg" alt></p>
+<h3 id="颜色三要素"><a href="#颜色三要素" class="headerlink" title="颜色三要素"></a>颜色三要素</h3><p>色调：不同颜色之间相互区分的特性。受环境光源的光谱组成和物体表面反射光源各波长辐射的相对比例影响。</p>
+<p>明度：颜色的亮度。受光源强度与反射率的影响。</p>
+<p>饱和度：颜色的纯度（鲜艳度）。发光光谱的宽度。</p>
+<h3 id="颜色的表征"><a href="#颜色的表征" class="headerlink" title="颜色的表征"></a>颜色的表征</h3><p>格拉斯曼混合定律</p>
+<p>​    中间色率：任何两个颜色可以合成他们之间的任一中间过渡色。</p>
+<p>​    补色率：均存在另一种颜色与其以适当比例混合后产生白色或灰色，定义为互补色。</p>
+<p>​    代替率：人眼识别存在惰性，不同颜色混合可实现相同的视觉效果。</p>
+<p>​    亮度相加率：总亮度等于组成混合色的各颜色光亮度的总和。</p>
+<p>国际照明委员会（International Commission on Illumination) 规定了 CIE 1931 RGB标准色度分别为700nm (R)、546.1 nm(G)和435.8 nm(B)，代表了匹配可见光范围内各波长等能刺激需要的三原色。用混合光中，这三个波长数量光各自占总数量的比值代表总量。为匹配等能量光谱色的三原色数量称为光谱三刺激值，不同波长的三刺激值是叫了许多个志愿者参与实验得到的平均值。</p>
+<p>后面出了CIE 1931 XYZ色度系统，将以前的rgb坐标进行换算，为了避免颜色数量中出现的负数。还用视敏函数规定了人眼对不同波长的响应。（x, y）表示色度，Y表示亮度。（个人理解：三刺激值体现了人眼把不同波段的光下转化为三原色混合的权重，比如单色的黄光和橙光的三刺激值都可以用刺激光x和刺激光y的坐标值来表示，那黄光和橙光的混合光，也可以分别把他们拆分成x光和y光的数量再各自相加来表示。）</p>
+<p>后面又出了CIE 1976 L<em> u</em> v*色度空间，用变换坐标轴的方式修正了1931图中宽容度（人眼察觉出颜色不同的能力）不均匀的特点。</p>
+<p>TFT器件光谱为背景光谱×液晶透过率×滤光片透过率谱，再计算色坐标。</p>
+<p>灰阶与色深：画面由亮到暗的等级为灰阶数，由数据的比特数决定。比如6bit数据，有2^6个灰阶，对于三原色显示，就有 2^6 <em> 2^6 </em> 2^6 个颜色。</p>
+<p>色域计算： 由计算得到的三原色坐标围成的三角形在CIE 1931 XYZ中的面积与标准三角形（NTSC，sRGB，Adobe RGB, BT.2020，DCI，根据应用场景来选择）面积相比来表示。</p>
+<p>色温计算：色温用来描述显示器颜色的色调，光源色温定义为与光源辐射颜色相同的黑体温度，但实际中不可能是黑体，故称为相关色温，用McCamy公式计算。</p>
+<p>（Correlated Color Temperature）<script type="math/tex">CCT=-437·(\frac{x-0.332}{y-0.1858})^3+3601·(\frac{x-0.332}{y-0.1858})^2-6861·\frac{x-0.332}{y-0.1858}+5514.31</script></p>
+<p>CIE图相关资料总结： <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137639368">https://zhuanlan.zhihu.com/p/137639368</a></p>
+<p><img src="/loading.gif" data-original="/posts/53757/9.jpg" alt="XYZ CIE图"></p>
+<h2 id="5-液晶光学设计基础"><a href="#5-液晶光学设计基础" class="headerlink" title="5. 液晶光学设计基础"></a>5. 液晶光学设计基础</h2><p>液晶盒的主要参数：透过率、对比度、视角、响应时间、驱动电压和工作温度等。</p>
+<p>液晶显示模式（根据液晶旋转方式不同）：扭曲向列相（Twist Nematic, TN）、垂直取向（Vertical Alignment, VA）、面内转换（In-Plane Switching, IPS）、边缘场转换（Fringe Field Switching, FFS）</p>
+<p><img src="/loading.gif" data-original="/posts/53757/10.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/11.jpg" alt></p>
+<h3 id="偏振光的描述"><a href="#偏振光的描述" class="headerlink" title="偏振光的描述"></a>偏振光的描述</h3><p>光的偏振包含5种可能状态：自然光、部分偏振光、椭圆偏振光、圆偏振光和线偏振光。</p>
+<p>光偏振态可以用多种方法来表示：三角函数，琼斯矩阵，斯托克斯矩阵，和庞加莱球。</p>
+<p>三角函数表示光的一般形式：</p>
+<p>将光分解为x轴和y轴上周期相同相互垂直的两个分量：</p>
+<script type="math/tex; mode=display">E_x=A_xcos(wt+δ_x)</script><script type="math/tex; mode=display">E_y=A_ycos(wt+δ_y)</script><p>定义相位差<script type="math/tex">δ=δ_y-δ_x</script></p>
+<p>可以利用三角函数相关公式推出等式<script type="math/tex">(\frac{E_x}{A_x})^2+(\frac{E_y}{A_y})^2-2\frac{cosδ}{A_xA_y}E_xE_y=sin^2δ</script></p>
+<p>可见相位ψ=π/2+kπ时，且Ax=Ay时，Ex与Ey呈现圆状，δ&gt;0满足右手定则，逆时针旋转（检测视角），右旋偏振光，反之亦然。</p>
+<p>ψ=0+kπ，为线偏。</p>
+<p>琼斯Jones法：通过欧拉公式可以将三角函数转换成复数模式</p>
+<script type="math/tex; mode=display">E_x(z,t)=E0_xexp(i(wt-kz+δ_x))</script><script type="math/tex; mode=display">E_y(z,t)=E0_yexp(i(wt-kz+δ_y))</script><p>不考虑了波的传播特性wt-kz则为：</p>
+<script type="math/tex; mode=display">E_x=E0_xexp(iδ_x)</script><script type="math/tex; mode=display">E_y=E0_yexp(iδ_y)</script><script type="math/tex; mode=display">
+E=\left[\begin{matrix}
+E_x\\
+E_y\end{matrix}\right]=\left[\begin{matrix}
+E0_xexp(iδ_x)\\
+E0_yexp(iδ_y)\end{matrix}\right]</script><p>将上述两个式子用矩阵描述就是琼斯矩阵。E0x和E0y是实部，表示振幅;e的指数是虚部，表示相位。</p>
+<p>用转置矩阵<script type="math/tex">(E^*_x E^*_y)</script>可获得强度I：</p>
+<script type="math/tex; mode=display">
+I=\left[\begin{matrix}E_x^*&E_y^*\end{matrix}\right]\left[\begin{matrix}E_x\\E_y\end{matrix}\right]=E0^2_x+E0^2_y</script><p>归一化 ：</p>
+<script type="math/tex; mode=display">
+E=\frac{1}{\sqrt{E0^2_x+E0^2_y}}\left[\begin{matrix}E0_xexp(iδ_x)\\E0_yexp(iδ_y)\end{matrix}\right]</script><p>ψ=0+kπ，为线偏推出：</p>
+<script type="math/tex; mode=display">
+E线性=\left[\begin{matrix}1\\0\end{matrix}\right]或者\left[\begin{matrix}0\\1\end{matrix}\right]</script><p>由欧拉公式，振幅相等，相位相差π/2+kπ推出：</p>
+<script type="math/tex; mode=display">
+E圆偏=\frac{1}{\sqrt{2}}\left[\begin{matrix}1\\i\end{matrix}\right]或者\left[\begin{matrix}i\\1\end{matrix}\right]</script><p>Jones矩阵可以很方便地表示偏振光学中常见的相位延迟片、偏光片、液晶分子及其旋转矩阵等。</p>
+<p>使用相位延迟片时，出射光与入射光的关系可以表示为：</p>
+<script type="math/tex; mode=display">
+\left[\begin{matrix}E'_x\\E'_y\end{matrix}\right]=\left[\begin{matrix}j_{xx}&j_{xy}\\j_{yx}&j_{yy}\end{matrix}\right]\left[\begin{matrix}E_x\\E_y\end{matrix}\right]</script><p>中间的这个2X2的矩阵J就称为相位延迟器件的Jones7变换矩阵</p>
+<p>对于偏光片（控制大部分都从某一个轴偏振，少量从另一个轴），表示为：</p>
+<p>公式0&lt;=px,y&lt;=1</p>
+<script type="math/tex; mode=display">
+\left[\begin{matrix}E'_x\\E'_y\end{matrix}\right]=\left[\begin{matrix}p_{x}&0\\0&p_y\end{matrix}\right]\left[\begin{matrix}E_x\\E_y\end{matrix}\right]</script><p>对于完全偏振片（只从某一个轴完全透过），琼斯矩阵可表示为：</p>
+<script type="math/tex; mode=display">
+\left[\begin{matrix}1&0\\0&0\end{matrix}\right]或者\left[\begin{matrix}0&0\\0&1\end{matrix}\right]</script><p>对于液晶的相位延迟，由于双折射现象，可以看成一种相位延迟元件，快轴前进+Φ/2，慢轴-Φ/2相位。</p>
+<p>Jones矩阵为</p>
+<script type="math/tex; mode=display">
+\left[\begin{matrix}e^{+iΦ/2}&0\\0&e^{-iΦ/2}\end{matrix}\right]</script><p>对于液晶的偏振现象。定义入射光E初始分量为Ex与Ey，经过液晶旋转θ角度后的分量为E’x与E’y，E偏振态方向与Ex夹角为β，与E’x则为（β-θ）。</p>
+<script type="math/tex; mode=display">
+E'_x=Ecos(β-θ)\\
+E'_y=Esin(β-θ)\\
+E_x=Ecosβ\\
+E_y=Esinβ</script><p>Jones矩阵如下，可见其偏振与β角度无关</p>
+<script type="math/tex; mode=display">
+\left[\begin{matrix}cosθ&sinθ\\-sinθ&cosθ\end{matrix}\right]</script><p>还可以用庞加来球表示，球面上不同的点表示不同的偏振态，球半径表示振幅强度。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/12.jpg" alt></p>
+<p>双折射现象：光经过晶体或液晶类材料变成两束折射光的物理现象，一束遵循折射定律的o光，一束不遵循的e光。</p>
+<p>光轴-光束绕此轴转动，无任何光学特性变化（可以有好几个光轴），沿着光轴入射不发生双折射现象。</p>
+<p>入射面-入射光方向与晶体界面法线组成</p>
+<p>主平面-入射光方向与光轴组成</p>
+<p>主截面-光轴与晶体界面法线组成</p>
+<p>I-光强，β-e光传播方向与光轴的夹角，θ-入射光振动方向与光轴的夹角，A-振幅</p>
+<p>o光和e光均为线偏振光，o光偏振方向垂直于自己的主平面，e光的偏振方向平行于自己的主平面，o光和e光主平面夹角很小，所以o光和e光的偏振方向近似垂直</p>
+<p>o光和e光在晶体中的传播方向可根据惠更斯原理。</p>
+<p>o光与e光的强度可表示为</p>
+<script type="math/tex; mode=display">
+I_0=n_0A^2_0=n_0A^2sin(θ)^2\\
+I_e=n_e(β)A^2_e=n_e(β)A^2cos(θ)^2</script><p>o光（寻常光）和e光（非寻常光）是双折射的产物，它只在各向异性的双折射晶体内部存在，从晶体中出射后，由于空气环境为各向同性，双折射消失，o光和e光变为两束传播速度相同、存在一定相位差、振动方向相互垂直的偏振光。</p>
+<p>非寻常光的折射率与入射光与光轴的角度有关，所以TN模式下，不同视角Δn不一样。</p>
+<p>液晶显示也就是利用偏振光在液晶分子中的双折射效应来调制透光强度，而且液晶层相位差基本在π/2内，所以可以视为1/4波片。</p>
+<h3 id="不同显示模式的透过率"><a href="#不同显示模式的透过率" class="headerlink" title="不同显示模式的透过率"></a>不同显示模式的透过率</h3><p>TN模式特点</p>
+<p>电极位置：液晶盒上下基板，无电压时，液晶长轴方向与配向膜的摩擦方向（配向膜锚定）一致；加电场时，长轴平行于电场，无双折射，偏振方向不变。</p>
+<p>根据Jones矩阵和Gaylry-Hamilton原理可以推出常黑模式：</p>
+<script type="math/tex; mode=display">
+T=\frac{sin^2(θ\sqrt{1+(\frac{△ndπ}{λθ})^2})}{1+(\frac{△ndπ}{λθ})^2}</script><p>常白模式透过率互补：</p>
+<script type="math/tex; mode=display">
+T=1-\frac{sin^2(θ\sqrt{1+(\frac{△ndπ}{λθ})^2})}{1+(\frac{△ndπ}{λθ})^2}</script><p>Δn-双折射率之差</p>
+<p>由于液晶对波长有色散，常黑模式下有暗态漏光和低灰阶色偏，一般用常白模式（暗态需要加电的状态）。</p>
+<p>这个公式给出的关键信息就是给出设计液晶时需调控厚度与折射率，以确保透过率较大，且透过率随波长的变化较小（色散程度较轻），值得注意的是TN模式下，斜视角存在双折射现象，Δnd增大，暗态漏光率也会增加， 要权衡。</p>
+<p>为满足最大透过率，根据公式的极限原理得到，Δnd&gt;=θλ/π</p>
+<p><img src="/loading.gif" data-original="/posts/53757/13.jpg" alt></p>
+<p>IPS模式特点</p>
+<p>电极位置：同一玻璃基板面上，有方位角而不是与液晶初始方向完全平行（防止加电压时，旋转角度随机）。</p>
+<p>下偏光片的透过轴与液晶分子长轴的初始排列方向平行，根据上述双折射定律公式，折射进入液晶层的是e光，e光振动方向与入射光振动方向平行，o光强度为0，称之为E模式。下偏光片的透过轴与液晶分子长轴的初始排列方向垂直，称之为O模式。</p>
+<p>常黑模式(施加电场后液晶层同时存在o光和e光变成椭圆光从而使得透过轴方向产生分量)根据Jones矩阵推出透过率公式</p>
+<script type="math/tex; mode=display">
+T=\frac{sin^2(2θ)sin^2(\frac{Δndπ}{λ})}{2}</script><p>FFS模式特点</p>
+<p>与IPS模式一致，但像素电极与公共电极不在同一平面内，创造了更多边缘场，可以提高透过率。</p>
+<p>VA模式特点</p>
+<p>采用负性液晶（<script type="math/tex">ε_{//}<ε_{⊥}</script>），不加电场时液晶与玻璃板垂直，光线沿着液晶分子长轴传播，不发生双折射，偏振态不改变。加电场后长轴与电场方向垂直，产生双折射，产生下偏光片中的分量。为常黑模式。</p>
+<h3 id="对比度与视角"><a href="#对比度与视角" class="headerlink" title="对比度与视角"></a>对比度与视角</h3><p>对比度：显示器亮态亮度与暗态亮度的比来表示，提高亮态亮度和降低暗态亮度都可以提高对比度。</p>
+<p>主要因素：液晶分子的排布方向（不同模式），透过率，偏振度，液晶分子的预倾角，扭转角，色阻和液晶材料的光散射程度等。</p>
+<p>散射会改变入射光偏振度，形成漏光，从而降低了对比度。</p>
+<script type="math/tex; mode=display">
+S_{液晶盒}=\frac{[Δn×(n_e+n_o)]^2×d}{K}</script><p>S-液晶层的色散系数，表示散射强度</p>
+<p>d-液晶盒厚</p>
+<p>K-弹性常数，液晶的本征属性。</p>
+<p>视角：对比度大于10:1的观测角度范围为视角，对于TN模式，也用灰阶反转角来定义视角。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/14.jpg" alt></p>
+<h3 id="响应时间"><a href="#响应时间" class="headerlink" title="响应时间"></a>响应时间</h3><p>具体计算公式由连续弹性模型推导。</p>
+<p>和黏度挂钩，黏度大的响应时间慢，而负性液晶黏度大，所以VA模式，响应时间较慢。</p>
+<h2 id="6-驱动电路系统设计基础"><a href="#6-驱动电路系统设计基础" class="headerlink" title="6. 驱动电路系统设计基础"></a>6. 驱动电路系统设计基础</h2><p>薄膜晶体管液晶显示模组的基本构成：液晶显示屏，驱动电路系统，背光源及其驱动电路系统。</p>
+<p>裸液晶盒：没有贴附偏光片和邦定、连接驱动电路元器件的显示屏</p>
+<p>OC（Open Cell）:贴了偏光片、邦定并连接了周边驱动电路元器件的显示屏。</p>
+<p>模组：背光源及其驱动电路系统组合。</p>
+<p>补习电路知识吧，不然这本书看这章没法看懂的。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/15.jpg" alt></p>
+<h2 id="7-机构光学设计基础"><a href="#7-机构光学设计基础" class="headerlink" title="7. 机构光学设计基础"></a>7. 机构光学设计基础</h2><p>背光模组设计主要参考以下几个主要方面：电学特性，光学特性，机构特性，外观特性、可靠性、量产性。</p>
+<p>背光源：荧光灯光源（Hg灯不环保，现在不常用）与发光二极管光源</p>
+<p>发光二极管：核心为PN结，常用GaAs、GaP、GaAsP等。衬底为Al2O3，Si和SiC三种。</p>
+<p>不存在真正意义的白光LED，是在发出蓝光的表层封装了荧光粉转换材料，会被激发辐射黄光，混合形成白光。根据荧光粉类型可以分类成蓝光、绿光、红光、紫外LED。</p>
+<p>提高色域的主要手段：</p>
+<p>（1）使用红绿蓝三芯LED；</p>
+<p>（2）蓝绿光芯片搭配红色荧光粉</p>
+<p>（3）蓝光芯片搭配量子点荧光粉</p>
+<p>（4）紫外光芯片搭配RGB荧光粉</p>
+<p>（5）蓝光芯片搭配KSF（含氟化物）荧光粉</p>
+<p>LED的辐射参数：</p>
+<ol>
+<li>光通量：光源在单位时间内发出的光量，单位：流明（lm）。</li>
+<li>光强度：光源在给定方向上的发光强度，单位：坎德拉（cd）。</li>
+<li>光亮度：光源发光表面上某一点处的亮度，单位：坎德拉每平方（cd/m^2）</li>
+<li>光照度：表面上一点的照度，单位：勒克斯（lx）。</li>
+</ol>
+<p>LED的光电特性：</p>
+<ol>
+<li><p>电流电压曲线</p>
+</li>
+<li><p>光强正电流曲线</p>
+<p>指导意义：避免驱动电压的微小波动引起电流的急剧变化，避免满额定电流设计，保证LED的使用寿命和稳定性。</p>
+</li>
+</ol>
+<ol>
+<li><p>电流温度曲线</p>
+<p>指导意义：温度升高会降低LED寿命和量子效率，指导散热设计。</p>
+</li>
+<li><p>LED电压档：LED是恒流器件，所以要精确控制电压，一般需要在芯片制作出后对其正向工作电压进行分档筛选，即为电压档，以保证亮度均匀。</p>
+</li>
+<li><p>LED色块：蓝光芯片发射峰受工艺波动有差异，导致其在CIE坐标位置变化，可爱CIE上规定小色块来区分其发射，一般拼接屏幕单元的色温具有高度一致性，即通常只能选用一个或至多两个色块。</p>
+</li>
+</ol>
+<p>光学膜片</p>
+<ol>
+<li><p>反射片：提高背光源利用率，金属膜的导电率越高，反射率也越高，但因波长而异。常用TiO2类材料。</p>
+</li>
+<li><p>导光板：侧光式背光结构中，把LED的点光源或冷阴极荧光管CCFL的线光源转换为LCD所需要的面光源。主要是利用了折射定律和反射定律，把侧光式水平入射光纤转换为垂直出射光线。常用PMMA和PC类材料。导光板底面还会印刷能把光反射的网点图形，印刷方法有很多种：丝网印刷法，转印法，掩膜版刻蚀法，紧密机械微加工法。</p>
+</li>
+<li><p>扩散板：直下式背光结构中，把点光源和线光源变成面光源。</p>
+<p>关键指标：密度，吸水率，光透性，折射率</p>
+</li>
+<li><p>扩散片：遮蔽导光板网点或扩散板微结构、提升出射光亮度、提高亮度均匀性和改善视角。</p>
+<p>关键指标：透过率，雾度</p>
+</li>
+<li><p>棱镜片：又称增亮膜，为PET基质表面覆盖了UV固化型树脂材料。涂布树脂材料的折射率越大，棱镜片的亮度增益越高。原理：将扩散片射入的大视角的发散光聚集在较小的角度范围内发射，从而增加了正视角亮度。</p>
+<p>不良效应与改良：棱镜棱形结构与像素阵列相干涉引起的摩尔纹，可以使用非规则等高图形。三角棱形不抗划，弄成圆弧形。</p>
+<p>关键参数：棱镜间距与 棱镜顶角的角度。</p>
+</li>
+<li><p>反射型偏光增亮膜（Dual Brightness Enhancement Film, DBEF）：利用液晶吸收掉的S偏振光。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/16.jpg" alt></p>
+</li>
+</ol>
+<p>其它部件：</p>
+<ol>
+<li><p>金属材料部件：背板、边框和电路板盖板。</p>
+</li>
+<li><p>非金属材料部件：胶框、支柱和硅脂黑胶带。</p>
+</li>
+</ol>
+<p>能耗标准：</p>
+<p>中国能效指数（Energy Efficiency Index, EEI）：2013年定义为1级对应EEI2.7，2级对应2.0，三级对应1.3。</p>
+<p>P=L×S/(1.1×EEI)+Ps</p>
+<p>P是开机功率，L是显示屏平均亮度，S是显示器可视区域面积，Ps是信号功率，用模拟射频接口输入信号时，Ps取值4W，数字射频接口输入信号时，Ps取值为8W，其它接口输入信号时Ps为0W。</p>
+<p>美国能源之星指标（Energy Star, ES）</p>
+<p>不同的ES版本算法不一样，规定了一个最大能耗值，与显示区的面积有关。</p>
+<p>要降低能耗，又要提高面板的透过率，也要提高背光源灯源的出射效率。</p>
+<h2 id="8-液晶显示器性能测试"><a href="#8-液晶显示器性能测试" class="headerlink" title="8.  液晶显示器性能测试"></a>8.  液晶显示器性能测试</h2><h3 id="TFT电学性能测试"><a href="#TFT电学性能测试" class="headerlink" title="TFT电学性能测试"></a>TFT电学性能测试</h3><p>仪器采购公司：Agilent和Keithly</p>
+<p>测试仪器：测量仪器，探针台。</p>
+<p>关键参数：</p>
+<ol>
+<li>开态电流：<script type="math/tex">I_{on}</script>，表示TFT的开态电流，TFT开启时的源漏极之间的电流，大小关系到像素充电能力，过小会导致充电不完全。</li>
+<li>关态电流：<script type="math/tex">I_{off}</script>，TFT关闭时（截止状态）的源漏之间的电流。Ioff过大会导致像素电压漏电，引起显示不良。</li>
+<li>阈值电压：<script type="math/tex">V_{th}</script>表示TFT的阈值电压。阈值电压的基本定义为TFT勾到开启时所需要的栅极电压<script type="math/tex">V_{gs}</script>。影响：驱动电压，像素充电率，开态电流，产品功耗等。</li>
+<li>迁移率：沟道载流子在单位电场下的迁移速率。迁移率大小会影响开态电流。迁移率越大，相同TFT输出电流下，TFT的尺寸可以做得更小，因此可以获得更大的像素开口率，可以根据转移特性饱和区的公式计算。</li>
+</ol>
+<p>TFT转移特性曲线：通过施加热应力、光应力及电应力进行测试来模拟TFT性质发生的变化。</p>
+<p>TFT输出特性曲线：输出特性曲线是在一定的栅源电压Vgs下，源漏电流Ids随源漏电压Vds变化的曲线。</p>
+<p>TFT的光偏压应力测试：模拟TFT在有背光源照射下的I-V特性。通常用Rp/d来表示，即为Ids(Photo)/Ids(Dark)，通常光诱导会使得光生载流子占优势，Rp/d会越大。</p>
+<p>TFT的热偏压应力测试：不同温度下的I-V特性。通常温度越高，TFT的截止区和线性区的漏电流都增加。通常用RTemp(n)/RT=Ids[Temp(n)]/Ids(RT)来表示。</p>
+<p>TFT的电偏压应力测试：给定温度和背光下（通常为Bias Temperature Photo Stress，50度，500nit），长时间施加驱动电压，Ion和Ioff也会随之变化，即器件老化。</p>
+<h3 id="显示器光学特性测试"><a href="#显示器光学特性测试" class="headerlink" title="显示器光学特性测试"></a>显示器光学特性测试</h3><p>主要特性：亮度、亮度均匀性、对比度、视角和色度学参数。</p>
+<p>不同于TFT电学测试，显示器光学测试通常有相应的国际、国内标准，如VESA、TCO和国标SJ等。</p>
+<p>控制变量：暗室，温度和湿度，先点亮预热30min使得样品稳定，样品与镜头距离，测试仪器镜头覆盖的测试区域应大于500个像素的面积。</p>
+<p>亮度以及亮度均匀性测试：亮态亮度：用全白画面，即最高灰阶画面；暗态亮度画面用最低灰阶画面测试。测试的都是屏幕中心点的亮度。均匀性测试一般是测试田字格的9个点亮度，周边8个点到屏幕边界的距离不小于W/9和H/9，最亮和最暗的比值就是亮度均匀性。</p>
+<p>对比度测试：亮态亮度与暗态亮度的比值。</p>
+<p>视角测试：四方位亮度法-上下左右四个方向测试一个点亮度，VESA定义是对比度大于10，国标SJ定义是亮度下降到1/3时的视角定义为可视角。</p>
+<p>色域测试：分别测试RGB画面下中心点的光谱能量分布，得到三刺激值，换算成相应标准下的色坐标，计算面积，再除以行业标准面积的比值得到值为色域。</p>
+<p>色偏：三种情况：同一视角不同灰阶之间的色度差异；同灰阶不同区域存在的色度差异；同一灰阶不同视角色度差异。</p>
+<p>色温测试</p>
+<p>灰阶响应时间测试：不同灰阶之间切换所需要的时间，黑白之间分成多少个梯度不同标准定义不同。测试参数：相对电平（被测点的信号功率PA与参考点信号功率P0比值的常用对数值）。测试方法：光电转化器件。规格要求：TCO要求每个灰阶装换的响应时间小于13ms。其它的可自行查找。还可以测连续变化灰阶，所谓动态响应时间测试。</p>
+<p>闪烁测试：由于输入信号会受耦合电容、漏电等因素影响，导致前后帧亮度不一致而闪烁（Flicker）。</p>
+<p>​    Flicker测试：JEITA法（测一帧内，亮度随时间的变化，得到亮度与频率的关系，再与直流0Hz下作为比值，取对数为Flicker值，但是得到的值通常与感官不一致）与FMA法（同样的测亮度随时间变化，将亮度转为电压，最高电压-最低电压视为交流成分，最高电压+最低电压/2视为直流成分，二者相比为Flicker值）。</p>
+<p>泛绿值：因为人眼对绿光敏感，即使RGB颜色差不多，颜色还是感觉发绿。</p>
+<p>串扰测试：一个区域的画面会影响相邻画面的灰阶。先测L127灰阶下显示区中心上下左右点亮度LA，再在中心区输入全黑，再测同一位置亮度LB，Cross Talk=ILB-LAI/LA，一般不超过2%。</p>
+<p>残像测试：老化前后全亮和全暗灰阶下原棋盘格影像残留的程度，取不同的点的亮度按所选规定的公式进行计算。</p>
+<p>VT曲线测试：不同实现模式下的电压-透过率曲线。</p>
+<p>Gamma曲线：人眼感觉与亮度之间的变化关系曲线就叫Gamma曲线（透过率-灰阶），大概在2.0-2.4之间。测试方法：1. 液晶面板老化半个小时稳定一下；2. 测试各个灰阶下的亮度；3. 将亮度除以最大亮度值得到透过率；4. 灰阶用百分比表示，再取对数，去掉端点取平均值得到Gamma值，如果不在2.0-2.4之间，需要调PCB上的Gamma电压电阻，重新校正。</p>
+<h2 id="9-阵列制造工程"><a href="#9-阵列制造工程" class="headerlink" title="9. 阵列制造工程"></a>9. 阵列制造工程</h2><p><img src="/loading.gif" data-original="/posts/53757/17.jpg" alt></p>
+<p>用以在玻璃基板上沉积各种薄膜图形，是实现液晶电学驱动的关键。</p>
+<p>溅射：物理气象沉积的一种，在一定高真空状态下，采用激励源使高真空里的带电粒子获得高能量并轰击靶材表面，靶材表面组分会获得足够大的能量而飞溅到另一个介质表面的薄膜沉积方法。被激励的通常是惰性气体，Xe和Kr溅射率最好，但是Ar稳定便宜，用得比较多。</p>
+<p>启辉：随着电压进一步增加，电流增大，非自持放电过渡到自持放电，此刻的电压被称为启辉电压。</p>
+<p>溅射薄膜的评价因子：靶材利用率，薄膜均匀性等。</p>
+<p>等离子体化学气象沉积，重要参数：气流量，功率，气压，衬底温度，两极板距离等。</p>
+<p>光刻胶徒步工艺参数：喷嘴与基板间距，胶吐量，喷嘴移动速度。</p>
+<p>显影液：TMAH四甲基氢氧化铵的水溶液，不会像早期用的NaOH那样留下影响。</p>
+<p>剥离：干法剥离较少，湿法较多，一般是DMSO:MEA=7:3来剥离。</p>
+<p>干法刻蚀工艺条件：气体种类和气流，腔室气体的压力，输入功率，基板温度。评价参数：刻蚀速率，刻蚀均一性，刻蚀选择比（不同膜层之间的刻蚀速率比），刻蚀坡度角（太大太小都不行，但一般在60度以下），特征尺寸偏差（掩膜版与实际面板尺寸之间的差值）</p>
+<p>湿法刻蚀是利用化学反应。</p>
+<p>阵列不良检测与修复</p>
+<p><img src="/loading.gif" data-original="/posts/53757/18.jpg" alt></p>
+<p>AOI检测：根据CCD捕获图像，看阵列显示明暗正不正常，比较灰度差，超过了阈值就是有问题，不同结构要求的分辨率也不一样。</p>
+<p>OS检测：三个步骤看短路断路，1. 逐行扫描（必要）2. 位置扫描（沿着不良线上扫描） 3. 不良取证：拍照镜头到不良位置拍照。</p>
+<p>阵列综合检测：在阵列制程结束后，像素具有完整电学功能结构后，对面板上所有像素统一充电，随后采用非接触式传感器探测对比像素表面电压差异及分布规律，进而发现各种电学不良的检测方法。</p>
+<p>阵列修复的四种基本手段：1. 线切割修复 2. 打点焊接修复 3. 膜剥离修复 4. 导电材料的激光CVD沉积修复。</p>
+<h2 id="10-彩膜制造工程"><a href="#10-彩膜制造工程" class="headerlink" title="10. 彩膜制造工程"></a>10. 彩膜制造工程</h2><p>彩膜（color filter, CF）：彩色滤光片。</p>
+<p>组成：</p>
+<p>玻璃衬底</p>
+<p>黑矩阵(Black Matrix, BM)-防止亚像素之间混色，以及照射到TFT沟道。</p>
+<p>红绿蓝三基色色阻(Color Resist, CR)-其实都是掺杂了燃料的光刻胶材料（是负胶，显影后保留下来，与阵列图案用正胶不同）</p>
+<p><img src="/loading.gif" data-original="/posts/53757/19.jpg" alt></p>
+<p>平坦层（Over Coater, OC）-在BM与R/G/B的段间形成一个平坦平面，有利于液晶取向，同时防止RGB中金属色阻污染液晶。</p>
+<p>ITO和柱状隔垫物(Post Spacer, PS)-维持液晶盒厚度，防止液晶在温度变化时产生重力Mura（热胀）和真空气泡（冷缩）。</p>
+<p><img src="/loading.gif" data-original="/posts/53757/20.jpg" alt></p>
+<p>彩膜除了ITO玻璃层是溅射沉积的，其它的都是PR涂布、曝光和显影三大工艺形成的。</p>
+<p>工艺细分：清洗（用EUV或者常压等离子体）、涂布（旋涂，刮涂，精细刮涂）、前烘（去除残余溶剂，活化感光剂）、曝光、显影、后烘（去除光阻中的溶剂，烘烤，使得非晶ITO退火为多晶ITO，降低电阻）</p>
+<p>不良的检测与修复</p>
+<p>检测手段：AOI检测，Mura检查、宏观检查（Macro，利用特别的波长观察薄膜干涉现象，出现干涉条纹意味着厚度有变）</p>
+<p>修复手段：缺陷发现-激光烧蚀-光阻滴注</p>
+<p><img src="/loading.gif" data-original="/posts/53757/21.jpg" alt></p>
+<p>再工工程：利用湿法刻蚀，把彩膜基板上的ITO和其他各层光阻去除。去除ITO用HCl和CH3COOH混合液，去除光阻用KOH为主的溶液。</p>
+<p>材料测试与评价：</p>
+<ol>
+<li><p>色阻的（x,y,Y）CIE坐标。 </p>
+</li>
+<li><p>光学密度OD值，步骤-校准光源亮度使得白板玻璃亮度为100-加一块遮光板，亮度值为A-去掉遮光板和白板玻璃，放上BM基板，测试表面亮度为B-OD=-lg[(A/100)X(B/100)]</p>
+</li>
+<li><p>对比度，步骤-通过下偏振片将线偏振光入射到色阻上-旋转上偏振片到亮度最大处记录-再转90度记录最小值-对比度就是最大值除以最小值，越高说明色阻对偏振光的位相差影响和入射光散射影响程度越低。</p>
+</li>
+<li><p>色阻的位相差，线偏振光通过色阻会产生相位差，会影响液晶盒的对比度和亮度，所以越小越好。测试光源分别是R-620 nm、G-550 nm、B-450 nm。</p>
+</li>
+<li><p>黏度</p>
+</li>
+<li><p>固含量=热处理后的质量/最初质量</p>
+</li>
+<li><p>溶剂再溶解性：要防止喷头处光阻凝聚。 测试步骤-用一个与喷头相同材质的条线材料放到光阻中-沾满光阻的条线材料取出后，在常温常压下干燥30min以上-放入PGMEA中观察光阻溶解性，要光阻15s内能完全溶解就正常。</p>
+</li>
+<li><p>制版性-光阻材料在曝光显影后，图形边缘轮廓清晰、无毛刺。</p>
+</li>
+<li><p>电学特性（介电常数，电阻率，电压保持率VHR）</p>
+</li>
+<li><p>表面特性测试（粗糙度，粘附性，亲疏水性什么的）</p>
+</li>
+</ol>
+<h2 id="11-液晶盒制造工程"><a href="#11-液晶盒制造工程" class="headerlink" title="11. 液晶盒制造工程"></a>11. 液晶盒制造工程</h2><p><img src="/loading.gif" data-original="/posts/53757/22.jpg" alt></p>
+<p>取向层经常用聚酰亚胺等高分子材料通过摩擦工艺得到带方向性的凹槽，用以锚定分子，否则初始自然滴加的液晶是杂乱的。</p>
+<p>材料要求：</p>
+<ol>
+<li><p>对液晶形成稳定的预倾角，小的预倾角能扩大视野，减少色偏。受取向分子和液晶分子结构、摩擦工艺影响。</p>
+</li>
+<li><p>具有低的直流电压残留。即交流信号中含有微小直流电压分量。现在常常被用来量化残像。</p>
+</li>
+<li><p>具有高的电压保持率。PI电压保持率低会导致漏电。</p>
+</li>
+<li><p>良好的印刷性。要调好PI胶液的固含量。</p>
+</li>
+<li><p>具有与基板材料良好的粘合性。</p>
+</li>
+</ol>
+<p>AMLCD主动式矩阵一般用凸版印刷法，喷墨印刷，来印刷取向层。</p>
+<p>喷好后需要红外光进行热固化。</p>
+<p>取向技术有物理取向（利用特殊处理的摩擦布摩擦）或者化学取向（光控取向涉及了光致异构、自组装增强取向和光降解等各种知识）</p>
+<p>液晶滴注以前是利用真空下的毛细作用，时长长，还有真空气泡；现在是根据需要的液晶量然后计算出所需要的点滴数直接滴成图案。</p>
+<p>液晶量的理论计算方法：</p>
+<p>总液晶质量=总液晶体积X液晶密度</p>
+<p>总液晶体积=AA区域体积+周边区域体积</p>
+<p>AA区域体积=像素体积X分辨率</p>
+<p>像素体积=像素空间体积-像素空间内各层薄膜体积</p>
+<p>周边区域体积=周边空间体积-周边空间内各层薄膜体积</p>
+<p>边框胶涂布：密封液晶防止水汽侵入，一般分为热固化和紫外固化树脂还添加了一些支持物（玻璃纤维、硅球和塑料球）。干燥前后的宽度分别称之为湿宽和干宽（为了方便根据尺寸选硅球，有经验公式：湿面积=干宽X（硅球尺寸-0.4），单位：um）。</p>
+<p>真空对盒：真空环境，上端通过静电吸附吸着彩膜基板，下端用阵列基板被负压吸附着阵列基板，CCD对准。</p>
+<p>液晶盒检测（不同的通电方式测试不同图形的显示效果）与修复（AOI检测，高能激光修复退火处理）</p>
+<p>清洗过程与彩膜类似。</p>
+<h2 id="12-模组制造工程"><a href="#12-模组制造工程" class="headerlink" title="12. 模组制造工程"></a>12. 模组制造工程</h2><p><img src="/loading.gif" data-original="/posts/53757/23.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/24.jpg" alt></p>
+<p><img src="/loading.gif" data-original="/posts/53757/25.jpg" alt></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Lee</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://x8378479.github.io/posts/53757/">https://x8378479.github.io/posts/53757/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Lee</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">读书笔记</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%98%BE%E7%A4%BA%E5%99%A8/">
+                                    <span class="chip bg-color">显示器</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢您的支持！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '67iv3fIwkPzU8B6pomqAdjDa-gzGzoHsz',
+        appKey: 'msR7WdRSmLnaEIqwzlUx0If4',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '想说你就说呀~如果你填了网址，你评论用的名字会自动生成网址的超链接'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/51146/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Linux入门指令学习记录">
+                        
+                        <span class="card-title">Linux入门指令学习记录</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-07-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8F%91%E6%8E%98%E4%B9%90%E8%B6%A3/" class="post-category">
+                                    发掘乐趣
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/58564/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="2022年求职训练课程笔记（二）">
+                        
+                        <span class="card-title">2022年求职训练课程笔记（二）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B9%B3%E5%87%A1%E7%9A%84%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    平凡的生活
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">读书笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%80%9D%E8%80%83%E4%B8%8E%E6%88%90%E9%95%BF/">
+                        <span class="chip bg-color">思考与成长</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lee&#39;s Base<br />'
+            + '文章作者: Lee<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2024</span>
+            
+
+            <a href="/about" target="_blank">Lee</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+
+
+
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "5";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已苟延残喘了 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6cbd3a2f0dfd08af75a743f1c51a163f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:425999183@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=425999183" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 425999183" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+
+
+
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+	<link rel="stylesheet" href="/css/matery.css">
+	<script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6cbd3a2f0dfd08af75a743f1c51a163f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+
+</html>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 128" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!--鼠标点击烟花特效-->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+
+
+

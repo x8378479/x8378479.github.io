@@ -1,0 +1,1797 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="半导体物理与器件知识汇总（定性解释篇）（定性解释篇）, Lee&#39;s Base">
+    <meta name="description" content="To explore!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>半导体物理与器件知识汇总（定性解释篇）（定性解释篇） | Lee&#39;s Base</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+
+
+   <style>
+    body{
+       background-image: url(http://x8378479.github.io/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Lee&#39;s Base</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Lee&#39;s Base</div>
+        <div class="logo-desc">
+            
+            To explore!
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<!--<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg');  opacity: 50;">--!>
+<br>
+<br>
+<br>
+<br>
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                   <!--<h1 class="description center-align post-title">半导体物理与器件知识汇总（定性解释篇）（定性解释篇）</h1>-->
+	<h1 class="description center-align post-title"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">读书笔记</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%9D%90%E6%96%99/">
+                                <span class="chip bg-color">材料</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8D%8A%E5%AF%BC%E4%BD%93%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/">
+                                <span class="chip bg-color">半导体集成电路</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%8B%A6%E9%80%BC%E7%9A%84%E7%A7%91%E7%A0%94/" class="post-category">
+                                苦逼的科研
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-09-17
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-05-07
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    16 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>结合半导体物理与器件第四版与西安邮电大学吕淑媛课程进行汇总。由于短时间内本人垃圾的数学能力不足以透彻地理解相关知识，只能透过解决问题的思路和前人已经推导出的公式定性理解构效关系，以思维导图为主，结合基本概念解释。</p>
+<p><img src="/loading.gif" data-original="/posts/17597/0.png" alt></p>
+<h2 id="固体晶格结构"><a href="#固体晶格结构" class="headerlink" title="固体晶格结构"></a>固体晶格结构</h2><p>电阻率单位：ρ（Ω·cm）</p>
+<p>电导率单位：σ（S/cm） //S是西门子</p>
+<p>R=ρ×L/A</p>
+<p>σ＝1／ρ</p>
+<p>常见半导体：Ge、Si、GaAs、GaP、CdS。一般为第IV族和以IV族对称的元素。</p>
+<p>半导体硅原子为sp3杂化形成共价键。</p>
+<p>半导体定义:</p>
+<p>​    电阻率介于金属（10<sup>-6</sup> Ω·cm）和绝缘体（10<sup>12</sup> Ω·cm）之间。</p>
+<p>​    电阻率介于10<sup>-3</sup>~10<sup>6</sup> Ω·cm之间。</p>
+<p>​    电阻率随温度升高减小，不止是温度，还有光照等其他因素也有影响。</p>
+<p><img src="/loading.gif" data-original="/posts/17597/1.png" alt></p>
+<p>半导体结构：一般为单晶。</p>
+<p>半导体单晶硅的一般制备方法：籽晶提拉法后沿晶面切割。</p>
+<p>如何描述单晶的周期性？//注意括号类型</p>
+<p>​    把构成单晶的粒子或粒子组抽象成一个格点，这样的空间点阵为晶格。</p>
+<p>​    晶胞：可以用来形成晶体结构的小（原胞为最小）单元。（共14种）</p>
+<p>​    晶胞的描述参数：体密度=每晶胞的原子数/每晶胞的体积，一般结构在10<sup>22</sup>/cm<sup>3</sup></p>
+<p>​    晶面的描述方法：密勒（Miller）指数-将晶面截距取倒数比，再化为整数（乘以最小公倍数），用（hkl）表示。</p>
+<p>​    晶面的描述参数：面密度=每晶面的原子数/晶面的面积。</p>
+<p>​    等效晶面：有些晶格有对称性，几个晶面的性质是一样的，如立法晶格的（100）、（001）和（010），统称为{100} 。</p>
+<p>​    晶列的描述方法：晶向指数，一个原子与最近的另一个原子相减形成的向量，[l1 l2 l3]。</p>
+<p>​    等效晶向：由于对称性存在，也有等价的晶向，用<100>这种括号表示。、</100></p>
+<p>实际晶体与理想晶体的差距：</p>
+<p>​    结构不完美：点、线、面缺陷。</p>
+<p>​        点缺陷：间隙原子、空位、杂质、反结构缺陷（多元素原子结构中发生互相替换）。</p>
+<p>​        线缺陷：刃位错（方块被推了下）、螺旋位错（方块被扭了下）。</p>
+<p>​        面缺陷：层错（两个膜因为肉的加入变成了肉夹馍，中间鼓起来的膜就产生了层错）。</p>
+<p>​    构成不完美：杂原子。</p>
+<h2 id="量子力学初步"><a href="#量子力学初步" class="headerlink" title="量子力学初步"></a>量子力学初步</h2><p>要了解半导体电子的状态，就要知道怎么描述。</p>
+<p>量子力学的三个基本原理：</p>
+<ol>
+<li>光子能量E=hν=hc/λ 普朗克完美地解释全波段黑体辐射（能量密度-波长关系）。</li>
+<li>光子动量p=h/λ 德布罗意波认为粒子也有波动性（Davisson的电子轰击晶体实验可证明电子波动性）。</li>
+<li>△p<sub>x</sub>·△x&gt;=h/2π;△E·△t&gt;=h/2π 海森堡测不准原理，一个变量趋于0，另一个就趋于无穷大。</li>
+</ol>
+<p>基于这些个原理薛定谔提出来了一个波动力学方程，可以解出波函数Ψ(x,t)与时间的关系，以及波函数与位置的关系。</p>
+<p>分离变量法：Ψ(x,t)=φ(x)Φ(t)，只是一个复数，波函数并不能表示实际物理量。</p>
+<p>马克思-波恩提出ΙΨ(x,t)Ι<sup>2</sup>为粒子的概率密度函数，所以里面涉及的被积分项必须是有限、单值和连续的。</p>
+<p>由自由电子的薛定谔方程和德布罗意波引出了波数k的概念：k=2π/λ。将k引入波函数中，可以发现只要k不同，波函数的表示形式就不同。</p>
+<p>由一维无限深势阱作为典型的粒子束缚态模型的薛定谔方程引出了主量子数（必须是整数）概念，不同k值对应不同主量子数，也就是说波数是离散的。</p>
+<p>通过对单电子原子的薛定谔方程引出了n，l，m三个量子数。关系如下：</p>
+<p>​    n=1, 2, 3…</p>
+<p>​    l=n-1, n-2, n-3, …，0</p>
+<p>​    ︱m︱=l, l-1, …, 0</p>
+<p>一个量子态由上述三个量子数确认后，一个轨道上可以容纳两个电子，m<sub>s</sub> = +-1/2，且能量只与n有关。//这似乎不太符合泡利能级图？</p>
+<p>电子填充原则：</p>
+<ol>
+<li>能量最低原理</li>
+<li>泡利不相容原理</li>
+<li>洪特规则（半导体里貌似提到的比较少）</li>
+</ol>
+<p>原子核外电子分布遵循泡利能级图ns, (n-2)f, (n-1)d, nf。 </p>
+<h2 id="固体量子理论初步"><a href="#固体量子理论初步" class="headerlink" title="固体量子理论初步"></a>固体量子理论初步</h2><p>一个电子只能占据一个量子态。</p>
+<p>能级形成的定性解释：几个原子不断靠近，它们的轨道共享，能级裂分，且共享程度多的就裂分更多更宽（外轨道），分裂出的能级为允带，不能占电子的为禁带。</p>
+<p>能带的定量解释：解克勒尼希-彭尼模型的薛定谔方程，利用其有非0解的条件可得到E-k关系图证明能带存在。</p>
+<p>Si的带隙：Si的四个价电子量子态在硅原子互相靠近后，按泡利不相容原理形成一条占满电子的价带和一条不占电子的导带。导带底和价带顶的能极差为带隙。价带电子通过加热到达导带的过程称为本征激发。</p>
+<p>根据价键理论，Si形成共价键的4个电子位于价带上。</p>
+<p>漂移电流：△I=neV<sub>体</sub>=neν△S //n为电子密度，1s内穿过长为ν*1s截面为△S的半导体的电子数量。实际情况并不是每个电子速度都为v，需要对速度求和。</p>
+<p>群速度V=(2π/h)(dE/dk)，也就是说如果E(k)是个关于Y轴的对称函数，V(k)就是关于原点的对称函数，k方向与-k方向分布的电子相同，电流总速度为0，没有电流。</p>
+<p>结论：外力作用推动电子下，满带电子不导电，半满带电子导电。所以本征半导体在电子跃迁后价带和导带由均不导电变成了均导电。</p>
+<p>有效质量m：由于半导体中的电子受到电子惯性质量与内力的共同作用，与自由电子不同，通过有效质量的概率可以将外力和加速度直接关联，从而将半导体的中的电子当作自由电子处理。1/m=(2π/h)<sup>2</sup>(d<sup>2</sup>E/dk<sup>2</sup>) //可见有效质量不是常数而是与E-k关系有关。</p>
+<p>E-k关系（有效质量）的实验测试方法：回旋共振实验。</p>
+<p>空穴概念的引入：价带的空位置填充正电荷等效出的新载流子。与电荷相反，占据的轨道越低能量越高。</p>
+<p>空穴的有效质量是电荷的相反数。</p>
+<p>晶体中不同晶面上的能带，因为原子堆叠方式不同。</p>
+<p>直接带隙半导体：导带底和价带顶有相同的k值，容易跃迁，适合作为光电器件。</p>
+<p>载流子浓度求解思路：</p>
+<ol>
+<li><p>状态密度函数（f<sub>F</sub>(E)量子态数与能级的关系）求解：计算单位k空间的量子态数（对晶体做三维无限深势阱近似）；根据E-k关系，求出能量变化范围内k空间体积；上述两者相乘再对E进行求导即可。</p>
+</li>
+<li><p>分布函数（g<sub>c</sub>(E)粒子占据能量量子态几率的函数）：半导体中费米-狄拉克分布函数比较适用，特点是粒子无法区分，一个量子态只允许一个粒子。（即为玻尔兹曼分布）这里引出了费米能级Ef的概念，在0K时的公式推断出费米能级在导带和价带之间。</p>
+<p>费米能级是电子占据能级高低的度量，标志了电子填充水平。</p>
+<p>当E-E<sub>f</sub>&gt;&gt;kT时，费米-狄拉克分布函数可做麦克斯韦-玻尔兹曼近似，差不多3kT就可以保证误差在5%以内。//可以在曲线图上比较二者的差异。</p>
+</li>
+</ol>
+<p><img src="/loading.gif" data-original="/posts/17597/2.png" alt></p>
+<h2 id="平衡半导体"><a href="#平衡半导体" class="headerlink" title="平衡半导体"></a>平衡半导体</h2><p>平衡载流子浓度公式</p>
+<p>​    电子浓度n<sub>0</sub>：对f<sub>F</sub>(E)和g<sub>c</sub>(E)的乘积在相应能带范围内进行积分。</p>
+<p>​    空穴浓度p<sub>0</sub>：对（1-f<sub>F</sub>(E)）和g<sub>c</sub>(E)的乘积在相应能带范围内进行积分。</p>
+<p>由此也可以推出本征半导体的载流子浓度，通过n<sub>i</sub>=n<sub>0</sub>=p<sub>0</sub>和n<sub>i</sub><sup>2</sup>=n<sub>0</sub>p<sub>0</sub>可以推出ni=(n<sub>i</sub>n<sub>p</sub>)<sup>0.5</sup>=(N<sub>c</sub>N<sub>v</sub>)<sup>0.5</sup>exp[-E<sub>g</sub>/(2kT)]</p>
+<p>​    也可以推出费米能级位置E<sub>Fi</sub>=(E<sub>c</sub>+E<sub>v</sub>)/2+kT/2ln(N<sub>c</sub>/N<sub>v</sub>) //N<sub>c</sub>和N<sub>v</sub>分别为导带和价带的有效状态密度，E<sub>c</sub>和E<sub>v</sub>分别为导带底和价带顶能级。</p>
+<p> 施主杂质（一般为V族元素）掺杂可以使得完整的半导体富余电子。</p>
+<p> 受主杂质（一般为III族元素）掺杂可以使得完整的半导体富余空穴。</p>
+<p>PS：这两个过程都是需要获得电离能的，只是比较低，因此不是所有掺杂原子都产生载流子。</p>
+<p>杂质补偿：如果同时存在两种掺杂，会优先发生施主能级的电子优先跃迁到受主能级的空位上放热，不产生载流子，也由此引出了“有效掺杂浓度”的概念。</p>
+<p>f<sub>F</sub>(E)与g<sub>c</sub>(E)掺杂后需进行修正。</p>
+<p>只掺杂一种杂质的非本征半导体的载流子计算思路：</p>
+<p>​    考虑电中性条件列等式：p<sub>0</sub>+N<sup>+</sup><sub>D</sub>=n<sub>0</sub>+P<sup>-</sup><sub>A</sub></p>
+<p>​    假设单独p<sub>0</sub>掺杂，p<sub>0</sub>+N<sup>+</sup><sub>D</sub>=n<sub>0</sub></p>
+<p>​    如果本征硅弱电离，掺杂原子全电离的话：N<sup>+</sup><sub>D</sub>=n<sub>0</sub>=N<sub>D</sub> //不同电离情况有不同简化。</p>
+<p>​    当温度过高时，本征载流子浓度不可忽略，一般定义某温度下n<sub>i</sub>=N<sub>D</sub>时，为最大工作温度。</p>
+<p>//个人理解：讲道理掺杂后的电子占据施主能级的分布函数也服从费米-狄拉克分布，再与状态密度函数相乘在能量上积分即可。但是书本仍然沿用ni<sup>2</sup>=(n<sub>i</sub>n<sub>p</sub>)<sup>2</sup>并且在此处把ni<sup>2</sup>等同于本征半导体ni<sup>2</sup>，所以说施主能级上P+被当成Si处理了？否则f<sub>F</sub>(E)和g<sub>c</sub>(E)在掺杂后不发生变化吗？如果变化了ni<sup>2</sup>值也就变化了吧？</p>
+<p>费米能级位置：N型偏向导带，P型偏向价带。</p>
+<p>注意：这些公式中很多都是玻尔兹曼近似下才成立，重掺杂下不能用。</p>
+<p>禁带变窄效应：重掺杂导致施主/受主能级与导带/价带交叠成一个带。</p>
+<p>//之前的一个疑问：能否用本征硅加个栅极直接作为MOS管，通过栅压控制沟道载流子开关电路？</p>
+<p>答：理论可行，但栅压产生的载流子本质上时施/受主能级电离出的载流子，为面电荷，非常少，如果完全本征则更少，因此开启沟道需要的阈值电压会非常之大；此外没有耗尽层漏电流也很大，因此源极与衬底短接形成反向偏压以保持耗尽层。</p>
+<h2 id="载流子漂移运动与扩散运动"><a href="#载流子漂移运动与扩散运动" class="headerlink" title="载流子漂移运动与扩散运动"></a>载流子漂移运动与扩散运动</h2><p>载流子运动：1. 电场作用下的漂移运动；2. 浓度梯度作用下的扩散运动。</p>
+<p>载流子热运动动能：3kT/2，但运动矢量方向混乱。</p>
+<p>PS：漂移运动中的电子也不是理想的直线运动，而是不断被散射，但总体来看朝着电场方向。//电子一边被撞得绕来绕去，一边往前。</p>
+<p>总漂移电流密度（A/m<sup>2</sup>）=电子漂移电流密度+空穴漂移电流密度。</p>
+<p>空穴迁移速度：v<sub>dp</sub>=μ<sub>p</sub>E ；电子迁移速度v<sub>dn</sub>=-μ<sub>n</sub>E；μ为迁移率，单位cm<sup>2</sup>/(V·s)。可与eE=mdv/dt联立解出μ与平均自由时间t的正比关系，v为载流子的平均漂移速度。</p>
+<p>平均自由时间：载流子没被散射的间隙用于电场加速的时间，显然散射越强，平均自由时间越短。</p>
+<p>散射概率：平均自由时间的倒数，也是代表单位时间散射次数。</p>
+<p>总散射概率=电离杂质散射概率（低温主导）+晶格振动散射概率（高温主导）</p>
+<p><img src="/loading.gif" data-original="/posts/17597/3.png" alt></p>
+<p>再考虑温度对载流子浓度的影响（影响杂质电离和本征激发），电阻率一般呈现如下变化趋势：</p>
+<p><img src="/loading.gif" data-original="/posts/17597/4.png" alt></p>
+<p>扩散电流：电子和空穴都会由高浓度向低浓度扩散，空穴扩散方向相同，电子扩散方向相反。</p>
+<p>总电流密度=扩散电流密度+漂移电流密度</p>
+<p>E<sub>c</sub>（最终能级）-E<sub>ref</sub>（初始能级）=-eV //电场下电子所处能带的弯曲畸变带来的能量差值等于电子在电场下做的功。</p>
+<p>爱因斯坦关系：载流子扩散产生了扩散电流，也会由于施主无法扩散而只有受主扩散而产生内电场，进一步产生漂移电流，这两股电流方向相反，最后会抵消。根据感生电场和上式联立解出迁移率和扩散系数的关系：D<sub>n</sub>/μ<sub>n</sub>=D<sub>p</sub>/μ<sub>p</sub>=kT/e。</p>
+<h2 id="半导体中的非平衡过剩载流子"><a href="#半导体中的非平衡过剩载流子" class="headerlink" title="半导体中的非平衡过剩载流子"></a>半导体中的非平衡过剩载流子</h2><p>总载流子数量：n=n<sub>0</sub>+△n（非平衡载流子数量，比如光激发产生）</p>
+<p>非平衡状态时， n<sub>0</sub>p<sub>0</sub>=ni<sup>2</sup>不再成立。</p>
+<p>光生载流子寿命τ：光照停止后，如果变化载流子远小于平衡载流子浓度，非平衡半导体载流子变化服从△n(t)=△n(0)e<sup>-t/τ</sup>的指数衰减。//实验上可以用光电导法验证，理论解释暂时通过这本书没看懂。</p>
+<p>准费米能级：将非平衡半导体的载流子浓度表示为类比于平衡载流子浓度的玻尔兹曼分布公式中的费米能级概念衍生出的一个参量。n载流子的准费米能级E<sub>Fn</sub>与p载流子的准费米能级E<sub>Fp</sub>相差越大，表明相聚平衡态越远。</p>
+<p>稳态指的是载流子产生率=复合率。</p>
+<p>连续性方程和双极输运方程联立：描述载流子浓度在不同外场、随时间和空间变化规律。</p>
+<p>载流子迁移率测量实验：海恩斯-肖克莱实验。//其原理利用了双极输运方程。</p>
+<p>扩散长度：稳态时无过剩载流子与外场时，载流子随空间变化分布也类似于寿命公式服从指数衰减，衍生出扩散长度。</p>
+<h2 id="PN结"><a href="#PN结" class="headerlink" title="PN结"></a>PN结</h2><p>PN结制备方法：合金法（形成突变结）、扩散法（形成扩散结，线性缓变结，突变结）。</p>
+<p>耗尽区（空间电荷区）：P和N载流子相互扩散，导致中间区域载流子耗尽形成内电场的区域。特点：阻碍多子扩散（由强变弱），扶植少子漂移（由无变强）。</p>
+<p>平衡时，载流子的电场力与扩散力相互平衡。</p>
+<p>平衡PN结耗尽区电势差：根据PN结载流子分布推出V<sub>D</sub>=(E<sub>Fn</sub>-E<sub>Fp</sub>)/e=(kT/e)*ln(N<sub>A</sub>N<sub>D</sub>)/n<sub>i</sub><sup>2</sup></p>
+<p>平衡PN结耗尽区电场：由麦克斯韦方程组（法拉第感应定律），解一维泊松方程，推出不同空间区域中电荷密度与掺杂量的函数。再用E=∫(ρ(x)/ε<sub>s</sub>)dx求出场强。//ρ为电荷密度；ε<sub>s</sub>为半导体介电常数。</p>
+<p>平衡PN结耗尽区电势分布：对电场在x方向上积分。</p>
+<p>空间电荷区宽度：由边界电势方程和x=0时的电势连续性返程可求。</p>
+<p>空间电荷密度分布：由电势分布公式推导。</p>
+<p>少子的空间分布：双极运输方程求解。</p>
+<p>正偏PN结：外场方向与内场方向相反，增强多子扩散，减少少子漂移。反偏则相反。</p>
+<p>理想PN结电流：多子与少子的扩散电流之和。（漂移电流较小，被忽略）扩散电流J=J<sub>s</sub>[exp(eV<sub>A</sub>/kT)-1]，J<sub>s</sub>为反向饱和电流密度，与材料掺杂浓度和扩散系数有关，V<sub>A</sub>是外加电压。</p>
+<p>电流求解思路：</p>
+<p>1)确定边界x = x<sub>n</sub>和x = -x<sub>p</sub>处的少子浓度。</p>
+<p>2)求解扩散区的连续性方程。</p>
+<p>3)计算出在x = x<sub>n</sub>和x = -x<sub>p</sub>处的空穴扩散电流和电子扩散电流</p>
+<p>4)将两种载流子的扩散电流密度相加乘以pn结的横截面积得到理想pn结的电流电压方程。</p>
+<p>反向偏压导致击穿：击穿电压比内接电场电压大得多，突然出现大电流。</p>
+<p>​    雪崩击穿机理：可导致载流子加速的平均自由程过后碰撞激励出了一个新载流子，又继续加速，越来越多。所以掺杂越多，越容易击穿。</p>
+<p>​    齐纳击穿：击穿两侧，一边有载流子，一边有空位；势垒要窄；所以重掺杂和大反向偏压容易引起齐纳击穿。</p>
+<p>​    隧道击穿</p>
+<p>PN结应用：发光二极管，太阳能电池，光电探测器等。</p>
+<h2 id="金属半导体接触"><a href="#金属半导体接触" class="headerlink" title="金属半导体接触"></a>金属半导体接触</h2><p>功函数Ws=E<sub>0</sub>(真空能级)-E<sub>Fs</sub>(费米能级) //在金属和半导体中均适用</p>
+<p>电子亲和能X=E<sub>0</sub>(真空能级)-E<sub>c</sub>(导带能级)//为了避免半导体中费米能级变化的情况引出的概念</p>
+<p>但金属半导体接触时，费米能级被拉平，产生接触电势差补偿费米能级差eV<sub>ms</sub>=W<sub>m</sub>-W<sub>s</sub>，金属电荷密度大所以能带在电场下基本不弯曲，而半导体能带会发生弯曲。</p>
+<p>对于N型半导体，</p>
+<p>当半导体功函数W<sub>s</sub><W<sub>m&lt;/sub&gt;金属功函数，电子从半导体流向金属，为肖特基接触，也是整流接触模式，与PN结效果类似。</W<sub></p>
+<p>当W<sub>s</sub>&gt;W<sub>m</sub>，电子从金属流向半导体，欧姆接触模式，加正偏和反偏载流子都能顺利导通。</p>
+<p>P型则相反。</p>
+<h2 id="MOSFET场效应晶体管"><a href="#MOSFET场效应晶体管" class="headerlink" title="MOSFET场效应晶体管"></a>MOSFET场效应晶体管</h2><p>功能：一种用电控制电的器件。</p>
+<p>参考朱士维教授课程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1JK411c7RC/?spm_id_from=333.999.0.0&amp;vd_source=ea480b8ccd665a521227e36f3036dd11">https://www.bilibili.com/video/BV1JK411c7RC/?spm_id_from=333.999.0.0&amp;vd_source=ea480b8ccd665a521227e36f3036dd11</a></p>
+<p>MOS：上中下三层分别为导体，绝缘层，半导体，中间加偏压形成反型层。</p>
+<p>加外电场才有沟道产生的叫增强型MOS，本来有沟道加电压沟道消失的叫耗尽型MOS。</p>
+<p>MOS管两端为N型半导体的叫NMOS，P型半导体的为PMOS。</p>
+<p>一端接地为源（产生载流子的极），另一端接电压为漏极（漏出载流子的极）。</p>
+<p>对于NMOS，沟道主要为电子，V<sub>TN</sub>阈值电压大于0，V<sub>GS</sub>&gt;V<sub>TN</sub>沟道打开，S和衬底都是接地的。</p>
+<p>对于PMOS，沟道主要为空穴，V<sub>TP</sub>阈值电压小于0，V<sub>GS</sub><V<sub>TP&lt;/sub&gt;沟道打开，S和衬底都是接地的。</V<sub></p>
+<h3 id="以NMOS为例对ID-VD曲线描述（输出特性曲线）："><a href="#以NMOS为例对ID-VD曲线描述（输出特性曲线）：" class="headerlink" title="以NMOS为例对ID-VD曲线描述（输出特性曲线）："></a>以NMOS为例对ID-VD曲线描述（输出特性曲线）：</h3><ol>
+<li>初期线性增长区：</li>
+</ol>
+<p>​    定义单位面积的电容大小C<sub>ox</sub>=ε<sub>ox</sub>/t<sub>ox</sub>，分子为介电常数，分母为栅绝缘层厚度</p>
+<p>​    单位面积上电容所带电荷IQI=C<sub>ox</sub>WL(V<sub>GS</sub>-V<sub>TN</sub>)</p>
+<p>​    单位长度的电荷密度IQI/L=C<sub>ox</sub>W(V<sub>GS</sub>-V<sub>TN</sub>)</p>
+<p>​    沟道电场强度为IEI=V<sub>DS</sub>/L</p>
+<p>​    利用迁移率μ可计算载流子迁移速率μE=μV<sub>DS</sub>/L</p>
+<p>​    电流I<sub>D</sub>就是电荷密度乘上迁移速率(IQI/L)×(μE)，I<sub>D</sub>=μC<sub>ox</sub>W/L(V<sub>GS</sub>-V<sub>TN</sub>)V<sub>DS</sub></p>
+<p>​    可见工艺决定后能调的就只有V<sub>GS</sub>和V<sub>DS</sub>。</p>
+<p>​    个人：思考这几个变量在更微观的层面上真的是相互独立的吗？</p>
+<ol>
+<li>中期非线性增长区，V<sub>DS</sub>持续变大，V<sub>GD</sub>=V<sub>GS</sub>-V<sub>DS</sub>减小，靠近漏端栅压变小明显：</li>
+</ol>
+<p>​    源端载流子正比于(V<sub>GS</sub>-V<sub>TN</sub>)，漏端为(V<sub>GS</sub>-V<sub>TN</sub>-V<sub>DS</sub>)</p>
+<p>​    沟道电压平局值为1/2[(V<sub>GS</sub>-V<sub>TN</sub>)+(V<sub>GS</sub>-V<sub>TN</sub>-V<sub>DS</sub>)]=(V<sub>GS</sub>-V<sub>TN</sub>)-0.5V<sub>DS</sub>。</p>
+<p>​    单位长度的平均电荷密度IQI/L=C<sub>ox</sub>W[(V<sub>GS</sub>-V<sub>TN</sub>)-0.5V<sub>DS</sub>]</p>
+<p>​    电流I<sub>D</sub>=μC<sub>ox</sub>W/L(V<sub>GS</sub>-V<sub>TN</sub>)V<sub>DS</sub>-0.5V<sub>DS</sub><sup>2</sup> //其实线性区也该这么表达，只能说V<sub>DS</sub><sup>2</sup>的影响比较小，不怎么改变电容在沟道上的平均分布，这个公式才是这三段区域中最有普适性的，其它的都是特殊点位。</p>
+<ol>
+<li><p>饱和区，预夹断，即为漏端电荷分布为0，V<sub>GS</sub>-V<sub>TN</sub>-V<sub>DS</sub>=0：</p>
+<p>带入公式I<sub>D</sub>=μC<sub>ox</sub>W/L(V<sub>GS</sub>-V<sub>TN</sub>)V<sub>DS</sub>-0.5V<sub>DS</sub><sup>2</sup> 中可得I<sub>D</sub>=μC<sub>ox</sub>W/L0.5(V<sub>GS</sub>-V<sub>TN</sub>)<sup>2</sup></p>
+<p>可见V<sub>DS</sub>已经不影响I<sub>D</sub>了。</p>
+</li>
+<li><p>继续增加V<sub>DS</sub>只会让夹断点向源端移，I<sub>D</sub>不变（夹断区为耗尽区，类似于PN的反偏，随着电压增长慢），看起来多么理想的恒流源啊，可惜：</p>
+<p>V<sub>DS</sub>继续增加，夹断点左移意味着沟道也在变短，实际电流I<sub>D</sub>=I<sub>D0</sub>(1+λV<sub>DS</sub>)，后面这个系数意味着电流随着V<sub>DS</sub>继续增大的程度，但引入这个系数的人应该并不怎么关心为什么继续增大，而是更注重这个输出结果。</p>
+</li>
+</ol>
+<p>将一个PMOS和NMOS用金属串联形成所谓的CMOS（Complementary MOSFETS）器件。</p>
+<h3 id="关键参量："><a href="#关键参量：" class="headerlink" title="关键参量："></a>关键参量：</h3><p>就算知道了这个公式，如何调控I<sub>D</sub>的方式似乎仍然十分有限，怎么调控Vth（V<sub>TN</sub>与V<sub>TP</sub>），电容C<sub>ox</sub>，迁移率μ呢？</p>
+<p>核心在于对阈值电压Vth的理解，在上面ID-VD曲线中已经知道了Vth是被视为了一个很关键的参数，那么Vth是常量吗？受什么因素影响？</p>
+<p>V<sub>TN</sub>的公式推导：</p>
+<p>​    栅极电容两边电荷之和Q’<sub>mT</sub>+Q’<sub>ss</sub>=︱Q’<sub>SD</sub>(max)︱衬底电离电荷</p>
+<p>​    ︱Q’<sub>SD</sub>(max)︱=eN<sub>a</sub>x<sub>dT</sub>    //x<sub>dT</sub>为最大空间电荷宽度，N<sub>a</sub>是杂质浓度。</p>
+<p>​    V<sub>TN</sub>=(︱Q’<sub>SD</sub>(max)︱-Q’<sub>ss</sub>)(t<sub>ox</sub>/ε<sub>ox</sub>)+Φ<sub>ms</sub>+2Φ<sub>fp</sub>    //Φ<sub>ms</sub>为金属半导体功函数差，Φ<sub>fp</sub>是费米能级与本征费米能级的势垒高度。</p>
+<p>可见V<sub>TN</sub>与半导体掺杂、栅氧化层电荷和栅氧化层厚度有关。</p>
+<p>电容</p>
+<p>跨导：g<sub>m</sub>=dI<sub>D</sub>/dV<sub>GS</sub> //即增加栅压会增加相应多少电流。</p>
+<p>衬底偏置电压：衬底和源极电压不一样导致器件正偏。</p>
+<p>//个人问题：到达Vth时，载流子是如何穿过MOSFET沟道的反型层的？普通的反偏PN结电阻就那么大，为什么MOSFET就可以？</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>其它更复杂的器件为PN结的花式组合，如果只是定性了解，可能认知也就停留在调节载流子浓度，温度，偏压上了，看来不了解建立的模型和推公式已经很难对电性的变化规律有具体的了解了，后面再开一章关于模型公式的学习总结吧。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Lee</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://x8378479.github.io/posts/17597/">https://x8378479.github.io/posts/17597/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Lee</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">读书笔记</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%9D%90%E6%96%99/">
+                                    <span class="chip bg-color">材料</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8D%8A%E5%AF%BC%E4%BD%93%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/">
+                                    <span class="chip bg-color">半导体集成电路</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢您的支持！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '67iv3fIwkPzU8B6pomqAdjDa-gzGzoHsz',
+        appKey: 'msR7WdRSmLnaEIqwzlUx0If4',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '想说你就说呀~如果你填了网址，你评论用的名字会自动生成网址的超链接'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/44948/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="半导体物理与器件知识汇总（定量解释篇）">
+                        
+                        <span class="card-title">半导体物理与器件知识汇总（定量解释篇）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-11-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%8B%A6%E9%80%BC%E7%9A%84%E7%A7%91%E7%A0%94/" class="post-category">
+                                    苦逼的科研
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">读书笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9D%90%E6%96%99/">
+                        <span class="chip bg-color">材料</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%8A%E5%AF%BC%E4%BD%93%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/">
+                        <span class="chip bg-color">半导体集成电路</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/52741/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="小白的第一次电脑组装成功点亮记录">
+                        
+                        <span class="card-title">小白的第一次电脑组装成功点亮记录</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8F%91%E6%8E%98%E4%B9%90%E8%B6%A3/" class="post-category">
+                                    发掘乐趣
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%98%BE%E7%A4%BA%E5%99%A8/">
+                        <span class="chip bg-color">显示器</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%94%B5%E8%84%91/">
+                        <span class="chip bg-color">电脑</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lee&#39;s Base<br />'
+            + '文章作者: Lee<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2024</span>
+            
+
+            <a href="/about" target="_blank">Lee</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+
+
+
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "5";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已苟延残喘了 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6cbd3a2f0dfd08af75a743f1c51a163f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:425999183@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=425999183" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 425999183" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+
+
+
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+	<link rel="stylesheet" href="/css/matery.css">
+	<script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6cbd3a2f0dfd08af75a743f1c51a163f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+
+</html>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 128" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!--鼠标点击烟花特效-->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+
+
+

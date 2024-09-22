@@ -1,0 +1,2559 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Arduino智能小车搭建学习, Lee&#39;s Base">
+    <meta name="description" content="To explore!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Arduino智能小车搭建学习 | Lee&#39;s Base</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+
+
+   <style>
+    body{
+       background-image: url(http://x8378479.github.io/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Lee&#39;s Base</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Lee&#39;s Base</div>
+        <div class="logo-desc">
+            
+            To explore!
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<!--<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg');  opacity: 50;">--!>
+<br>
+<br>
+<br>
+<br>
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                   <!--<h1 class="description center-align post-title">Arduino智能小车搭建学习</h1>-->
+	<h1 class="description center-align post-title"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Arduino/">
+                                <span class="chip bg-color">Arduino</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8F%91%E6%8E%98%E4%B9%90%E8%B6%A3/" class="post-category">
+                                发掘乐趣
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-01-21
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-01-22
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    14 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Arduino智能小车搭建学习"><a href="#Arduino智能小车搭建学习" class="headerlink" title="Arduino智能小车搭建学习"></a>Arduino智能小车搭建学习</h1><p>学习一下怎么搭建一个具有智能避障，寻迹的蓝牙遥控车。个人认为可以主要分为以下两个步骤：1. 硬件电路连接。2. 编码。编好程序的Arduino去控制各个元件去发挥作用就如同人的大脑去控制手脚。</p>
+<p>由于本人基本是属于0基础，将在此对不认识的元器件留下笔记，并尝试理解每一个电路和代码的意义。Arduino是如何实现对电子元器件控制的，单独的Arduino初步熟悉可以参考上一篇笔记，这里只记录小车中用到的功能模块。 </p>
+<h3 id="组装好的智障鬼畜小车演示："><a href="#组装好的智障鬼畜小车演示：" class="headerlink" title="组装好的智障鬼畜小车演示："></a>组装好的智障鬼畜小车演示：</h3><video id="video" controls preload="none" height="400">
+    <source id="mp4" src="./1.mp4" type="video/mp4">
+</video>
+
+
+
+
+<h2 id="1-硬件电路焊接与组装"><a href="#1-硬件电路焊接与组装" class="headerlink" title="1. 硬件电路焊接与组装"></a>1. 硬件电路焊接与组装</h2><p>基本流程：先焊接好各个模块，再将模块组装。焊接时先焊接小元件再焊接大元件。（由于零件都是买了的，所以不涉及PCB电路板设计，想要进一步提高，这个也得学一学，要是板子都没有，焊个啥）</p>
+<h3 id="主板焊接效果"><a href="#主板焊接效果" class="headerlink" title="主板焊接效果"></a>主板焊接效果</h3><p><img src="/loading.gif" data-original="/posts/10477/2.jpg" alt="（左）UNO R3开发板，（右）焊接好的主板正面"></p>
+<p><img src="/loading.gif" data-original="/posts/10477/3.jpg" alt="（左）UNO R3开发板，（右）焊接好的主板背面"></p>
+<p><img src="/loading.gif" data-original="/posts/10477/4.jpg" alt="将UNO R3引脚引出"></p>
+<h3 id="小车底板焊接"><a href="#小车底板焊接" class="headerlink" title="小车底板焊接"></a>小车底板焊接</h3><p><img src="/loading.gif" data-original="/posts/10477/6.jpg" alt="小车主板初始位置"></p>
+<p><img src="/loading.gif" data-original="/posts/10477/7.jpg" alt="小车主板焊接完毕的正面"></p>
+<p><img src="/loading.gif" data-original="/posts/10477/8.jpg" alt="小车主板焊接完毕的背面"></p>
+<h3 id="电池盒的焊接"><a href="#电池盒的焊接" class="headerlink" title="电池盒的焊接"></a>电池盒的焊接</h3><p>电池盒的焊接主要是把两根线连接起来，先把线皮拨开（用剥线钳子我总是用不好，我用美工刀削开的），再把裸露的导线穿上热缩管（黑的和红的各套一根，再套一个热缩管子把两个捆在一起），防止短路。先把裸露的导线拧好，再焊接上，再剪掉多余的部分，再套好热缩管，用烙铁头烫一下，捆绑好就OK了。</p>
+<p><img src="/loading.gif" data-original="/posts/10477/9.jpg" alt="电池盒"></p>
+<h3 id="寻迹模块焊接"><a href="#寻迹模块焊接" class="headerlink" title="寻迹模块焊接"></a>寻迹模块焊接</h3><p>（哭了，这里R0 L0 GND VCC的排母焊接反面了，它应该是与R0和L0同侧的，然后直接就能插入小车底板P2的排针上）</p>
+<p><img src="/loading.gif" data-original="/posts/10477/11.jpg" alt="下面"></p>
+<p><img src="/loading.gif" data-original="/posts/10477/12.jpg" alt="上面"></p>
+<h3 id="组装好的小车"><a href="#组装好的小车" class="headerlink" title="组装好的小车"></a>组装好的小车</h3><p><img src="/loading.gif" data-original="/posts/10477/13.jpg" alt="正面"></p>
+<p><img src="/loading.gif" data-original="/posts/10477/14.jpg" alt="底部"></p>
+<h3 id="涉及相关工具和元器件知识"><a href="#涉及相关工具和元器件知识" class="headerlink" title="涉及相关工具和元器件知识"></a>涉及相关工具和元器件知识</h3><h4 id="相关工具"><a href="#相关工具" class="headerlink" title="相关工具"></a>相关工具</h4><ol>
+<li>电烙铁的使用。（手一定要远离烙铁头啊，不然你会闻道菜市场用火去除猪蹄上的毛时发出来的香味，别问我为什么知道）</li>
+<li>吸锡器的使用。万一焊错了要用。<br>  <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av77382196">电烙铁和吸锡器的使用教程链接</a>。<br>  <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1G7411Z75j?from=search&amp;seid=6199709897536263282&amp;spm_id_from=333.337.0.0">松香使用教程链接</a>。</li>
+<li>固定胶带：因为焊接电路板是在背面，背过来焊接元器件时元器件容易掉下去，胶带用来固定。</li>
+</ol>
+<h4 id="元器件"><a href="#元器件" class="headerlink" title="元器件"></a>元器件</h4><p>将元器件一个个焊接到主板上，秉承着先焊接小元件（电阻和LED类）再焊接大元件的原则，防止大的装上去之后，小的安装不上。然后作为小白，我主要了解下这些元器件的使用方法和功能，还有就是元器件为什么是这么安装！一个个来~</p>
+<p><img src="/loading.gif" data-original="/posts/10477/5.jpg" alt="主板上焊接的元器件与相应位置坐标"></p>
+<ol>
+<li><p>色环电阻的识别，金色条带的朝着右边摆放，这里用的四环电阻。功能：分流分压。</p>
+<p><img src="/loading.gif" data-original="/posts/10477/1.jpg" alt></p>
+</li>
+<li><p>LED灯，长为正级，短为负极。</p>
+</li>
+<li><p>蜂鸣器，长为正级，短为负极。</p>
+</li>
+<li><p>瓷片电容，无极性，以陶瓷作为绝缘介质的电容，电容量较小，用于高稳定振荡回路中，作为回路电容器及垫整电容器。</p>
+<p>电解电容，长脚为正，短脚为负极，用氧化膜(氧化铝或五氧化二钽)作电介质，电容量较大，通常在电源电路或中频、低频电路中起电源滤波、退耦、信号耦合及时间常数设定、隔直流等作用。</p>
+<p>拓展：</p>
+<p>电容的公式为：C=εS/4πkd 。其中，ε是一个常数，S为电容极板的正对面积，d为电容极板的距离，k则是静电力常量。常见的平行板电容器，电容为C=εS/d(ε为极板间介质的介电常数，S为极板面积，d为极板间的距离)。</p>
+<p>关键参数：1.标称容值与误差 2.额定电压 3.温度系数 4.绝缘电阻 5.损耗 6.频率特性 7.介质 8.封装尺寸</p>
+<p>电容器选择参考：<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/a17d52851fa6fe8099c8f27f.html">https://jingyan.baidu.com/article/a17d52851fa6fe8099c8f27f.html</a></p>
+</li>
+<li><p>红外接收：主要用于将红外信号转化为电信号，底层原理可自行按照规格搜索（<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=xn4EdYUWxDc55Umih8udGu2RnKnFR2NtkZeHPFQMCg5xcJmPqGzIkZhvVCAP7Cm0eK2BlVlNJ-5rh9QInSxwgMQfPpo4iXlQCxtgsWfxkZa&amp;wd=&amp;eqid=f5ff0c9f009b59de0000000261d27990">拓展资料</a>）。</p>
+</li>
+<li><p>按键开关，拨动开关：控制电源短路与断路。</p>
+</li>
+<li><p>稳压芯片：稳压芯片可以保护电路，使电路不会因为脉冲而受到破坏。这里是配合锂电池使用，原理和选择（<a target="_blank" rel="noopener" href="https://nj.news.anjuke.com/36/721875.html">拓展资料</a>）</p>
+</li>
+<li><p>二极管：有白边的为负极，不清楚时可以用万用表测试。功能：1. 整流 2. 开关 3. 限幅 4. 续流 5. 检波 6. 变容 7. 显示 8. 稳压 9. 触发</p>
+</li>
+<li><p>IC座（16PIC座子）与驱动芯片（L293D）：这里主要用来驱动电机。</p>
+</li>
+<li><p>接线座（XH-2P与XH-7P）：用于接通导线。</p>
+</li>
+<li><p>排针与排母</p>
+<p><img src="/loading.gif" data-original="/posts/10477/10.jpg" alt="主板上焊接的元器件与相应位置坐标"></p>
+</li>
+<li><p>跳线：跳线实际就是连接电路板两需求点的金属连接线。</p>
+</li>
+<li><p>直流减速电机：小车前面两个轮子的动力驱动装置，是减速机和马达的集合体，此处两个电机必须都是红线朝外，黑线朝内，镜像对称。</p>
+</li>
+<li><p>寻迹模块：透明断是发射(接板子的T)，黑色是接收（接板子的R）</p>
+</li>
+<li><p>红外反射开关</p>
+</li>
+<li><p>可调电位器：本质就是一个可变电阻。</p>
+</li>
+<li><p>舵机云台：舵机主要是控制物体角度的，包含三根线，黄色的是IO口，中间的橙线是VCC，旁边的褐色线是GND。</p>
+</li>
+<li>超声波模块：上述的舵机云台主要用于控制超声波模块转向用。</li>
+<li>蓝牙模块：供给主板蓝牙数据传输功能。</li>
+<li>面包板：开发板上还有富余的IO口，可以连接面包板拓展功能。</li>
+</ol>
+<h2 id="2-程序导入"><a href="#2-程序导入" class="headerlink" title="2. 程序导入"></a>2. 程序导入</h2><p>软件是Arduino 1.8.13，烧入程序时一定要先看下，选得是不是所用的Arduino UNO板，还有就是软件菜单栏中工具的端口那选得是和设备管理中端口一样，我这里是COM3。主要是看下小车的黑线循迹、避障、遥控实验是如何实现的，其中避障可以靠红外实现，也可以靠超声波模块实现，故各摘取了一些程序，等代码完全看得懂了，也可以自己修改和添加来调控板子上的元器件。</p>
+<h3 id="卖家提供程序代码解读"><a href="#卖家提供程序代码解读" class="headerlink" title="卖家提供程序代码解读"></a>卖家提供程序代码解读</h3><p>程序是Copy卖家的哦，以后需要功能再在这个基础上改。</p>
+<h4 id="1、智能小车黑线循迹、避障、遥控实验综合程序。"><a href="#1、智能小车黑线循迹、避障、遥控实验综合程序。" class="headerlink" title="1、智能小车黑线循迹、避障、遥控实验综合程序。"></a>1、智能小车黑线循迹、避障、遥控实验综合程序。</h4><pre class="line-numbers language-lang-C++"><code class="language-lang-C++">//============================智宇科技===========================
+//  智能小车黑线循、红外避障、遥控综合实验
+//===============================================================
+//#include <Servo.h> 
+#include <IRremote.h>//包含红外库  关键点
+int RECV_PIN = A4;//端口声明
+IRrecv irrecv(RECV_PIN);
+decode_results results;//结构声明
+int on = 0;//标志位
+unsigned long last = millis();
+
+long run_car = 0x00FF629D;//按键CH
+long back_car = 0x00FFA857;//按键+
+long left_car = 0x00FF22DD;//按键<<
+long right_car = 0x00FFC23D;//按键>||
+long stop_car = 0x00FF02FD;//按键>>|
+long left_turn = 0x00ffE01F;//按键-
+long right_turn = 0x00FF906F;//按键EQ
+
+int Left_motor_go=8;     //左电机前进(IN1)
+int Left_motor_back=9;     //左电机后退(IN2)
+int Right_motor_go=10;    // 右电机前进(IN3)
+int Right_motor_back=11;    // 右电机后退(IN4)
+
+#define PORT_KEY  A2     //定义按键 数字A2 接口
+#define PORT_LED1  7    //定义LED 数字7 接口
+#define PORT_LED2  12   //定义LED2 数字12 接口
+int beep=A3;//定义蜂鸣器 数字A3 接口
+
+#define KEYMODE_1   1  // 定义按键模式1
+#define KEYMODE_2   2  // 定义按键模式2
+#define KEYMODE_3   3  // 定义按键模式3
+uint8_t keyMode;      //指无符号8bit整型数
+const int SensorRight = 3;       //右循迹红外传感器(P3.2 OUT1)
+const int SensorLeft = 4;         //左循迹红外传感器(P3.3 OUT2)
+const int SensorRight_2 = 5;       //中间红外避障传感器()
+
+int SR_2;    //中间红外避障传感器状态
+
+int SL;    //左循迹红外传感器状态
+int SR;    //右循迹红外传感器状态
+
+void setup()
+&#123;
+  //初始化电机驱动IO为输出方式
+  pinMode(Left_motor_go,OUTPUT); // PIN 8 (PWM)
+  pinMode(Left_motor_back,OUTPUT); // PIN 9 (PWM)
+  pinMode(Right_motor_go,OUTPUT);// PIN 10 (PWM) 
+  pinMode(Right_motor_back,OUTPUT);// PIN 11 (PWM)
+  pinMode(beep,OUTPUT);
+
+  pinMode(SensorRight, INPUT); //定义右循迹红外传感器为输入
+  pinMode(SensorLeft, INPUT); //定义左循迹红外传感器为输入
+  pinMode(SensorRight_2, INPUT); //定义右红外传感器为输入
+
+  pinMode(13, OUTPUT);////端口模式，输出
+  Serial.begin(9600);    //波特率9600
+  irrecv.enableIRIn(); // Start the receiver
+
+   KeyScanInit();
+   LEDInit();
+&#125;
+//=======================智能小车的基本动作  遥控控制单独用电机驱动函数=========================
+//  遥控实验不可调节电机速度，调节pwm值会影响红外的信号接收
+void run2()     // 前进
+&#123;
+   digitalWrite(Right_motor_go,HIGH);  // 右电机前进
+   digitalWrite(Right_motor_back,LOW);     
+
+   digitalWrite(Left_motor_go,LOW);  // 左电机前进
+   digitalWrite(Left_motor_back,HIGH);
+
+&#125;
+
+void brake2()         //刹车，停车
+&#123;
+  digitalWrite(Right_motor_go,LOW);
+  digitalWrite(Right_motor_back,LOW);
+  digitalWrite(Left_motor_go,LOW);
+  digitalWrite(Left_motor_back,LOW);
+
+&#125;
+
+void left2()         //左转(左轮不动，右轮前进)
+&#123;
+  digitalWrite(Right_motor_go,HIGH);    // 右电机前进
+  digitalWrite(Right_motor_back,LOW);
+
+  digitalWrite(Left_motor_go,LOW);   //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+
+&#125;
+
+void spin_left2()         //左转(左轮后退，右轮前进)
+&#123;
+  digitalWrite(Right_motor_go,HIGH);    // 右电机前进
+  digitalWrite(Right_motor_back,LOW);
+
+  digitalWrite(Left_motor_go,HIGH);   //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+&#125;
+
+void right2()        //右转(右轮不动，左轮前进)
+&#123;
+  digitalWrite(Right_motor_go,LOW);   //右电机后退
+  digitalWrite(Right_motor_back,LOW);
+
+  digitalWrite(Left_motor_go,LOW);//左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+&#125;
+
+void spin_right2()        //右转(右轮后退，左轮前进)
+&#123;
+  digitalWrite(Right_motor_go,LOW);   //右电机后退
+  digitalWrite(Right_motor_back,HIGH);
+
+  digitalWrite(Left_motor_go,LOW);//左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+&#125;
+
+void back2()          //后退
+&#123;
+  digitalWrite(Right_motor_go,LOW);  //右轮后退
+  digitalWrite(Right_motor_back,HIGH);
+
+  digitalWrite(Left_motor_go,HIGH);  //左轮后退
+  digitalWrite(Left_motor_back,LOW);  
+&#125;
+
+
+//=======================智能小车的基本动作=========================
+//void run(int time)     // 前进
+void run()
+&#123;
+   digitalWrite(Right_motor_go,HIGH);  // 右电机前进
+  digitalWrite(Right_motor_back,LOW);     
+  analogWrite(Right_motor_go,150);//PWM比例0~255调速，左右轮差异略增减
+  analogWrite(Right_motor_back,0);
+  digitalWrite(Left_motor_go,LOW);  // 左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+  analogWrite(Left_motor_go,0);//PWM比例0~255调速，左右轮差异略增减
+  analogWrite(Left_motor_back,150);
+  //delay(time * 100);   //执行时间，可以调整  
+&#125;
+
+//void brake(int time)  //刹车，停车
+void brake()
+&#123;
+  digitalWrite(Right_motor_go,LOW);
+  digitalWrite(Right_motor_back,LOW);
+  digitalWrite(Left_motor_go,LOW);
+  digitalWrite(Left_motor_back,LOW);
+  //delay(time * 100);//执行时间，可以调整  
+&#125;
+
+//void left(int time)         //左转(左轮不动，右轮前进)
+void left()
+&#123;
+  digitalWrite(Right_motor_go,HIGH);    // 右电机前进
+  digitalWrite(Right_motor_back,LOW);
+  analogWrite(Right_motor_go,150); 
+  analogWrite(Right_motor_back,0);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,LOW);   //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+  analogWrite(Left_motor_go,0); 
+  analogWrite(Left_motor_back,0);//PWM比例0~255调速
+  //delay(time * 100);    //执行时间，可以调整  
+&#125;
+
+void spin_left()         //左转(左轮后退，右轮前进)
+&#123;
+   digitalWrite(Right_motor_go,HIGH);    // 右电机前进
+  digitalWrite(Right_motor_back,LOW);
+  analogWrite(Right_motor_go,200); 
+  analogWrite(Right_motor_back,0);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,HIGH);   //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+  analogWrite(Left_motor_go,200); 
+  analogWrite(Left_motor_back,0);//PWM比例0~255调速
+ // delay(time * 100);    //执行时间，可以调整  
+&#125;
+
+//void right(int time)        //右转(右轮不动，左轮前进)
+void right()
+&#123;
+  digitalWrite(Right_motor_go,LOW);   //右电机后退
+  digitalWrite(Right_motor_back,LOW);
+  analogWrite(Right_motor_go,0); 
+  analogWrite(Right_motor_back,0);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,LOW);//左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+  analogWrite(Left_motor_go,0); 
+  analogWrite(Left_motor_back,150);//PWM比例0~255调速
+  //delay(time * 100);    //执行时间，可以调整  
+&#125;
+
+void spin_right(int time)        //右转(右轮后退，左轮前进)
+&#123;
+  digitalWrite(Right_motor_go,LOW);   //右电机后退
+  digitalWrite(Right_motor_back,HIGH);
+  analogWrite(Right_motor_go,0); 
+  analogWrite(Right_motor_back,200);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,LOW);//左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+  analogWrite(Left_motor_go,0); 
+  analogWrite(Left_motor_back,200);//PWM比例0~255调速
+  delay(time * 100);    //执行时间，可以调整    
+&#125;
+
+//void back(int time)          //后退
+void back()
+&#123;
+  digitalWrite(Right_motor_go,LOW);  //右轮后退
+  digitalWrite(Right_motor_back,HIGH);
+  //analogWrite(Right_motor_go,0);
+ // analogWrite(Right_motor_back,200);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,HIGH);  //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+  //analogWrite(Left_motor_go,200);
+//analogWrite(Left_motor_back,0);//PWM比例0~255调速
+  //delay(time * 100);     //执行时间，可以调整  
+&#125;
+//==========================================================
+
+
+void dump(decode_results *results)
+&#123;
+  int count = results->rawlen;
+  if (results->decode_type == UNKNOWN) 
+  &#123;
+    //Serial.println("Could not decode message");
+    brake();
+  &#125; 
+&#125;
+void IR_IN()                             //机器人遥控子程序
+&#123;
+
+  if (irrecv.decode(&results)) //调用库函数：解码
+  &#123;
+    // If it's been at least 1/4 second since the last
+    // IR received, toggle the relay
+    if (millis() - last > 250) //确定接收到信号
+    &#123;
+      on = !on;//标志位置反
+      digitalWrite(13, on ? HIGH : LOW);//板子上接收到信号闪烁一下led
+      dump(&results);//解码红外信号
+    &#125;
+
+    if (results.value == run_car )//按键CH
+      run2();//前进
+    if (results.value == back_car )//按键+
+      back2();//后退
+    if (results.value == left_car )//按键<<
+      left2();//左转
+    if (results.value == right_car )//按键>||
+      right2();//右转
+    if (results.value == stop_car )//按键>>|
+      brake2();//停车
+    if (results.value == left_turn )//按键-
+      spin_left2();//左旋转
+    if (results.value == right_turn )//按键EQ
+      spin_right2();//右旋转
+    last = millis();      
+    irrecv.resume(); // Receive the next value
+  &#125;
+
+&#125;
+void Robot_Avoidance()                   //机器人避障子程序
+&#123;
+ //有信号为LOW  没有信号为HIGH
+    SR_2 = digitalRead(SensorRight_2);
+    if (SR_2==HIGH)//前面没有障碍物
+    &#123;
+      run();   //调用前进函数
+      digitalWrite(beep,LOW);        //蜂鸣器不响
+      //digitalWrite(LED,LOW);        //LED不亮
+    &#125; 
+    else if ( SR_2 == LOW)// 前面探测到有障碍物，有信号返回，向左转 
+       &#123; 
+         digitalWrite(beep,HIGH);        //蜂鸣器响
+         //digitalWrite(LED,HIGH);        //LED亮
+         brake();//停止200MS
+         delay(300);
+         back();//后退500MS
+         delay(400);
+         left();//调用左转函数  延时500ms 
+         delay(500);        
+     &#125;
+&#125;
+void Robot_Traction()                     //机器人循迹子程序
+&#123;
+   //有信号为LOW  没有信号为HIGH
+  SR = digitalRead(SensorRight);//有信号表明在白色区域，车子底板上L1亮；没信号表明压在黑线上，车子底板上L1灭
+  SL = digitalRead(SensorLeft);//有信号表明在白色区域，车子底板上L2亮；没信号表明压在黑线上，车子底板上L2灭
+  if (SL == LOW&&SR==LOW)
+    run();   //调用前进函数
+  else if (SL == HIGH & SR == LOW)// 左循迹红外传感器,检测到信号，车子向右偏离轨道，向左转 
+    left();
+  else if (SR == HIGH & SL == LOW) // 右循迹红外传感器,检测到信号，车子向左偏离轨道，向右转  
+    right();
+  else // 都是白色, 停止
+  brake();
+
+&#125;
+// 按键处理初始化
+void KeyScanInit(void)
+&#123;
+    pinMode(PORT_KEY,INPUT_PULLUP); //输入模式，内部上拉。
+    keyMode = KEYMODE_1;
+&#125;
+
+// 任务：按键处理
+void KeyScanTask(void)//
+&#123;
+    static uint8_t keypre = 0; //按键被按下时置1.
+    if( (keypre == 0) && (digitalRead(PORT_KEY) == HIGH) ) //按键被按下
+    &#123;
+        keypre = 1; //置1，避免持续按下按键时再次进入此函数体。
+        switch(keyMode)
+        &#123;
+        case KEYMODE_1:
+            keyMode = KEYMODE_2;  //关键点错位赋值
+            break;
+        case KEYMODE_2:
+            keyMode = KEYMODE_3;
+            break;
+        case KEYMODE_3:
+            keyMode = KEYMODE_1;
+            break;
+        default:
+            break;
+        &#125;
+    &#125;
+    if(digitalRead(PORT_KEY) == LOW) //按键被放开
+    &#123;
+        keypre = 0; //置0，允许再次切换LED模式
+    &#125;
+&#125;
+// LED初始化
+void LEDInit(void)
+&#123;
+    pinMode(PORT_LED1,OUTPUT);
+    pinMode(PORT_LED2,OUTPUT);
+    digitalWrite(PORT_LED1,LOW);
+    digitalWrite(PORT_LED2,LOW);
+&#125;
+// 任务：循迹、避障、遥控模式处理
+void LEDTask(void)
+&#123;
+    switch(keyMode)
+    &#123;
+    case KEYMODE_1:
+        digitalWrite(PORT_LED1,HIGH);
+        digitalWrite(PORT_LED2,LOW);
+        Robot_Traction(); //调用循迹子程序
+        break;
+    case KEYMODE_2:
+        digitalWrite(PORT_LED1,LOW);
+        digitalWrite(PORT_LED2,HIGH);
+        Robot_Avoidance(); // 调用避障子程序
+        break;
+    case KEYMODE_3:
+        digitalWrite(PORT_LED1,HIGH);
+        digitalWrite(PORT_LED2,HIGH);
+        IR_IN();    //调用遥控子程序
+        break;
+    default:
+        break;
+    &#125;
+&#125;
+void loop()
+&#123; 
+  /*while(1)
+  &#123;
+    keysacn();//调用按键扫描函数
+    //Robot_Traction();
+    //Robot_Avoidance();
+    //IR_IN(); 
+  &#125;*/
+   KeyScanTask();
+   LEDTask();
+&#125;//
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>对应遥控器按键：</p>
+<p><img src="/loading.gif" data-original="/posts/10477/18.jpg" alt></p>
+<h4 id="2、智能小车超声波避障实验-无舵机-。"><a href="#2、智能小车超声波避障实验-无舵机-。" class="headerlink" title="2、智能小车超声波避障实验(无舵机)。"></a>2、智能小车超声波避障实验(无舵机)。</h4><pre class="line-numbers language-lang-C++"><code class="language-lang-C++">//============================智宇科技===========================
+//  智能小车超声波避障实验(无舵机)
+//===============================================================
+//#include <Servo.h> 
+#include <LiquidCrystal.h> //申明1602液晶的函数库
+//申明1602液晶的引脚所连接的Arduino数字端口，8线或4线数据模式，任选其一
+//LiquidCrystal lcd(12,11,10,9,8,7,6,5,4,3,2);   //8数据口模式连线声明
+LiquidCrystal lcd(13,12,7,6,5,4,3); //4数据口模式连线声明 P13--LCD 4脚  P12--LCD 5脚  
+              //P7--LCD 6脚   P6--LCD 11脚  P5--LCD 12脚  P4--LCD 13脚  P3--LCD 14脚  
+
+int Echo = A1;  // Echo回声脚(P2.0)
+int Trig =A0;  //  Trig 触发脚(P2.1)
+
+int Distance = 0;
+
+int Left_motor_go=8;     //左电机前进(IN1)
+int Left_motor_back=9;     //左电机后退(IN2)
+
+int Right_motor_go=10;    // 右电机前进(IN3)
+int Right_motor_back=11;    // 右电机后退(IN4)
+
+int key=A2;//定义按键 A2 接口
+int beep=A3;//定义蜂鸣器 A3 接口
+
+void setup()
+&#123;
+  Serial.begin(9600);     // 初始化串口
+  //初始化电机驱动IO为输出方式
+  pinMode(Left_motor_go,OUTPUT); // PIN 8 (PWM)
+  pinMode(Left_motor_back,OUTPUT); // PIN 9 (PWM)
+  pinMode(Right_motor_go,OUTPUT);// PIN 10 (PWM) 
+  pinMode(Right_motor_back,OUTPUT);// PIN 11 (PWM)
+  pinMode(key,INPUT);//定义按键接口为输入接口
+  pinMode(beep,OUTPUT);
+  // pinMode(SensorRight, INPUT); //定义右循迹红外传感器为输入
+  // pinMode(SensorLeft, INPUT); //定义左循迹红外传感器为输入
+  //pinMode(SensorRight_2, INPUT); //定义右红外传感器为输入
+  //pinMode(SensorLeft_2, INPUT); //定义左红外传感器为输入
+  //初始化超声波引脚
+  pinMode(Echo, INPUT);    // 定义超声波输入脚
+  pinMode(Trig, OUTPUT);   // 定义超声波输出脚
+  lcd.begin(16,2);      //初始化1602液晶工作                       模式
+  //定义1602液晶显示范围为2行16列字符  
+&#125;
+//=======================智能小车的基本动作=========================
+//void run(int time)     // 前进
+void run()     // 前进
+&#123;
+  digitalWrite(Right_motor_go,HIGH);  // 右电机前进
+  digitalWrite(Right_motor_back,LOW);     
+  analogWrite(Right_motor_go,150);//0~255调速，左右轮差异略增减
+  analogWrite(Right_motor_back,0);
+  digitalWrite(Left_motor_go,LOW);  // 左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+  analogWrite(Left_motor_go,0);//PWM比例0~255调速，左右轮差异略增减
+  analogWrite(Left_motor_back,150);
+  //delay(time * 100);   //执行时间，可以调整  
+&#125;
+
+void brake(int time)  //刹车，停车
+&#123;
+  digitalWrite(Right_motor_go,LOW);
+  digitalWrite(Right_motor_back,LOW);
+  digitalWrite(Left_motor_go,LOW);
+  digitalWrite(Left_motor_back,LOW);
+  delay(time * 100);//执行时间，可以调整  
+&#125;
+
+//void left(int time)         //左转(左轮不动，右轮前进)
+void left()         //左转(左轮不动，右轮前进)
+&#123;
+  digitalWrite(Right_motor_go,HIGH);    // 右电机前进
+  digitalWrite(Right_motor_back,LOW);
+  analogWrite(Right_motor_go,150); 
+  analogWrite(Right_motor_back,0);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,LOW);   //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+  analogWrite(Left_motor_go,0); 
+  analogWrite(Left_motor_back,0);//PWM比例0~255调速
+  //delay(time * 100);    //执行时间，可以调整  
+&#125;
+
+void spin_left(int time)         //左转(左轮后退，右轮前进)
+&#123;
+  digitalWrite(Right_motor_go,HIGH);    // 右电机前进
+  digitalWrite(Right_motor_back,LOW);
+  analogWrite(Right_motor_go,150); 
+  analogWrite(Right_motor_back,0);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,HIGH);   //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+  analogWrite(Left_motor_go,150); 
+  analogWrite(Left_motor_back,0);//PWM比例0~255调速
+  delay(time * 100);    //执行时间，可以调整  
+&#125;
+
+void right(int time)
+//void right()        //右转(右轮不动，左轮前进)
+&#123;
+  digitalWrite(Right_motor_go,LOW);   //右电机后退
+  digitalWrite(Right_motor_back,LOW);
+  analogWrite(Right_motor_go,0); 
+  analogWrite(Right_motor_back,0);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,LOW);//左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+  analogWrite(Left_motor_go,0); 
+  analogWrite(Left_motor_back,150);//PWM比例0~255调速
+  delay(time * 100);    //执行时间，可以调整  
+&#125;
+
+void spin_right(int time)        //右转(右轮后退，左轮前进)
+&#123;
+  digitalWrite(Right_motor_go,LOW);   //右电机后退
+  digitalWrite(Right_motor_back,HIGH);
+  analogWrite(Right_motor_go,0); 
+  analogWrite(Right_motor_back,150);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,LOW);//左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+  analogWrite(Left_motor_go,0); 
+  analogWrite(Left_motor_back,150);//PWM比例0~255调速
+  delay(time * 100);    //执行时间，可以调整        
+&#125;
+
+void back(int time)          //后退
+&#123;
+  digitalWrite(Right_motor_go,LOW);  //右轮后退
+  digitalWrite(Right_motor_back,HIGH);
+  analogWrite(Right_motor_go,0);
+  analogWrite(Right_motor_back,150);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,HIGH);  //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+  analogWrite(Left_motor_go,150);
+  analogWrite(Left_motor_back,0);//PWM比例0~255调速
+  delay(time * 100);     //执行时间，可以调整   
+&#125;
+//==========================================================
+
+void keysacn()//按键扫描
+&#123;
+  int val;
+  val=digitalRead(key);//读取数字7 口电平值赋给val
+  while(!digitalRead(key))//当按键没被按下时，一直循环
+  &#123;
+    val=digitalRead(key);//此句可省略，可让循环跑空
+  &#125;
+  while(digitalRead(key))//当按键被按下时
+  &#123;
+    delay(10);    //延时10ms
+    val=digitalRead(key);//读取数字7 口电平值赋给val
+    if(val==HIGH)  //第二次判断按键是否被按下
+    &#123;
+      digitalWrite(beep,HIGH);        //蜂鸣器响
+      while(!digitalRead(key))    //判断按键是否被松开
+        digitalWrite(beep,LOW);        //蜂鸣器停止
+    &#125;
+    else
+      digitalWrite(beep,LOW);          //蜂鸣器停止
+  &#125;
+&#125;
+
+void Distance_test()   // 量出前方距离 
+&#123;
+  digitalWrite(Trig, LOW);   // 给触发脚低电平2μs
+  delayMicroseconds(2);
+  digitalWrite(Trig, HIGH);  // 给触发脚高电平10μs，这里至少是10μs
+  delayMicroseconds(10);
+  digitalWrite(Trig, LOW);    // 持续给触发脚低电
+  float Fdistance = pulseIn(Echo, HIGH);  // 读取高电平时间(单位：微秒)
+  Fdistance= Fdistance/58;       //为什么除以58等于厘米，  Y米=（X秒*344）/2
+  // X秒=（ 2*Y米）/344 ==》X秒=0.0058*Y米 ==》厘米=微秒/58
+  Serial.print("Distance:");      //输出距离（单位：厘米）
+  Serial.println(Fdistance);         //显示距离
+  Distance = Fdistance;
+&#125;  
+
+void Distance_display()//显示距离
+&#123;
+   if((2<Distance)&(Distance<400))
+  &#123;
+    lcd.home();        //把光标移回左上角，即从头开始输出   
+    lcd.print("    Distance: ");       //显示
+    lcd.setCursor(6,2);   //把光标定位在第2行，第6列
+    lcd.print(Distance);        //显示距离
+    lcd.print("cm");            //显示
+  &#125;
+  else
+  &#123;
+    lcd.home();        //把光标移回左上角，即从头开始输出  
+    lcd.print("!!! Out of range");       //显示超出距离
+  &#125;
+  delay(250);
+  lcd.clear();
+&#125;
+
+void loop()
+&#123;
+  keysacn();       //调用按键扫描函数
+  while(1)
+  &#123;
+    Distance_test();//测量前方距离
+    Distance_display();//液晶屏显示距离
+
+    if(Distance < 40)//数值为碰到障碍物的距离，可以按实际情况设置
+      while(Distance < 40)//再次判断是否有障碍物，若有则转动方向后，继续判断
+      &#123;
+        back(2);    
+        right(1);//右转
+        digitalWrite(beep,HIGH);          //蜂鸣器停止
+       // brake(1);//停车
+        Distance_test();//测量前方距离
+        Distance_display();//液晶屏显示距离
+      &#125;
+    else
+
+      &#123;
+        run();//无障碍物，直行
+        digitalWrite(beep,LOW);  
+      &#125;
+  &#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="3、智能小车超声波避障实验-有舵机-。"><a href="#3、智能小车超声波避障实验-有舵机-。" class="headerlink" title="3、智能小车超声波避障实验(有舵机)。"></a>3、智能小车超声波避障实验(有舵机)。</h4><pre class="line-numbers language-lang-c++"><code class="language-lang-c++">//============================智宇科技========================================
+//  智能小车超声波避障实验(有舵机)
+//  程序中电脑打印数值部分都被屏蔽了，打印会影响小车遇到障碍物的反应速度
+//  调试时可以打开屏蔽内容Serial.print，打印测到的距离
+//  本实验控制速度的pwm值和延时均有调节，但还是配合实际情况，实际电量调节数值
+//=============================================================================
+//#include <Servo.h> 
+#include <LiquidCrystal.h> //申明1602液晶的函数库
+//申明1602液晶的引脚所连接的Arduino数字端口，8线或4线数据模式，任选其一
+//LiquidCrystal lcd(12,11,10,9,8,7,6,5,4,3,2);   //8数据口模式连线声明
+LiquidCrystal lcd(13,12,7,6,5,4,3); //4数据口模式连线声明 P13--LCD 4脚  P12--LCD 5脚  
+              //P7--LCD 6脚   P6--LCD 11脚  P5--LCD 12脚  P4--LCD 13脚  P3--LCD 14脚  
+
+int Echo = A1;  // Echo回声脚(P2.0)
+int Trig =A0;  //  Trig 触发脚(P2.1)
+
+int Front_Distance = 0;//
+int Left_Distance = 0;
+int Right_Distance = 0;
+
+int Left_motor_go=8;     //左电机前进(IN1)
+int Left_motor_back=9;     //左电机后退(IN2)
+
+int Right_motor_go=10;    // 右电机前进(IN3)
+int Right_motor_back=11;    // 右电机后退(IN4)
+
+int key=A2;//定义按键 A2 接口
+int beep=A3;//定义蜂鸣器 A3 接口
+
+//const int SensorRight = 3;       //右循迹红外传感器(P3.2 OUT1)
+//const int SensorLeft = 4;         //左循迹红外传感器(P3.3 OUT2)
+
+//const int SensorRight_2 = 6;       //右红外传感器(P3.5 OUT4)
+//const int SensorLeft_2 = 5;     //左红外传感器(P3.4 OUT3)
+
+//int SL;    //左循迹红外传感器状态
+//int SR;    //右循迹红外传感器状态
+//int SL_2;    //左红外传感器状态
+//int SR_2;    //右红外传感器状态
+
+int servopin=2;//设置舵机驱动脚到数字口2
+int myangle;//定义角度变量
+int pulsewidth;//定义脉宽变量
+int val;
+
+void setup()
+&#123;
+  Serial.begin(9600);     // 初始化串口
+  //初始化电机驱动IO为输出方式
+  pinMode(Left_motor_go,OUTPUT); // PIN 8 (PWM)
+  pinMode(Left_motor_back,OUTPUT); // PIN 9 (PWM)
+  pinMode(Right_motor_go,OUTPUT);// PIN 10 (PWM) 
+  pinMode(Right_motor_back,OUTPUT);// PIN 11 (PWM)
+  pinMode(key,INPUT);//定义按键接口为输入接口
+  pinMode(beep,OUTPUT);
+  // pinMode(SensorRight, INPUT); //定义右循迹红外传感器为输入
+  // pinMode(SensorLeft, INPUT); //定义左循迹红外传感器为输入
+  //pinMode(SensorRight_2, INPUT); //定义右红外传感器为输入
+  //pinMode(SensorLeft_2, INPUT); //定义左红外传感器为输入
+  //初始化超声波引脚
+  pinMode(Echo, INPUT);    // 定义超声波输入脚
+  pinMode(Trig, OUTPUT);   // 定义超声波输出脚
+  lcd.begin(16,2);      //初始化1602液晶工作                       模式
+  //定义1602液晶显示范围为2行16列字符  
+  pinMode(servopin,OUTPUT);//设定舵机接口为输出接口
+&#125;
+//=======================智能小车的基本动作=========================
+//void run(int time)     // 前进
+void run()     // 前进
+&#123;
+  digitalWrite(Right_motor_go,HIGH);  // 右电机前进
+  digitalWrite(Right_motor_back,LOW);     
+  analogWrite(Right_motor_go,165);//PWM比例0~255调速，左右轮差异略增减
+  analogWrite(Right_motor_back,0);
+  digitalWrite(Left_motor_go,LOW);  // 左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+  analogWrite(Left_motor_go,0);//PWM比例0~255调速，左右轮差异略增减
+  analogWrite(Left_motor_back,160);
+  //delay(time * 100);   //执行时间，可以调整  
+&#125;
+
+void brake(int time)  //刹车，停车
+&#123;
+  digitalWrite(Right_motor_go,LOW);
+  digitalWrite(Right_motor_back,LOW);
+  digitalWrite(Left_motor_go,LOW);
+  digitalWrite(Left_motor_back,LOW);
+  delay(time * 100);//执行时间，可以调整  
+&#125;
+
+void left(int time)         //左转(左轮不动，右轮前进)
+//void left()         //左转(左轮不动，右轮前进)
+&#123;
+  digitalWrite(Right_motor_go,HIGH);    // 右电机前进
+  digitalWrite(Right_motor_back,LOW);
+  analogWrite(Right_motor_go,180); 
+  analogWrite(Right_motor_back,0);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,LOW);   //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+  analogWrite(Left_motor_go,0); 
+  analogWrite(Left_motor_back,0);//PWM比例0~255调速
+  delay(time * 100);    //执行时间，可以调整  
+&#125;
+
+void spin_left(int time)         //左转(左轮后退，右轮前进)
+&#123;
+  digitalWrite(Right_motor_go,HIGH);    // 右电机前进
+  digitalWrite(Right_motor_back,LOW);
+  analogWrite(Right_motor_go,200); 
+  analogWrite(Right_motor_back,0);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,HIGH);   //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+  analogWrite(Left_motor_go,200); 
+  analogWrite(Left_motor_back,0);//PWM比例0~255调速
+  delay(time * 100);    //执行时间，可以调整   
+&#125;
+
+void right(int time)
+//void right()        //右转(右轮不动，左轮前进)
+&#123;
+  digitalWrite(Right_motor_go,LOW);   //右电机后退
+  digitalWrite(Right_motor_back,LOW);
+  analogWrite(Right_motor_go,0); 
+  analogWrite(Right_motor_back,0);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,LOW);//左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+  analogWrite(Left_motor_go,0); 
+  analogWrite(Left_motor_back,200);//PWM比例0~255调速
+  delay(time * 100);    //执行时间，可以调整  
+&#125;
+
+void spin_right(int time)        //右转(右轮后退，左轮前进)
+&#123;
+   digitalWrite(Right_motor_go,LOW);   //右电机后退
+  digitalWrite(Right_motor_back,HIGH);
+  analogWrite(Right_motor_go,0); 
+  analogWrite(Right_motor_back,150);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,LOW);//左电机前进
+  digitalWrite(Left_motor_back,HIGH);
+  analogWrite(Left_motor_go,0); 
+  analogWrite(Left_motor_back,150);//PWM比例0~255调速
+  delay(time * 100);    //执行时间，可以调整   
+&#125;
+
+void back(int time)          //后退
+&#123;
+   digitalWrite(Right_motor_go,LOW);  //右轮后退
+  digitalWrite(Right_motor_back,HIGH);
+  analogWrite(Right_motor_go,0);
+  analogWrite(Right_motor_back,150);//PWM比例0~255调速
+  digitalWrite(Left_motor_go,HIGH);  //左轮后退
+  digitalWrite(Left_motor_back,LOW);
+  analogWrite(Left_motor_go,150);
+  analogWrite(Left_motor_back,0);//PWM比例0~255调速
+  delay(time * 100);     //执行时间，可以调整  
+&#125;
+//==========================================================
+
+void keysacn()//按键扫描
+&#123;
+  int val;
+  val=digitalRead(key);//读取数字7 口电平值赋给val
+  while(!digitalRead(key))//当按键没被按下时，一直循环
+  &#123;
+    val=digitalRead(key);//此句可省略，可让循环跑空
+  &#125;
+  while(digitalRead(key))//当按键被按下时
+  &#123;
+    delay(10);    //延时10ms
+    val=digitalRead(key);//读取数字7 口电平值赋给val
+    if(val==HIGH)  //第二次判断按键是否被按下
+    &#123;
+      digitalWrite(beep,HIGH);        //蜂鸣器响
+      while(!digitalRead(key))    //判断按键是否被松开
+        digitalWrite(beep,LOW);        //蜂鸣器停止
+    &#125;
+    else
+      digitalWrite(beep,LOW);          //蜂鸣器停止
+  &#125;
+&#125;
+
+float Distance_test()   // 量出前方距离 
+&#123;
+  digitalWrite(Trig, LOW);   // 给触发脚低电平2μs
+  delayMicroseconds(2);
+  digitalWrite(Trig, HIGH);  // 给触发脚高电平10μs，这里至少是10μs
+  delayMicroseconds(10);
+  digitalWrite(Trig, LOW);    // 持续给触发脚低电
+  float Fdistance = pulseIn(Echo, HIGH);  // 读取高电平时间(单位：微秒)
+  Fdistance= Fdistance/58;       //为什么除以58等于厘米，  Y米=（X秒*344）/2
+  // X秒=（ 2*Y米）/344 ==》X秒=0.0058*Y米 ==》厘米=微秒/58
+  //Serial.print("Distance:");      //输出距离（单位：厘米）
+  //Serial.println(Fdistance);         //显示距离
+  //Distance = Fdistance;
+  return Fdistance;
+&#125;  
+
+void Distance_display(int Distance)//显示距离
+&#123;
+  if((2<Distance)&(Distance<400))
+  &#123;
+    lcd.home();        //把光标移回左上角，即从头开始输出   
+    lcd.print("    Distance: ");       //显示
+    lcd.setCursor(6,2);   //把光标定位在第2行，第6列
+    lcd.print(Distance);       //显示距离
+    lcd.print("cm");          //显示
+  &#125;
+  else
+  &#123;
+    lcd.home();        //把光标移回左上角，即从头开始输出  
+    lcd.print("!!! Out of range");       //显示
+  &#125;
+  delay(250);
+  lcd.clear();
+&#125;
+
+void servopulse(int servopin,int myangle)/*定义一个脉冲函数，用来模拟方式产生PWM值舵机的范围是0.5MS到2.5MS 1.5MS 占空比是居中周期是20MS*/ 
+&#123;
+  pulsewidth=(myangle*11)+500;//将角度转化为500-2480 的脉宽值 这里的myangle就是0-180度  所以180*11+50=2480  11是为了换成90度的时候基本就是1.5MS
+  digitalWrite(servopin,HIGH);//将舵机接口电平置高                                      90*11+50=1490uS  就是1.5ms
+  delayMicroseconds(pulsewidth);//延时脉宽值的微秒数  这里调用的是微秒延时函数
+  digitalWrite(servopin,LOW);//将舵机接口电平置低
+ // delay(20-pulsewidth/1000);//延时周期内剩余时间  这里调用的是ms延时函数
+  delay(20-(pulsewidth*0.001));//延时周期内剩余时间  这里调用的是ms延时函数
+&#125;
+
+void front_detection()
+&#123;
+  //此处循环次数减少，为了增加小车遇到障碍物的反应速度
+  for(int i=0;i<=5;i++) //产生PWM个数，等效延时以保证能转到响应角度
+  &#123;
+    servopulse(servopin,90);//模拟产生PWM
+  &#125;
+  Front_Distance = Distance_test();
+  //Serial.print("Front_Distance:");      //输出距离（单位：厘米）
+ // Serial.println(Front_Distance);         //显示距离
+ //Distance_display(Front_Distance);
+&#125;
+
+void left_detection()
+&#123;
+  for(int i=0;i<=15;i++) //产生PWM个数，等效延时以保证能转到响应角度
+  &#123;
+    servopulse(servopin,175);//模拟产生PWM
+  &#125;
+  Left_Distance = Distance_test();
+  //Serial.print("Left_Distance:");      //输出距离（单位：厘米）
+  //Serial.println(Left_Distance);         //显示距离
+&#125;
+
+void right_detection()
+&#123;
+  for(int i=0;i<=15;i++) //产生PWM个数，等效延时以保证能转到响应角度
+  &#123;
+    servopulse(servopin,5);//模拟产生PWM
+  &#125;
+  Right_Distance = Distance_test();
+  //Serial.print("Right_Distance:");      //输出距离（单位：厘米）
+  //Serial.println(Right_Distance);         //显示距离
+&#125;
+//===========================================================
+void loop()
+&#123;
+  keysacn();       //调用按键扫描函数
+  while(1)
+  &#123;
+    front_detection();//测量前方距离
+    if(Front_Distance < 30)//当遇到障碍物时
+    &#123;
+      brake(2);//先刹车
+      back(2);//后退减速
+      brake(2);//停下来做测距
+      left_detection();//测量左边距障碍物距离
+      Distance_display(Left_Distance);//液晶屏显示距离
+      right_detection();//测量右边距障碍物距离
+      Distance_display(Right_Distance);//液晶屏显示距离
+      if((Left_Distance < 30 ) &&( Right_Distance < 30 ))//当左右两侧均有障碍物靠得比较近
+        spin_left(0.7);//旋转掉头
+      else if(Left_Distance > Right_Distance)//左边比右边空旷
+      &#123;      
+        left(3);//左转
+        brake(1);//刹车，稳定方向
+      &#125;
+      else//右边比左边空旷
+      &#123;
+        right(3);//右转
+        brake(1);//刹车，稳定方向
+      &#125;
+    &#125;
+    else
+    &#123;
+      run(); //无障碍物，直行     
+    &#125;
+  &#125; 
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="3-原理图"><a href="#3-原理图" class="headerlink" title="3. 原理图"></a>3. 原理图</h2><p>思考三个问题：1. 要学哪些知识可以看懂这种图？ 2. 要学哪些知识会设计这种图？ 3. 要学哪些软件会画这种图？</p>
+<p><img src="/loading.gif" data-original="/posts/10477/15.jpg" alt="转接控制板原理图"></p>
+<p><img src="/loading.gif" data-original="/posts/10477/16.jpg" alt="小车底板原理图"></p>
+<p><img src="/loading.gif" data-original="/posts/10477/17.jpg" alt="Arduino UNO R3原理图"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Lee</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://x8378479.github.io/posts/10477/">https://x8378479.github.io/posts/10477/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Lee</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Arduino/">
+                                    <span class="chip bg-color">Arduino</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢您的支持！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '67iv3fIwkPzU8B6pomqAdjDa-gzGzoHsz',
+        appKey: 'msR7WdRSmLnaEIqwzlUx0If4',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '想说你就说呀~如果你填了网址，你评论用的名字会自动生成网址的超链接'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/55213/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="利用jade软件做XRD物相分析">
+                        
+                        <span class="card-title">利用jade软件做XRD物相分析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-11
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%8B%A6%E9%80%BC%E7%9A%84%E7%A7%91%E7%A0%94/" class="post-category">
+                                    苦逼的科研
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">读书笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9D%90%E6%96%99/">
+                        <span class="chip bg-color">材料</span>
+                    </a>
+                    
+                    <a href="/tags/XRD/">
+                        <span class="chip bg-color">XRD</span>
+                    </a>
+                    
+                    <a href="/tags/jade/">
+                        <span class="chip bg-color">jade</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/19216/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="与Arduino的初次相遇">
+                        
+                        <span class="card-title">与Arduino的初次相遇</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8F%91%E6%8E%98%E4%B9%90%E8%B6%A3/" class="post-category">
+                                    发掘乐趣
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Arduino/">
+                        <span class="chip bg-color">Arduino</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lee&#39;s Base<br />'
+            + '文章作者: Lee<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2024</span>
+            
+
+            <a href="/about" target="_blank">Lee</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+
+
+
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "5";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已苟延残喘了 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6cbd3a2f0dfd08af75a743f1c51a163f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:425999183@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=425999183" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 425999183" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+
+
+
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+	<link rel="stylesheet" href="/css/matery.css">
+	<script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6cbd3a2f0dfd08af75a743f1c51a163f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+
+</html>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 128" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!--鼠标点击烟花特效-->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+
+
+
