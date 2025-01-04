@@ -431,7 +431,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-10-08
+                    2024-12-03
                 </div>
                 
 
@@ -652,6 +652,7 @@
 <p>V<sub>DS</sub>继续增加，夹断点左移意味着沟道也在变短，实际电流I<sub>D</sub>=I<sub>D0</sub>(1+λV<sub>DS</sub>)，后面这个系数意味着电流随着V<sub>DS</sub>继续增大的程度，但引入这个系数的人应该并不怎么关心为什么继续增大，而是更注重这个输出结果。</p>
 </li>
 </ol>
+<p>MOSFET在使用时其实是有方向的，因为Vgs&gt;Vth就会打开，所以源端最好在稳定的VDD上，不经过其他器件，否则其它器件如OLED带来的压降会使得Vgs变化，如果先过MOSFET再过器件，器件分压改变只影响Vd，Vds变化在饱和区影响较小。</p>
 <p>将一个PMOS和NMOS用金属串联形成所谓的CMOS（Complementary MOSFETS）器件。</p>
 <h3 id="关键参量："><a href="#关键参量：" class="headerlink" title="关键参量："></a>关键参量：</h3><p>就算知道了这个公式，如何调控I<sub>D</sub>的方式似乎仍然十分有限，怎么调控Vth（V<sub>TN</sub>与V<sub>TP</sub>），电容C<sub>ox</sub>，迁移率μ呢？</p>
 <p>核心在于对阈值电压Vth的理解，在上面ID-VD曲线中已经知道了Vth是被视为了一个很关键的参数，那么Vth是常量吗？受什么因素影响？</p>
@@ -1472,7 +1473,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021-2024</span>
+                <span id="year">2021-2025</span>
             
 
             <a href="/about" target="_blank">Lee</a>
