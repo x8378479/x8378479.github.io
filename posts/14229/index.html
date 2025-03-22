@@ -427,7 +427,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2025-02-23
+                    2025-03-22
                 </div>
                 
 
@@ -462,18 +462,28 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="MOSFET-TFT器件slivaco仿真常用语句汇总"><a href="#MOSFET-TFT器件slivaco仿真常用语句汇总" class="headerlink" title="MOSFET-TFT器件slivaco仿真常用语句汇总"></a>MOSFET-TFT器件slivaco仿真常用语句汇总</h1><p>其实就是把用户手册搞出来常用的一部分，方便查阅。</p>
-<h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><h3 id="1-模拟器，启动！"><a href="#1-模拟器，启动！" class="headerlink" title="1.模拟器，启动！"></a>1.模拟器，启动！</h3><p>go atlas #windows版deckbuild常用</p>
+<h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><p>1.模拟器，启动！</p>
+<p>go atlas #windows版deckbuild常用</p>
 <p>go victorydevice#linux版deckbuild常用</p>
-<h3 id="2-划分网格"><a href="#2-划分网格" class="headerlink" title="2.划分网格"></a>2.划分网格</h3><h1 id="网格中往右往下是正方向。"><a href="#网格中往右往下是正方向。" class="headerlink" title="网格中往右往下是正方向。"></a>网格中往右往下是正方向。</h1><p>x.mesh location = 0 spacing = 1 #x轴方向坐标0的位置，网格间距为1</p>
+<p>2.划分网格</p>
+<h1 id="网格中往右往下是正方向。"><a href="#网格中往右往下是正方向。" class="headerlink" title="网格中往右往下是正方向。"></a>网格中往右往下是正方向。</h1><p>x.mesh location = 0 spacing = 1 #x轴方向坐标0的位置，网格间距为1</p>
 <p>y.mesh location = -1 spacing = 0.05  #y轴方向坐标-1的位置，网格间距为0.05</p>
-<h1 id="基本规则：沟道区域与空间电荷区网格较为密集。"><a href="#基本规则：沟道区域与空间电荷区网格较为密集。" class="headerlink" title="基本规则：沟道区域与空间电荷区网格较为密集。"></a>基本规则：沟道区域与空间电荷区网格较为密集。</h1><h3 id="3-材料定义"><a href="#3-材料定义" class="headerlink" title="3.材料定义"></a>3.材料定义</h3><p>region num=1 x.min=0 x.max=50 y.min= -1 y.max=0 material=air #定义了空间序号1的区间范围和材料</p>
-<h1 id="注意：定义材料时重复定义相同区域会以最后一次为准，之前的会被覆盖且不可以有没定义的区域。"><a href="#注意：定义材料时重复定义相同区域会以最后一次为准，之前的会被覆盖且不可以有没定义的区域。" class="headerlink" title="注意：定义材料时重复定义相同区域会以最后一次为准，之前的会被覆盖且不可以有没定义的区域。"></a>注意：定义材料时重复定义相同区域会以最后一次为准，之前的会被覆盖且不可以有没定义的区域。</h1><h3 id="4-电极定义"><a href="#4-电极定义" class="headerlink" title="4.电极定义"></a>4.电极定义</h3><h1 id="定义了电极范围和序号，此处num和材料定义num可以不等同"><a href="#定义了电极范围和序号，此处num和材料定义num可以不等同" class="headerlink" title="定义了电极范围和序号，此处num和材料定义num可以不等同"></a>定义了电极范围和序号，此处num和材料定义num可以不等同</h1><p>electrode  num=1  x.min=5    x.max=15  y.min=-0.1 y.max=-0.1 name=gate </p>
+<h1 id="基本规则：沟道区域与空间电荷区网格较为密集。"><a href="#基本规则：沟道区域与空间电荷区网格较为密集。" class="headerlink" title="基本规则：沟道区域与空间电荷区网格较为密集。"></a>基本规则：沟道区域与空间电荷区网格较为密集。</h1><p>3.材料定义</p>
+<p>region num=1 x.min=0 x.max=50 y.min= -1 y.max=0 material=air #定义了空间序号1的区间范围和材料</p>
+<h1 id="注意：定义材料时重复定义相同区域会以最后一次为准，之前的会被覆盖且不可以有没定义的区域。"><a href="#注意：定义材料时重复定义相同区域会以最后一次为准，之前的会被覆盖且不可以有没定义的区域。" class="headerlink" title="注意：定义材料时重复定义相同区域会以最后一次为准，之前的会被覆盖且不可以有没定义的区域。"></a>注意：定义材料时重复定义相同区域会以最后一次为准，之前的会被覆盖且不可以有没定义的区域。</h1><p>4.电极定义</p>
+<h1 id="定义了电极范围和序号，此处num和材料定义num可以不等同"><a href="#定义了电极范围和序号，此处num和材料定义num可以不等同" class="headerlink" title="定义了电极范围和序号，此处num和材料定义num可以不等同"></a>定义了电极范围和序号，此处num和材料定义num可以不等同</h1><p>electrode  num=1  x.min=5    x.max=15  y.min=-0.1 y.max=-0.1 name=gate </p>
 <h1 id="或者用这个语句，此处直接用region-8指代材料定义中区域8"><a href="#或者用这个语句，此处直接用region-8指代材料定义中区域8" class="headerlink" title="或者用这个语句，此处直接用region=8指代材料定义中区域8"></a>或者用这个语句，此处直接用region=8指代材料定义中区域8</h1><p>electrode name=gate region=8</p>
-<h3 id="5-掺杂"><a href="#5-掺杂" class="headerlink" title="5.掺杂"></a>5.掺杂</h3><p>doping     reg=2  gauss conc=3.e18 n.type x.right=5 char=0.3 # 在区域2中，右侧X=5处高斯分布掺杂，浓度3e18，n型</p>
-<h3 id="6-设置材料参数"><a href="#6-设置材料参数" class="headerlink" title="6.设置材料参数"></a>6.设置材料参数</h3><h1 id="可以不写相关语句，即为默认材料"><a href="#可以不写相关语句，即为默认材料" class="headerlink" title="可以不写相关语句，即为默认材料"></a>可以不写相关语句，即为默认材料</h1><p>material region=2 mun=20 mup=1.5 nc300=2.5e20 \</p>
+<p>5.掺杂</p>
+<p>doping     reg=2  gauss conc=3.e18 n.type x.right=5 char=0.3 # 在区域2中，右侧X=5处高斯分布掺杂，浓度3e18，n型</p>
+<p>6.设置材料参数</p>
+<h1 id="可以不写相关语句，即为默认材料"><a href="#可以不写相关语句，即为默认材料" class="headerlink" title="可以不写相关语句，即为默认材料"></a>可以不写相关语句，即为默认材料</h1><p>material region=2 mun=20 mup=1.5 nc300=2.5e20 \</p>
 <p>  nv300=2.5e20 eg300=1.9</p>
-<h3 id="7-设置缺陷参数"><a href="#7-设置缺陷参数" class="headerlink" title="7.设置缺陷参数"></a>7.设置缺陷参数</h3><h1 id="可以不写相关语句，即为默认缺陷，-这里指定陷阱密度、能级、宽度等"><a href="#可以不写相关语句，即为默认缺陷，-这里指定陷阱密度、能级、宽度等" class="headerlink" title="可以不写相关语句，即为默认缺陷， 这里指定陷阱密度、能级、宽度等"></a>可以不写相关语句，即为默认缺陷， 这里指定陷阱密度、能级、宽度等</h1><p>defects nta=1.e21 ntd=1.e21 wta=0.033 wtd=0.049 \<br>  nga=1.5e15 ngd=1.5e15 ega=0.62 egd=0.78 wga=0.15 wgd=0.15 \<br>  sigtae=1.e-17 sigtah=1.e-15 sigtde=1.e-15 sigtdh=1.e-17  \<br>  siggae=2.e-16 siggah=2.e-15 siggde=2.e-15 siggdh=2.e-16  </p>
-<h3 id="8-设置接触模型"><a href="#8-设置接触模型" class="headerlink" title="8. 设置接触模型"></a>8. 设置接触模型</h3><h1 id="可以不写相关语句，即为默认，这里指定接触类型和温度模型"><a href="#可以不写相关语句，即为默认，这里指定接触类型和温度模型" class="headerlink" title="可以不写相关语句，即为默认，这里指定接触类型和温度模型"></a>可以不写相关语句，即为默认，这里指定接触类型和温度模型</h1><p>contact    num=1 alum<br>models  temp=300 </p>
+<p>7.设置缺陷参数</p>
+<h1 id="可以不写相关语句，即为默认缺陷，-这里指定陷阱密度、能级、宽度等"><a href="#可以不写相关语句，即为默认缺陷，-这里指定陷阱密度、能级、宽度等" class="headerlink" title="可以不写相关语句，即为默认缺陷， 这里指定陷阱密度、能级、宽度等"></a>可以不写相关语句，即为默认缺陷， 这里指定陷阱密度、能级、宽度等</h1><p>defects nta=1.e21 ntd=1.e21 wta=0.033 wtd=0.049 \<br>  nga=1.5e15 ngd=1.5e15 ega=0.62 egd=0.78 wga=0.15 wgd=0.15 \<br>  sigtae=1.e-17 sigtah=1.e-15 sigtde=1.e-15 sigtdh=1.e-17  \<br>  siggae=2.e-16 siggah=2.e-15 siggde=2.e-15 siggdh=2.e-16  </p>
+<ol>
+<li>设置接触模型<h1 id="可以不写相关语句，即为默认，这里指定接触类型和温度模型"><a href="#可以不写相关语句，即为默认，这里指定接触类型和温度模型" class="headerlink" title="可以不写相关语句，即为默认，这里指定接触类型和温度模型"></a>可以不写相关语句，即为默认，这里指定接触类型和温度模型</h1></li>
+</ol>
+<p>contact    num=1 alum<br>models  temp=300 </p>
 <h1 id="通常，你只需要设定金属的功函数，软件会处理后续的计算。"><a href="#通常，你只需要设定金属的功函数，软件会处理后续的计算。" class="headerlink" title="通常，你只需要设定金属的功函数，软件会处理后续的计算。"></a>通常，你只需要设定金属的功函数，软件会处理后续的计算。</h1><p>CONTACT NAME=gate WORKFUNCTION=4.8 #定义肖特基接触的电极功函数的方式之一</p>
 <p>CONTACT NAME=gate N.POLYSILICON #定义肖特基接触的电极功函数的方式之一</p>
 <p>CONTACT NAME=fgate FLOATING #定义电极fgate为floating，适用于电极而非导体触点</p>
@@ -481,14 +491,25 @@
 <p>CONTACT NAME=drain RESIST=1e20 #对于半导体触点定义时，还可以假设接了一个大电阻</p>
 <p>CONTACT NAME=base1 COMMON=base #将电极base1和base同步给电位，SOLVE VBASE=0.1，因为common电压是主要参考点，所以链接后只对common施加。</p>
 <p>CONTACT NAME=MYDRAIN COMMON=DRAIN FACTOR=4.6 #对MYDRAIN的偏见将永远存在等于漏极上的偏置加4.6。如果已经指定了可选的MULT参数，MYDRAIN上的偏置将等于漏极上的偏置乘以4.6。</p>
-<h3 id="9-设置求解方法和初始化求解"><a href="#9-设置求解方法和初始化求解" class="headerlink" title="9. 设置求解方法和初始化求解"></a>9. 设置求解方法和初始化求解</h3><p>method itlimit=30 # 指定迭代次数限制和求解初始化<br>solve init #设置求解方法和初始化求解</p>
-<h3 id="10-保存初始状态"><a href="#10-保存初始状态" class="headerlink" title="10. 保存初始状态"></a>10. 保存初始状态</h3><p>save outf=test.str #为了保证每次算都从初始化求解开始</p>
-<h3 id="11-设置求解方法"><a href="#11-设置求解方法" class="headerlink" title="11. 设置求解方法"></a>11. 设置求解方法</h3><h1 id="v-必须从以下名字中选取-GATE-GG-DRAIN-DD-SOURCE-BULK-SUBSTRATE-EMITTER-EE-COLLECTOR-CC-BASE-BB-ANODE-CATHODDE-FGATE-CGATE-NGATE-PGATE-WELL-NWELL-PWELL-CHANNEL-and-GROUND-每次slove都会定义一个电极，会一直保留这个状态除非重新被定义。"><a href="#v-必须从以下名字中选取-GATE-GG-DRAIN-DD-SOURCE-BULK-SUBSTRATE-EMITTER-EE-COLLECTOR-CC-BASE-BB-ANODE-CATHODDE-FGATE-CGATE-NGATE-PGATE-WELL-NWELL-PWELL-CHANNEL-and-GROUND-每次slove都会定义一个电极，会一直保留这个状态除非重新被定义。" class="headerlink" title="v. 必须从以下名字中选取: GATE, GG, DRAIN, DD, SOURCE, BULK, SUBSTRATE, EMITTER, EE, COLLECTOR, CC, BASE, BB, ANODE, CATHODDE, FGATE, CGATE, NGATE, PGATE, WELL, NWELL, PWELL, CHANNEL, and GROUND. 每次slove都会定义一个电极，会一直保留这个状态除非重新被定义。"></a>v.<name> 必须从以下名字中选取: GATE, GG, DRAIN, DD, SOURCE, BULK, SUBSTRATE, EMITTER, EE, COLLECTOR, CC, BASE, BB, ANODE, CATHODDE, FGATE, CGATE, NGATE, PGATE, WELL, NWELL, PWELL, CHANNEL, and GROUND. 每次slove都会定义一个电极，会一直保留这个状态除非重新被定义。</name></h1><h4 id="IDVD求解"><a href="#IDVD求解" class="headerlink" title="IDVD求解"></a>IDVD求解</h4><p>method  gummel newton    #选方法<br>solve  vgate=-1.0    #定Vg</p>
+<ol>
+<li><p>设置求解方法和初始化求解<br>method itlimit=30 # 指定迭代次数限制和求解初始化<br>solve init #设置求解方法和初始化求解</p>
+</li>
+<li><p>保存初始状态<br>save outf=test.str #为了保证每次算都从初始化求解开始</p>
+</li>
+<li><p>设置求解方法</p>
+</li>
+</ol>
+<h1 id="v-必须从以下名字中选取-GATE-GG-DRAIN-DD-SOURCE-BULK-SUBSTRATE-EMITTER-EE-COLLECTOR-CC-BASE-BB-ANODE-CATHODDE-FGATE-CGATE-NGATE-PGATE-WELL-NWELL-PWELL-CHANNEL-and-GROUND-每次slove都会定义一个电极，会一直保留这个状态除非重新被定义。"><a href="#v-必须从以下名字中选取-GATE-GG-DRAIN-DD-SOURCE-BULK-SUBSTRATE-EMITTER-EE-COLLECTOR-CC-BASE-BB-ANODE-CATHODDE-FGATE-CGATE-NGATE-PGATE-WELL-NWELL-PWELL-CHANNEL-and-GROUND-每次slove都会定义一个电极，会一直保留这个状态除非重新被定义。" class="headerlink" title="v. 必须从以下名字中选取: GATE, GG, DRAIN, DD, SOURCE, BULK, SUBSTRATE, EMITTER, EE, COLLECTOR, CC, BASE, BB, ANODE, CATHODDE, FGATE, CGATE, NGATE, PGATE, WELL, NWELL, PWELL, CHANNEL, and GROUND. 每次slove都会定义一个电极，会一直保留这个状态除非重新被定义。"></a>v.<name> 必须从以下名字中选取: GATE, GG, DRAIN, DD, SOURCE, BULK, SUBSTRATE, EMITTER, EE, COLLECTOR, CC, BASE, BB, ANODE, CATHODDE, FGATE, CGATE, NGATE, PGATE, WELL, NWELL, PWELL, CHANNEL, and GROUND. 每次slove都会定义一个电极，会一直保留这个状态除非重新被定义。</name></h1><p>IDVD求解</p>
+<p>method  gummel newton    #选方法<br>solve  vgate=-1.0    #定Vg</p>
 <p>method  newton #选方法</p>
 <h1 id="求不同Vd下的Id"><a href="#求不同Vd下的Id" class="headerlink" title="求不同Vd下的Id"></a>求不同Vd下的Id</h1><p>log outfile=IDVD.log</p>
 <p>solve  vdrain=0.1<br>solve  vdrain=0.2<br>solve  vdrain=0.5<br>solve  vdrain=1 vfinal=5 vstep=1 name=drain</p>
-<h4 id="IDVG求解"><a href="#IDVG求解" class="headerlink" title="IDVG求解"></a>IDVG求解</h4><p>log off<br>load inf=test.str master<br>solve prev #回到该模型的上一步求解状态，即初始化求解<br>log outf=IDVG.log<br>solve vgate=0 vstep=0.2 vfinal=15.0 name=gate #尽量从0开始解防止不收敛</p>
-<h3 id="12-退出"><a href="#12-退出" class="headerlink" title="12. 退出"></a>12. 退出</h3><p>quit</p>
+<p>IDVG求解</p>
+<p>log off<br>load inf=test.str master<br>solve prev #回到该模型的上一步求解状态，即初始化求解<br>log outf=IDVG.log<br>solve vgate=0 vstep=0.2 vfinal=15.0 name=gate #尽量从0开始解防止不收敛</p>
+<ol>
+<li>退出</li>
+</ol>
+<p>quit</p>
 
                 
             </div>
@@ -1584,13 +1605,13 @@ $(function () {
     
 
 
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
 
