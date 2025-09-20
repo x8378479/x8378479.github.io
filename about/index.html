@@ -559,7 +559,7 @@ text-shadow:0 0 5px #060606;
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"平凡的生活","value":5},{"name":"苦逼的科研","value":16},{"name":"发掘乐趣","value":13}],
+                data: [{"name":"平凡的生活","value":5},{"name":"发掘乐趣","value":13},{"name":"苦逼的科研","value":16}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -583,7 +583,7 @@ text-shadow:0 0 5px #060606;
         xAxis: [
             {
                 type: 'category',
-                data: ["读书笔记","材料","思考与成长","显示器","半导体集成电路","网站编辑","Arduino","Linux","仿真","电脑"]
+                data: ["读书笔记","材料","思考与成长","显示器","半导体集成电路","Arduino","电脑","网站编辑","仿真","Linux"]
             }
         ],
         yAxis: [
@@ -792,14 +792,8 @@ text-shadow:0 0 5px #060606;
             
             
             
-            <a href="/tags/Endnote/">
-                <span class="chip center-align waves-effect waves-light chip-default">Endnote</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E7%BD%91%E7%AB%99%E7%BC%96%E8%BE%91/">
-                <span class="chip center-align waves-effect waves-light chip-default">网站编辑</span>
+            <a href="/tags/Arduino/">
+                <span class="chip center-align waves-effect waves-light chip-default">Arduino</span>
             </a>
             
             
@@ -810,14 +804,26 @@ text-shadow:0 0 5px #060606;
             
             
             
-            <a href="/tags/Arduino/">
-                <span class="chip center-align waves-effect waves-light chip-default">Arduino</span>
+            <a href="/tags/%E7%94%B5%E8%84%91/">
+                <span class="chip center-align waves-effect waves-light chip-default">电脑</span>
             </a>
             
             
             
-            <a href="/tags/Linux/">
-                <span class="chip center-align waves-effect waves-light chip-default">Linux</span>
+            <a href="/tags/%E6%98%BE%E7%A4%BA%E5%99%A8/">
+                <span class="chip center-align waves-effect waves-light chip-default">显示器</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Endnote/">
+                <span class="chip center-align waves-effect waves-light chip-default">Endnote</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%BD%91%E7%AB%99%E7%BC%96%E8%BE%91/">
+                <span class="chip center-align waves-effect waves-light chip-default">网站编辑</span>
             </a>
             
             
@@ -834,14 +840,20 @@ text-shadow:0 0 5px #060606;
             
             
             
-            <a href="/tags/%E7%94%B5%E8%84%91/">
-                <span class="chip center-align waves-effect waves-light chip-default">电脑</span>
+            <a href="/tags/Linux/">
+                <span class="chip center-align waves-effect waves-light chip-default">Linux</span>
             </a>
             
             
             
-            <a href="/tags/%E6%98%BE%E7%A4%BA%E5%99%A8/">
-                <span class="chip center-align waves-effect waves-light chip-default">显示器</span>
+            <a href="/tags/%E5%BB%BA%E6%A8%A1/">
+                <span class="chip center-align waves-effect waves-light chip-default">建模</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Solidworks/">
+                <span class="chip center-align waves-effect waves-light chip-default">Solidworks</span>
             </a>
             
             
@@ -860,18 +872,6 @@ text-shadow:0 0 5px #060606;
             
             <a href="/tags/NMR/">
                 <span class="chip center-align waves-effect waves-light chip-default">NMR</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E5%BB%BA%E6%A8%A1/">
-                <span class="chip center-align waves-effect waves-light chip-default">建模</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Solidworks/">
-                <span class="chip center-align waves-effect waves-light chip-default">Solidworks</span>
             </a>
             
             
@@ -900,6 +900,12 @@ text-shadow:0 0 5px #060606;
             
             
             
+            <a href="/tags/%E6%B5%B7%E6%B7%98/">
+                <span class="chip center-align waves-effect waves-light chip-default">海淘</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E5%AE%9E%E9%AA%8C/">
                 <span class="chip center-align waves-effect waves-light chip-default">实验</span>
             </a>
@@ -908,12 +914,6 @@ text-shadow:0 0 5px #060606;
             
             <a href="/tags/%E9%95%BF%E4%BD%99%E8%BE%89/">
                 <span class="chip center-align waves-effect waves-light chip-default">长余辉</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%B5%B7%E6%B7%98/">
-                <span class="chip center-align waves-effect waves-light chip-default">海淘</span>
             </a>
             
             
@@ -1260,13 +1260,13 @@ $(function () {
     
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
 
 </html>
 
